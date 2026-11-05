@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#e9e6dc;font:13px/1.35 -apple-system,Arial,sans-serif;color:#1d1d1b}
+.row{display:flex;gap:28px;justify-content:center}
+.col{width:360px}.col h2{margin:0 0 4px;font-size:18px;color:#1f4d2b}.col p.d{margin:0 0 10px;color:#555;height:52px}
+.ph{width:360px;height:740px;border-radius:38px;background:#fff;border:10px solid #111;overflow:hidden;position:relative;box-shadow:0 10px 30px #0003}
+.sb{height:26px;font-size:11px;display:flex;justify-content:space-between;padding:6px 18px 0;font-weight:600}
+/* A painel */
+.a .hd{background:#1f4d2b;color:#fff;padding:10px 14px;font-weight:800;font-size:16px}.a .hd small{display:block;font-weight:400;font-size:11px;opacity:.8}
+.chips{display:flex;gap:6px;flex-wrap:wrap;padding:10px 12px;background:#fafaf7;border-bottom:1px solid #eee}.chips span{background:#fff;border:1px solid #cfd8d1;border-radius:14px;padding:4px 9px;font-size:11px}.chips span.on{background:#2f7a43;color:#fff;border-color:#2f7a43}
+.kp{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px}.kp div{background:#f3f8f4;border-left:3px solid #2f7a43;border-radius:5px;padding:7px 8px;font-size:11px;color:#555}.kp b{display:block;font-size:17px;color:#1d1d1b}
+.rk{padding:0 12px}.rk h4{margin:6px 0;font-size:13px;color:#1f4d2b}
+.it{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid #eee}.it .p{font-weight:800;color:#1f4d2b;width:22px}.it .t{flex:1}.it .t small{color:#777;display:block}.it .v{text-align:right;font-weight:800}.it .v small{display:block;font-weight:600;font-size:11px}
+.g{color:#2f7a43}.r{color:#b3261e}
+.bar{height:6px;background:#eee;border-radius:3px;margin-top:4px}.bar i{display:block;height:6px;border-radius:3px;background:#2f7a43}
+.tab{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-around;border-top:1px solid #ddd;background:#fff;padding:8px 0 14px;font-size:10px;color:#777}.tab b{color:#1f4d2b}
+/* B whatsapp */
+.b{background:#efeae2}.b .hd{background:#075e54;color:#fff;padding:10px 12px;display:flex;gap:10px;align-items:center}.b .av{width:32px;height:32px;border-radius:50%;background:#ffd54a;color:#1f4d2b;font-weight:900;display:flex;align-items:center;justify-content:center}
+.b .hd small{display:block;font-size:10px;opacity:.8}
+.cv{padding:10px;display:flex;flex-direction:column;gap:7px}
+.m{max-width:85%;padding:7px 9px;border-radius:8px;background:#fff;box-shadow:0 1px 1px #0001;font-size:12px}.m.eu{align-self:flex-end;background:#d9fdd3}.m .h{font-size:9px;color:#888;text-align:right}
+.m img{width:100%;border-radius:6px;display:block;margin-bottom:4px}
+.m table{border-collapse:collapse;width:100%;font-size:11px}.m td{padding:2px 0}.m td:last-child{text-align:right;font-weight:700}
+.bt{display:flex;gap:5px;margin-top:5px}.bt span{flex:1;text-align:center;border-top:1px solid #eee;color:#027eb5;padding-top:5px;font-size:11px}
+.alerta{border-left:3px solid #d32f2f}
+/* C feed */
+.c .hd{padding:8px 14px;display:flex;justify-content:space-between;align-items:center}.c .hd b{font-size:18px;color:#1f4d2b}
+.seg{display:flex;margin:0 12px 8px;background:#f0f0ec;border-radius:10px;padding:3px}.seg span{flex:1;text-align:center;padding:5px;border-radius:8px;font-size:11px}.seg span.on{background:#fff;font-weight:700;box-shadow:0 1px 2px #0002}
+.live{margin:0 12px 8px;background:#fdecea;border-radius:10px;padding:7px 10px;font-size:11px}.live b{color:#d32f2f}
+.card{margin:0 12px 10px;border-radius:14px;overflow:hidden;border:1px solid #e4e1d6;background:#fff}
+.card img{width:100%;height:128px;object-fit:cover;display:block}
+.card .bd{padding:8px 10px}.card .tt{display:flex;justify-content:space-between;font-weight:700;font-size:13px}.card .tt span{color:#1f4d2b;font-size:15px}
+.card .mt{color:#666;font-size:11px;margin:2px 0 6px}.card .tg{display:flex;gap:5px;flex-wrap:wrap}.card .tg span{font-size:10px;background:#eef5ef;color:#1f4d2b;padding:2px 7px;border-radius:9px}.card .tg span.o{background:#fff3d6;color:#8a6200}
+.card .ac{display:flex;gap:6px;margin-top:7px}.card .ac span{flex:1;text-align:center;border:1px solid #2f7a43;color:#2f7a43;border-radius:8px;padding:5px;font-size:11px;font-weight:600}.card .ac span.f{background:#2f7a43;color:#fff}
+.pros{font-size:12px;margin-top:10px;background:#fff;border-radius:10px;padding:10px}.pros b{color:#1f4d2b}
+</style></head><body>
+<div class="row">
+
+<div class="col"><h2>A · Painel de preços</h2><p class="d">Site/app "planilha inteligente": filtros em cima, números e ranking. Para quem gosta de comparar.</p>
+<div class="ph a"><div class="sb"><span>9:41</span><span>●●● 5G</span></div>
+<div class="hd">◎ Radar Boi<small>Barro Alto/GO · semana 02 a 08/11</small></div>
+<div class="chips"><span class="on">Fêmeas</span><span class="on">6–8@</span><span class="on">Só brancas</span><span>250 km</span><span>Vender 15@</span></div>
+<div class="kp"><div>@ de reposição na região<b>R$ 440</b>Scot GO: R$ 438</div><div>Mais barato<b class="g">R$ 325/@</b>Uruaçu · 55 km</div><div>Margem até 15@<b>R$ 2.406</b>sem custo de recria</div><div>Cabeças brancas<b>353</b>16 lotes</div></div>
+<div class="rk"><h4>Leilões do mais barato ao mais caro</h4>
+<div class="it"><span class="p">1º</span><div class="t">WM Uruaçu<small>55 km · qua 28/10 · 20 cab</small><div class="bar"><i style="width:53%"></i></div></div><div class="v g">R$ 325/@<small>-26% Scot</small></div></div>
+<div class="it"><span class="p">2º</span><div class="t">WM Uruaçu<small>55 km · qua 04/11 · 14 cab</small><div class="bar"><i style="width:53%"></i></div></div><div class="v g">R$ 328/@<small>-25% Scot</small></div></div>
+<div class="it"><span class="p">3º</span><div class="t">JPS Niquelândia<small>73 km · ter 03/11 · 9 cab</small><div class="bar"><i style="width:55%"></i></div></div><div class="v g">R$ 339/@<small>-23% Scot</small></div></div>
+<div class="it"><span class="p">4º</span><div class="t">Brasil Leilões Porangatu<small>172 km · seg 26/10 · 310 cab</small><div class="bar"><i style="width:74%;background:#b3261e"></i></div></div><div class="v r">R$ 456/@<small>+4% Scot</small></div></div>
+</div>
+<div class="tab"><b>▦ Ranking</b><span>☰ Lotes</span><span>📈 Histórico</span><span>🔔 Alertas</span><span>⚙ Fazenda</span></div>
+</div>
+<div class="pros"><b>Prós:</b> já está pronto, mostra muito número, bom para quem compra volume e para o sócio analisar.<br><b>Contras:</b> o fazendeiro precisa lembrar de abrir. Menos "emocional".</div></div>
+
+<div class="col"><h2>B · Tudo pelo WhatsApp</h2><p class="d">Sem app: o fazendeiro conversa com o Radar Boi no WhatsApp, recebe o resumo de segunda e alertas de lote barato.</p>
+<div class="ph b"><div class="sb"><span>9:41</span><span>●●● 5G</span></div>
+<div class="hd"><div class="av">◎</div><div><b>Radar Boi</b><small>conta comercial · online</small></div></div>
+<div class="cv">
+<div class="m"><b>Bom dia, Gabriel! Resumo da semana 🐂</b><br>Bezerra branca 6–8@ até 250 km de Barro Alto:
+<table><tr><td>1º Uruaçu (55 km)</td><td class="g">R$ 325/@</td></tr><tr><td>2º Niquelândia (73 km)</td><td class="g">R$ 339/@</td></tr><tr><td>3º Porangatu (172 km)</td><td class="r">R$ 456/@</td></tr><tr><td>Scot GO</td><td>R$ 438/@</td></tr></table>
+<div class="bt"><span>Ver painel</span><span>PDF</span></div><div class="h">06:00</div></div>
+<div class="m eu">tem bezerra branca de 12 meses quarta em uruaçu?<div class="h">07:12 ✓✓</div></div>
+<div class="m">Quarta 11/11, 20h, WM Uruaçu. O catálogo ainda não saiu. Te aviso quando a bezerra branca entrar na pista 👍<div class="h">07:12</div></div>
+<div class="m alerta"><img src="img/rmlJbmSu1i4_10.jpg"><b>🔴 Entrando agora: WM Uruaçu</b><br>7 bezerras brancas · 12 m · ~210 kg<br>Lance: <b>R$ 2.330</b> = R$ 333/@ (-24% Scot)<div class="bt"><span>▶ Assistir</span><span>Ligar leiloeiro</span></div><div class="h">20:41</div></div>
+</div></div>
+<div class="pros"><b>Prós:</b> o fazendeiro já vive no WhatsApp, não precisa baixar nada, alerta na hora. Mais fácil de vender.<br><b>Contras:</b> custo da API do WhatsApp por mensagem, pouco espaço para tabelas grandes.</div></div>
+
+<div class="col"><h2>C · Vitrine de lotes (app)</h2><p class="d">App estilo "feed": cada lote é um card com foto do gado, preço, @ e distância. Favoritar, alertar e, no futuro, comprar.</p>
+<div class="ph c"><div class="sb"><span>9:41</span><span>●●● 5G</span></div>
+<div class="hd"><b>◎ Radar Boi</b><span>🔔 ⚙</span></div>
+<div class="seg"><span class="on">Mais barato /@</span><span>Mais perto</span><span>Mapa</span></div>
+<div class="live"><b>● AO VIVO</b> · Bambu Campinorte (77 km) · lote 18 de 60</div>
+<div class="card"><img src="img/rmlJbmSu1i4_10.jpg"><div class="bd"><div class="tt">7 bezerras · 12 m<span>R$ 2.330</span></div><div class="mt">WM Uruaçu · 55 km · 28/10 · ~210 kg · R$ 11,10/kg</div><div class="tg"><span>✓ 100% brancas</span><span>R$ 333/@ · -24% Scot</span><span class="o">margem 15@: R$ 3.141</span></div><div class="ac"><span>▶ ver no vídeo</span><span>☆ salvar</span><span class="f">🔔 avisar parecido</span></div></div></div>
+<div class="card"><img src="img/faPKYrIsWuU_15.jpg"><div class="bd"><div class="tt">7 bezerras · 12 m<span>R$ 2.415</span></div><div class="mt">JPS Niquelândia · 73 km · 03/11 · ~210 kg</div><div class="tg"><span>✓ 100% brancas</span><span>R$ 345/@ · -21% Scot</span></div></div></div>
+<div class="tab"><b>⌂ Lotes</b><span>📅 Agenda</span><span>☆ Salvos</span><span>📈 Preços</span><span>👤 Conta</span></div>
+</div>
+<div class="pros"><b>Prós:</b> mais visual (o fazendeiro vê o gado), base natural para virar marketplace depois.<br><b>Contras:</b> precisa baixar app (lojas Apple/Google), mais caro e demorado de construir.</div></div>
+
+</div></body></html>
