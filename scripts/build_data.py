@@ -1,4 +1,4 @@
-"""Gera site/data.json a partir do levantamento da fazenda (pipeline YouTube → OCR → cor → médias).
+"""Gera docs/data.json a partir do levantamento da fazenda (pipeline YouTube → OCR → cor → médias).
 Uso: python3 scripts/build_data.py [DATA]   (padrão: lotes mais recente)"""
 import csv, json, os, sys, glob, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,5 +33,5 @@ for v in usados:
 out = dict(atualizado=D, gorda=dict(rs_arroba=PZ.GORDA, fonte='Datagro novilha GO', data='04/11/2026'),
            ref=dict(bezerra12=dict(rs_cab=3062.98, kg=210, fonte='Scot GO 04/11/2026')),
            leiloes=sorted(leiloes, key=lambda x: x['data']), lotes=lotes)
-json.dump(out, open(os.path.join(ROOT, 'site', 'data.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
+json.dump(out, open(os.path.join(ROOT, 'docs', 'data.json'), 'w'), ensure_ascii=False, separators=(',', ':'))
 print(D, len(leiloes), 'leilões', len(lotes), 'lotes', sum(1 for l in lotes if l['cor'] == 'ok'), 'brancos conferidos')

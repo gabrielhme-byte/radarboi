@@ -2,7 +2,7 @@
 
 O leilão mais barato perto da sua fazenda, toda semana.
 
-- `site/`: painel estático (HTML/JS) que lê `site/data.json`. Publicado no GitHub Pages.
+- `docs/`: painel estático (HTML/JS) que lê `docs/data.json`. Publicado no GitHub Pages.
 - `scripts/build_data.py`: gera `data.json` a partir do levantamento em `../fazenda` (pipeline YouTube → OCR → cor → médias).
 - `PLANO_DE_NEGOCIO.md`: nome, mercado, preço, operação, riscos, plano de 90 dias.
 
