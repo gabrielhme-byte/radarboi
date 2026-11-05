@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Boi · o leilão mais barato perto da sua fazenda</title>
+<meta name="description" content="Preços dos leilões de gado da sua região, lote por lote, do mais barato ao mais caro. Nelore branco conferido, R$/@ estimado e margem de recria.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="marca"><span class="logo">◎</span> Radar Boi</div>
+  <nav><a href="#painel">Painel</a><a href="#planos">Planos</a><a href="#como">Como funciona</a></nav>
+</header>
+
+<section class="hero">
+  <h1>O leilão mais barato perto da sua fazenda, toda semana.</h1>
+  <p>A gente assiste as transmissões dos leilões da sua região, anota o preço de cada lote e confere a cor do gado nas imagens. Você abre o celular e vê onde está compensando comprar.</p>
+  <div class="hero-nums" id="heroNums"></div>
+</section>
+
+<section id="painel" class="painel">
+  <div class="filtros">
+    <label>Sua fazenda
+      <select id="fFaz"></select>
+    </label>
+    <label>Raio <b id="fRaioV"></b>
+      <input type="range" id="fRaio" min="50" max="500" step="25" value="250">
+    </label>
+    <label>Sexo
+      <select id="fSexo"><option value="F">Fêmeas</option><option value="M">Machos</option><option value="">Todos</option></select>
+    </label>
+    <label>Peso estimado
+      <select id="fPeso">
+        <option value="6-8">6 a 8@ (recria)</option>
+        <option value="0-6">até 6@</option>
+        <option value="8-10">8 a 10@</option>
+        <option value="10-99">acima de 10@</option>
+        <option value="">qualquer</option>
+      </select>
+    </label>
+    <label class="chk"><input type="checkbox" id="fCor" checked> Só lotes 100% brancos conferidos</label>
+    <label>Vender com
+      <select id="fVenda"><option value="13">13@</option><option value="14">14@</option><option value="15" selected>15@</option><option value="16">16@</option></select>
+    </label>
+  </div>
+
+  <div class="resumo" id="resumo"></div>
+
+  <h2>Leilões, do mais barato ao mais caro (R$ por @ estimada)</h2>
+  <div class="tw"><table id="tLeiloes"></table></div>
+
+  <h2>Lotes, um por um</h2>
+  <div class="tw"><table id="tLotes"></table></div>
+
+  <p class="aviso"><b>Como ler:</b> o preço é o último lance que aparece na tela da transmissão, não uma venda confirmada. A tela não mostra o peso, então ele é <b>estimado pela idade</b> (curva Scot GO: 8m 180 kg, 12m 210 kg, 18m 270 kg; 1@ = 30 kg vivos). A margem é a venda menos a compra, sem custo de recria, frete e comissão. Distância em linha reta (pela estrada, some 20 a 30%). <span id="fonteVenda"></span></p>
+</section>
+
+<section id="como" class="como">
+  <h2>Como funciona</h2>
+  <ol>
+    <li><b>Assistimos os leilões.</b> Todas as transmissões de corte e reposição num raio de 500 km.</li>
+    <li><b>Lemos cada lote.</b> Categoria, quantidade, idade e o último lance, com o minuto exato do vídeo.</li>
+    <li><b>Conferimos a cor.</b> Três imagens por lote; se tiver um animal de outra cor, o lote sai.</li>
+    <li><b>Você decide.</b> Ranking por R$/@, margem até o peso de venda e alerta no WhatsApp quando aparece lote barato.</li>
+  </ol>
+</section>
+
+<section id="planos" class="planos">
+  <h2>Planos</h2>
+  <div class="cards">
+    <div class="card"><h3>Semanal</h3><div class="preco">R$ 79<span>/mês</span></div><ul><li>Relatório toda segunda no WhatsApp</li><li>Ranking por região e categoria</li><li>Link dos lotes no vídeo</li></ul></div>
+    <div class="card dest"><h3>Pro</h3><div class="preco">R$ 149<span>/mês</span></div><ul><li>Tudo do Semanal</li><li>Painel com filtros (raio, peso, cor)</li><li>Alerta de lote barato antes do leilão</li><li>Margem com os seus custos</li></ul></div>
+    <div class="card"><h3>Fazenda+</h3><div class="preco">R$ 399<span>/mês</span></div><ul><li>Tudo do Pro</li><li>Até 3 fazendas / 5 usuários</li><li>Freteiros da rota</li><li>Atendimento direto</li></ul></div>
+  </div>
+  <p class="cta"><a class="btn" id="btnWa" href="#">Quero testar 30 dias grátis</a></p>
+</section>
+
+<footer>Radar Boi · dados de transmissões públicas de leilões · não compramos nem vendemos gado e não damos lance por você.</footer>
+<script src="app.js"></script>
+</body>
+</html>
