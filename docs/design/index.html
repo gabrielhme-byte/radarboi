@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar Boi · Telas para aprovação · rodada 1</title>
+<link rel="stylesheet" href="rb.css">
+<style>
+.w-main{max-width:1360px}
+section{margin-top:36px}
+h2{font:800 26px/1.2 var(--fonte);color:var(--verde-900);margin-bottom:14px} h2 small{font-size:15px;color:var(--cinza);font-weight:600}
+.g{display:grid;gap:18px} .gw{grid-template-columns:repeat(3,1fr)} .gm{grid-template-columns:repeat(6,1fr)}
+figure{margin:0;background:#fff;border:1px solid var(--areia);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+figure img{display:block;width:100%;background:#eee}
+figure.w img{max-height:300px;object-fit:cover;object-position:top} figure.w>a{display:block;max-height:300px;overflow:hidden}
+figcaption{padding:10px 12px 12px;font-size:14px;display:flex;flex-direction:column;gap:2px}
+figcaption b{font-size:16px} figcaption span{color:var(--cinza)} figcaption em{font-style:normal;margin-top:4px;font-weight:600}
+.dec{background:var(--amarelo);border-radius:18px;padding:20px 24px;margin-top:22px}
+.dec h3{font:800 20px/1.2 var(--fonte);color:var(--verde-900);margin:0 0 10px}
+.dec ol{margin:0;padding-left:22px;font-size:17px;line-height:1.5}
+</style></head><body>
+<header class="w-top"><div class="in"><span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span><nav><a class="is-on">Telas · rodada 1</a><a href="https://github.com/gabrielhme-byte/radarboi/blob/main/docs/design/README.md">Design system (README)</a></nav><span style="color:#cfe3d4">05/11/2026</span></div></header>
+<main class="w-main">
+<h1 class="w-h1">Telas para aprovação · rodada 1</h1>
+<div class="w-sub">Experiência A+B (painel web + WhatsApp) e a base do app (C). Dados reais de data.json (leilões de 26/10 a 04/11, 936 lotes). Filtro padrão: fêmeas 6–8@, 100% brancas, até 250 km de Barro Alto/GO. O que não é dado real está marcado <span class="rb-tag rb-tag--exemplo">exemplo</span>.</div>
+<div class="dec"><h3>Para o Gabriel decidir</h3><ol>
+<li><b>Número principal = R$/@ grande</b>, com R$/cab embaixo e o selo contra a Scot (barato ≤ −3%, caro ≥ +3%).</li>
+<li><b>“Só 100% brancas” ligado por padrão</b>: mostra 16 de 269 lotes. Os leilões sem conferência aparecem à parte, marcados “cor não conferida”.</li>
+<li><b>Teste de 30 dias do Pro sem cartão</b>, entrando só com o WhatsApp; no dia 25 a gente manda o link de pagamento (Pix recorrente).</li>
+</ol></div>
+<section><h2>Web · painel (A) <small>9 telas</small></h2><div class="g gw"><figure class="w"><a href="web/w01-landing.html"><img loading="lazy" src="png/w01-landing.png" alt="Landing de vendas"></a>
+<figcaption><b>Landing de vendas</b><span>Planos e “testar 30 dias grátis”</span><em><a href="web/w01-landing.html">HTML</a> · <a href="png/w01-landing.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w02-entrar.html"><img loading="lazy" src="png/w02-entrar.png" alt="Entrar pelo WhatsApp"></a>
+<figcaption><b>Entrar pelo WhatsApp</b><span>Número + código de 6 dígitos</span><em><a href="web/w02-entrar.html">HTML</a> · <a href="png/w02-entrar.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w03-onboarding.html"><img loading="lazy" src="png/w03-onboarding.png" alt="Onboarding"></a>
+<figcaption><b>Onboarding</b><span>Fazenda, o que compra, raio e cor</span><em><a href="web/w03-onboarding.html">HTML</a> · <a href="png/w03-onboarding.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w04-painel.html"><img loading="lazy" src="png/w04-painel.png" alt="Ranking de leilões"></a>
+<figcaption><b>Ranking de leilões</b><span>Painel principal, do mais barato ao mais caro</span><em><a href="web/w04-painel.html">HTML</a> · <a href="png/w04-painel.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w05-lotes.html"><img loading="lazy" src="png/w05-lotes.png" alt="Lotes com filtros"></a>
+<figcaption><b>Lotes com filtros</b><span>16 lotes, um por um</span><em><a href="web/w05-lotes.html">HTML</a> · <a href="png/w05-lotes.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w06-lote.html"><img loading="lazy" src="png/w06-lote.png" alt="Detalhe do lote"></a>
+<figcaption><b>Detalhe do lote</b><span>Foto, preço, @, margem, vídeo no minuto</span><em><a href="web/w06-lote.html">HTML</a> · <a href="png/w06-lote.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w07-agenda.html"><img loading="lazy" src="png/w07-agenda.png" alt="Agenda"></a>
+<figcaption><b>Agenda</b><span>Próximos leilões no raio, 09 a 13/11</span><em><a href="web/w07-agenda.html">HTML</a> · <a href="png/w07-agenda.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w08-alertas.html"><img loading="lazy" src="png/w08-alertas.png" alt="Alertas"></a>
+<figcaption><b>Alertas</b><span>Regra de aviso + histórico</span><em><a href="web/w08-alertas.html">HTML</a> · <a href="png/w08-alertas.png">PNG</a></em></figcaption></figure><figure class="w"><a href="web/w09-conta.html"><img loading="lazy" src="png/w09-conta.png" alt="Conta e planos"></a>
+<figcaption><b>Conta e planos</b><span>Fazenda, custos, plano, pagamento</span><em><a href="web/w09-conta.html">HTML</a> · <a href="png/w09-conta.png">PNG</a></em></figcaption></figure></div></section><section><h2>App · celular (C) <small>12 telas</small></h2><div class="g gm"><figure class="m"><a href="app/a01-splash.html"><img loading="lazy" src="png/a01-splash.png" alt="Splash"></a>
+<figcaption><b>Splash</b><em><a href="app/a01-splash.html">HTML</a> · <a href="png/a01-splash.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a02-onb-fazenda.html"><img loading="lazy" src="png/a02-onb-fazenda.png" alt="Onboarding 1"></a>
+<figcaption><b>Onboarding 1</b><span>Fazenda</span><em><a href="app/a02-onb-fazenda.html">HTML</a> · <a href="png/a02-onb-fazenda.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a03-onb-compra.html"><img loading="lazy" src="png/a03-onb-compra.png" alt="Onboarding 2"></a>
+<figcaption><b>Onboarding 2</b><span>O que compra</span><em><a href="app/a03-onb-compra.html">HTML</a> · <a href="png/a03-onb-compra.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a04-onb-raio-cor.html"><img loading="lazy" src="png/a04-onb-raio-cor.png" alt="Onboarding 3"></a>
+<figcaption><b>Onboarding 3</b><span>Raio, cor, aviso</span><em><a href="app/a04-onb-raio-cor.html">HTML</a> · <a href="png/a04-onb-raio-cor.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a05-home.html"><img loading="lazy" src="png/a05-home.png" alt="Início"></a>
+<figcaption><b>Início</b><span>Resumo + ao vivo</span><em><a href="app/a05-home.html">HTML</a> · <a href="png/a05-home.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a06-lotes.html"><img loading="lazy" src="png/a06-lotes.png" alt="Lotes"></a>
+<figcaption><b>Lotes</b><span>Feed com foto</span><em><a href="app/a06-lotes.html">HTML</a> · <a href="png/a06-lotes.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a07-lote.html"><img loading="lazy" src="png/a07-lote.png" alt="Detalhe do lote"></a>
+<figcaption><b>Detalhe do lote</b><em><a href="app/a07-lote.html">HTML</a> · <a href="png/a07-lote.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a08-agenda.html"><img loading="lazy" src="png/a08-agenda.png" alt="Agenda"></a>
+<figcaption><b>Agenda</b><em><a href="app/a08-agenda.html">HTML</a> · <a href="png/a08-agenda.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a09-alertas.html"><img loading="lazy" src="png/a09-alertas.png" alt="Alertas"></a>
+<figcaption><b>Alertas</b><span>Entrando agora</span><em><a href="app/a09-alertas.html">HTML</a> · <a href="png/a09-alertas.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a10-notificacao.html"><img loading="lazy" src="png/a10-notificacao.png" alt="Notificação"></a>
+<figcaption><b>Notificação</b><span>Tela bloqueada</span><em><a href="app/a10-notificacao.html">HTML</a> · <a href="png/a10-notificacao.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a11-salvos.html"><img loading="lazy" src="png/a11-salvos.png" alt="Salvos"></a>
+<figcaption><b>Salvos</b><span>Aba dentro de Lotes</span><em><a href="app/a11-salvos.html">HTML</a> · <a href="png/a11-salvos.png">PNG</a></em></figcaption></figure><figure class="m"><a href="app/a12-conta.html"><img loading="lazy" src="png/a12-conta.png" alt="Conta"></a>
+<figcaption><b>Conta</b><span>Fazenda e plano</span><em><a href="app/a12-conta.html">HTML</a> · <a href="png/a12-conta.png">PNG</a></em></figcaption></figure></div></section><section><h2>WhatsApp (B) <small>2 telas</small></h2><div class="g gm"><figure class="m"><a href="whatsapp/z01-resumo-segunda.html"><img loading="lazy" src="png/z01-resumo-segunda.png" alt="Resumo de segunda"></a>
+<figcaption><b>Resumo de segunda</b><span>6h, ranking da semana</span><em><a href="whatsapp/z01-resumo-segunda.html">HTML</a> · <a href="png/z01-resumo-segunda.png">PNG</a></em></figcaption></figure><figure class="m"><a href="whatsapp/z02-alerta-entrando.html"><img loading="lazy" src="png/z02-alerta-entrando.png" alt="Alerta entrando agora"></a>
+<figcaption><b>Alerta entrando agora</b><span>Com foto e botão</span><em><a href="whatsapp/z02-alerta-entrando.html">HTML</a> · <a href="png/z02-alerta-entrando.png">PNG</a></em></figcaption></figure></div></section><section><h2>Design system <small>1 telas</small></h2><div class="g gw"><figure class="w"><a href="componentes.html"><img loading="lazy" src="png/componentes.png" alt="Componentes e estados"></a>
+<figcaption><b>Componentes e estados</b><span>Cores, tipos, cards, vazio, carregando, erro, sem sinal</span><em><a href="componentes.html">HTML</a> · <a href="png/componentes.png">PNG</a></em></figcaption></figure></div></section>
+<div style="height:40px"></div>
+</main></body></html>

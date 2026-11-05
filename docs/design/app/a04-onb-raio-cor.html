@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A04 · Onboarding 3: raio, cor e aviso · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.onb{flex:1;display:flex;flex-direction:column;padding:4px 20px 34px}
+.prog{display:flex;gap:6px;margin:6px 0 22px}.prog i{flex:1;height:6px;border-radius:3px;background:#dcd8cc}.prog i.on{background:var(--verde-600)}
+.onb .passo{font:800 14px/1 var(--fonte);color:var(--verde-600);text-transform:uppercase;letter-spacing:.8px}
+.onb h1{font:800 30px/1.12 var(--fonte);color:var(--verde-900);margin:8px 0 8px;letter-spacing:-.5px}
+.onb p.d{font-size:18px;color:var(--cinza);margin:0 0 20px}
+.onb .fim{margin-top:auto}
+.onb .sub-t{font:800 17px/1 var(--fonte);margin:18px 0 10px}
+.onb .rb-opcao{margin-bottom:10px}
+.topo{display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+.topo a{font-weight:700;text-decoration:none;font-size:17px;min-height:44px;display:flex;align-items:center}
+</style></head>
+<body class="app-pg">
+<!-- A04 · Onboarding 3: raio, cor e aviso. O quadro verde recalcula ao mexer no raio/cor. Sem o filtro de cor seriam 269 lotes. -->
+<div class="phone">
+<div class="sb"><span>9:41</span><span class="di"></span><span>▂▄▆ 4G ▭</span></div><div class="topo"><a>← Voltar</a><a>Pular</a></div>
+<div class="onb"><div class="prog"><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="passo">Passo 3 de 3</div>
+<h1>Até onde e de que cor?</h1>
+<div class="sub-t" style="margin-top:6px">Raio de busca</div>
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font:800 40px/1 var(--fonte);color:var(--verde-900)" class="num">250 km</span><span class="muted">24 leilões</span></div>
+<div class="rb-slider"><i style="width:44%"></i><b style="left:44%"></b></div>
+<div style="display:flex;justify-content:space-between;color:var(--cinza);font-size:14px;font-weight:600"><span>50 km</span><span>500 km</span></div>
+<div style="background:#fff;border:1px solid var(--areia);border-radius:14px;padding:4px 16px;margin-top:20px">
+  <div style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #eee"><div style="flex:1"><b style="font-size:18px">Só lotes 100% brancos</b><div class="muted small">Conferimos 3 imagens de cada lote</div></div><span class="rb-toggle is-on"></span></div>
+  <div style="display:flex;align-items:center;gap:12px;padding:14px 0"><div style="flex:1"><b style="font-size:18px">Avisar no WhatsApp</b><div class="muted small">Resumo de segunda e "entrando agora"</div></div><span class="rb-toggle is-on"></span></div>
+</div>
+<div style="background:var(--verde-800);color:#fff;border-radius:16px;padding:16px;margin-top:16px;display:flex;gap:14px;align-items:center">
+  <span style="font:800 36px/1 var(--fonte);color:var(--amarelo)" class="num">16</span><span style="font-size:16px;line-height:1.35">lotes serviram pra você nos últimos 10 dias. O mais barato: <b>Uruaçu, R$ 325/@</b>.</span>
+</div>
+
+<div class="fim"><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:20px">Ver meu radar</a></div></div>
+<span class="home-ind"></span>
+</div>
+</body></html>

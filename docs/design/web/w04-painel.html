@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W04 · Painel: ranking de leilões · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.lay{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:#fff;border:1px solid var(--areia);border-radius:16px;padding:14px 16px;margin:22px 0}
+.filtros .lb{font:700 15px/1 var(--fonte);color:var(--cinza);margin-right:4px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rank{display:flex;flex-direction:column;gap:12px}
+.leg{display:flex;gap:18px;align-items:center;color:var(--cinza);font-size:14px;margin:-4px 0 12px}
+.leg i{display:inline-block;width:3px;height:14px;background:var(--tinta);vertical-align:middle;margin-right:6px}
+.outros .it{display:grid;grid-template-columns:1fr auto;gap:10px;padding:12px 0;border-top:1px solid #eee;align-items:center}
+.outros .it b{font-size:17px}.outros .it small{display:block;color:var(--cinza);font-size:14px}
+.outros .v{text-align:right;font:800 20px/1 var(--fonte)}
+.lado .w-card{margin-bottom:16px}
+.lado h3{font-size:18px;margin-bottom:10px}
+.ag .it{display:flex;gap:12px;padding:10px 0;border-top:1px solid #eee;align-items:center}
+.ag .d{width:52px;text-align:center;background:var(--creme);border-radius:10px;padding:6px 0;font:800 18px/1 var(--fonte)}
+.ag .d small{display:block;font-size:12px;color:var(--cinza);font-weight:700;margin-bottom:2px}
+.ag .t{flex:1;font-size:15px}.ag .t b{font-size:16px;display:block}
+.links a{display:inline-block;margin-right:10px;font-weight:700;text-decoration:none}
+</style></head>
+<body>
+<!-- Tela W04 · Painel: ranking de leilões (tela inicial do assinante).
+     Ordenação: R$/@ estimada (média ponderada por cabeça dos lotes que passam no filtro), do menor para o maior.
+     BadgeScot: barato se <= -3% da Scot, caro se >= +3%, neutro no meio. Barra: R$/@ numa escala de 0 a R$ 500; traço preto = Scot.
+     Tag "poucas cabeças" quando o leilão tem menos de 20 cab. no filtro. Clique no card -> Lotes (W05) já filtrado por esse leilão.
+     ChipFiltro: clique abre popover com as opções; "x" volta ao padrão do perfil. -->
+<header class="w-top"><div class="in">
+  <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
+  <nav><a class="is-on">Ranking</a><a>Lotes</a><a>Agenda</a><a>Alertas</a><a>Conta</a></nav>
+  <div class="faz">📍<div>Barro Alto/GO<small>sua fazenda · trocar</small></div></div>
+  <div class="av">G</div>
+</div></header>
+<main class="w-main">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end">
+    <div><h1 class="w-h1">Onde a @ está mais barata</h1><div class="w-sub">Leilões de 26/10 a 04/11 · atualizado em 05/11/2026</div></div>
+    <div class="links"><a>⬇ Baixar PDF</a><a>📤 Mandar no WhatsApp</a></div>
+  </div>
+  <div class="filtros">
+    <span class="lb">Filtros</span>
+    <span class="rb-chip is-on">Fêmeas</span><span class="rb-chip is-on">6 a 8@</span><span class="rb-chip is-on">Só 100% brancas</span><span class="rb-chip is-on">Até 250 km</span><span class="rb-chip is-on">Vender com 15@</span><span class="rb-chip rb-chip--add">+ Era</span><span class="rb-chip rb-chip--add">+ Data</span>
+  </div>
+  <div class="kpis">
+    <div class="rb-kpi rb-kpi--destaque"><div class="rot">Mais barato</div><div class="val num">R$ 325<small>/@</small></div><div class="sub">Uruaçu · 55 km · qua 28/10</div></div>
+    <div class="rb-kpi"><div class="rot">Média na região</div><div class="val num">R$ 440<small>/@</small></div><div class="sub">Scot GO: R$ 438/@ · R$ 3.065/cab</div></div>
+    <div class="rb-kpi"><div class="rot">Margem média até 15@</div><div class="val num">R$ 2.406<small>/cab</small></div><div class="sub">sem recria, frete e comissão</div></div>
+    <div class="rb-kpi"><div class="rot">Cabeças que servem</div><div class="val num">353</div><div class="sub">16 lotes em 3 cidades</div></div>
+  </div>
+
+  <div class="lay">
+    <div>
+      <h2 class="w-sec">Leilões, do mais barato ao mais caro</h2>
+      <div class="leg"><span>R$ por @ estimada · peso pela era (curva Scot GO)</span><span><i></i>Scot GO R$ 438/@</span></div>
+      <div class="rank">
+        <article class="rb-leilao is-1">
+          <span class="pos">1º</span>
+          <div><div class="nome">Uruaçu <span class="casa">· WM Leilões / Sindicato Rural</span></div>
+            <div class="meta num"><span>📍 <b>55 km</b></span><span>📅 qua 28/10</span><span><b>20 cab.</b> em 5 lotes</span><span>R$ 2.342/cab · ~216 kg</span></div></div>
+          <div class="preco"><div class="v g num">R$ 325<small>/@</small></div><span class="rb-scot rb-scot--barato">26% abaixo da Scot</span></div>
+          <div class="barra"><i style="width:65%"></i><span class="scot" style="left:87.6%"></span></div>
+          <div class="rodape"><span class="rb-tag rb-tag--margem">Margem até 15@: R$ 3.128/cab</span><span class="rb-tag">Cor: 15 lotes ok · 26 fora</span><a class="rb-btn rb-btn--txt" style="margin-left:auto;min-height:36px">Ver os 5 lotes →</a></div>
+        </article>
+        <article class="rb-leilao">
+          <span class="pos">2º</span>
+          <div><div class="nome">Uruaçu <span class="casa">· WM Leilões / Sindicato Rural</span></div>
+            <div class="meta num"><span>📍 <b>55 km</b></span><span>📅 qua 04/11</span><span><b>14 cab.</b> em 2 lotes</span><span>R$ 2.570/cab · ~235 kg</span></div></div>
+          <div class="preco"><div class="v g num">R$ 328<small>/@</small></div><span class="rb-scot rb-scot--barato">25% abaixo da Scot</span></div>
+          <div class="barra"><i style="width:65.6%"></i><span class="scot" style="left:87.6%"></span></div>
+          <div class="rodape"><span class="rb-tag rb-tag--margem">Margem até 15@: R$ 2.901/cab</span><span class="rb-tag">Cor: 11 lotes ok · 11 fora</span><span class="rb-tag" style="background:var(--aviso-bg);color:var(--aviso)">Poucas cabeças</span><a class="rb-btn rb-btn--txt" style="margin-left:auto;min-height:36px">Ver os 2 lotes →</a></div>
+        </article>
+        <article class="rb-leilao">
+          <span class="pos">3º</span>
+          <div><div class="nome">Niquelândia <span class="casa">· JPS Leilões</span></div>
+            <div class="meta num"><span>📍 <b>73 km</b></span><span>📅 ter 03/11</span><span><b>9 cab.</b> em 3 lotes</span><span>R$ 2.324/cab · ~206 kg</span></div></div>
+          <div class="preco"><div class="v g num">R$ 339<small>/@</small></div><span class="rb-scot rb-scot--barato">23% abaixo da Scot</span></div>
+          <div class="barra"><i style="width:67.8%"></i><span class="scot" style="left:87.6%"></span></div>
+          <div class="rodape"><span class="rb-tag rb-tag--margem">Margem até 15@: R$ 3.147/cab</span><span class="rb-tag">Cor: 14 lotes ok · 6 fora</span><span class="rb-tag" style="background:var(--aviso-bg);color:var(--aviso)">Poucas cabeças</span><a class="rb-btn rb-btn--txt" style="margin-left:auto;min-height:36px">Ver os 3 lotes →</a></div>
+        </article>
+        <article class="rb-leilao">
+          <span class="pos">4º</span>
+          <div><div class="nome">Porangatu <span class="casa">· Brasil Leilões</span></div>
+            <div class="meta num"><span>📍 <b>172 km</b></span><span>📅 seg 26/10</span><span><b>310 cab.</b> em 6 lotes</span><span>R$ 3.155/cab · ~208 kg</span></div></div>
+          <div class="preco"><div class="v r num">R$ 456<small>/@</small></div><span class="rb-scot rb-scot--caro">4% acima da Scot</span></div>
+          <div class="barra"><i class="caro" style="width:91.2%"></i><span class="scot" style="left:87.6%"></span></div>
+          <div class="rodape"><span class="rb-tag rb-tag--margem">Margem até 15@: R$ 2.315/cab</span><span class="rb-tag">Cor: 20 lotes ok · 18 fora</span><a class="rb-btn rb-btn--txt" style="margin-left:auto;min-height:36px">Ver os 6 lotes →</a></div>
+        </article>
+      </div>
+
+      <h2 class="w-sec">Outros leilões no raio <span class="muted" style="font-size:17px;font-weight:600">· cor ainda não conferida</span></h2>
+      <div class="w-card outros">
+        <div class="rb-nota" style="margin-bottom:6px">Estes leilões têm bezerra/novilha 6–8@, mas a cor dos lotes ainda não foi conferida. O preço é de todos os lotes, de qualquer cor.</div>
+        <div class="it"><div><b>Nova Crixás · Araguaia Leilões</b><small>181 km · sex 30/10 · 84 cab.</small></div><div class="v num">R$ 317/@ <span class="rb-selo rb-selo--nc">não conferida</span></div></div>
+        <div class="it"><div><b>São Miguel do Araguaia · Cristiano Reis</b><small>232 km · qui 29/10 · 175 cab.</small></div><div class="v num">R$ 326/@ <span class="rb-selo rb-selo--nc">não conferida</span></div></div>
+        <div class="it"><div><b>Mara Rosa · Mara Rosa Leilões</b><small>110 km · ter 03/11 · 252 cab.</small></div><div class="v num">R$ 354/@ <span class="rb-selo rb-selo--nc">não conferida</span></div></div>
+        <div class="it"><div><b>Trombas · Trombas Leilões</b><small>163 km · qua 28/10 · 183 cab.</small></div><div class="v num">R$ 355/@ <span class="rb-selo rb-selo--nc">não conferida</span></div></div>
+        <div style="padding-top:12px"><a class="rb-btn rb-btn--txt" style="padding:0">Ver os outros leilões do raio →</a></div>
+      </div>
+    </div>
+
+    <aside class="lado" style="margin-top:32px">
+      <div class="w-card" style="border-color:#f1c4c1">
+        <h3><span class="rb-tag rb-tag--aovivo">AO VIVO</span></h3>
+        <div style="font:800 19px/1.3 var(--fonte)">WM Uruaçu · lote 10</div>
+        <div class="muted">7 bezerras brancas · 12 m · ~210 kg</div>
+        <div style="margin:10px 0"><div style="font:800 30px/1 var(--fonte);white-space:nowrap" class="num">R$ 2.330<small style="font-size:15px;color:var(--cinza)">/cab</small></div><span class="rb-scot rb-scot--barato" style="margin-top:8px">R$ 333/@ · 24% abaixo da Scot</span></div>
+        <a class="rb-btn rb-btn--pri rb-btn--full" style="background:var(--aovivo)">▶ Assistir agora</a>
+        <div style="margin-top:8px"><span class="rb-tag rb-tag--exemplo">exemplo · lote real de 28/10</span></div>
+      </div>
+      <div class="w-card ag">
+        <h3>Próximos no seu raio</h3>
+        <div class="it"><div class="d"><small>SEG</small>09</div><div class="t"><b>Nova Glória · CBN</b>74 km · última: R$ 412/@ · cor não conferida</div></div>
+        <div class="it"><div class="d"><small>TER</small>10</div><div class="t"><b>Niquelândia · JPS</b>73 km · última: R$ 339/@ ✓</div></div>
+        <div class="it"><div class="d"><small>QUA</small>11</div><div class="t"><b>Uruaçu · WM</b>55 km · última: R$ 328/@ ✓</div></div>
+        <a class="rb-btn rb-btn--txt" style="padding:0;margin-top:6px">Agenda completa →</a>
+      </div>
+      <div class="rb-nota"><b>Como ler.</b> O preço é o último lance na tela, não venda confirmada. O peso é estimado pela era (8 m 180 kg, 12 m 210 kg, 18 m 270 kg; 1@ = 30 kg vivos). Margem = 15@ × R$ 364,71 (Datagro novilha GO, 04/11) menos a compra, sem recria, frete e comissão.</div>
+    </aside>
+  </div>
+</main>
+</body></html>

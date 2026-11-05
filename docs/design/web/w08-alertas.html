@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W08 · Alertas · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.lay{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start;margin-top:22px}
+.frase{background:var(--verde-800);color:#fff;border-radius:18px;padding:24px}
+.frase h2{font-size:20px;color:var(--amarelo);margin-bottom:14px}
+.frase p{font:600 22px/2.1 var(--fonte);margin:0}
+.frase .s{display:inline-block;background:#fff;color:var(--verde-900);border-radius:10px;padding:2px 12px;line-height:1.5;font-weight:800;border-bottom:3px solid var(--amarelo)}
+.frase .rodape{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:#cfe3d4;font-size:16px}
+.regra{display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center;background:#fff;border:1px solid var(--areia);border-radius:16px;padding:16px 18px;margin-top:12px}
+.regra .ic{width:48px;height:48px;border-radius:12px;background:var(--verde-100);display:grid;place-items:center;font-size:24px}
+.regra b{font-size:18px;display:block}.regra small{color:var(--cinza);font-size:15px;display:block;margin-top:3px}
+.regra .cn{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.regra.off{opacity:.6}
+.hist .it{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:14px 0;border-top:1px solid #eee}
+.hist .it:first-of-type{border-top:0}
+.hist img{width:120px;aspect-ratio:21/8;object-fit:cover;border-radius:8px;display:block}
+.hist b{font-size:17px}.hist small{color:var(--cinza);display:block;font-size:14px;margin-top:2px}
+.hist .q{display:flex;gap:8px;align-items:center;margin-top:6px;flex-wrap:wrap}
+.hist .dia{font:800 14px/1 var(--fonte);color:var(--cinza);text-transform:uppercase;letter-spacing:.6px;margin:18px 0 4px}
+</style></head>
+<body>
+<!-- Tela W08 · Alertas. Esquerda: criar aviso (frase com campos clicáveis) + avisos ativos. Direita: histórico do que chegou no WhatsApp.
+     Tipos de aviso: (1) Entrando agora: lote do filtro entra na pista ao vivo. (2) Catálogo saiu: leilão divulgou os lotes. (3) Resumo de segunda.
+     Limite de preço relativo à Scot, para não ficar velho quando o mercado muda. Máximo de 5 avisos por dia por pessoa (anti-spam), configurável.
+     Canal padrão WhatsApp; no app também chega como notificação. -->
+<header class="w-top"><div class="in">
+  <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
+  <nav><a>Ranking</a><a>Lotes</a><a>Agenda</a><a class="is-on">Alertas</a><a>Conta</a></nav>
+  <div class="faz">📍<div>Barro Alto/GO<small>sua fazenda · trocar</small></div></div>
+  <div class="av">G</div>
+</div></header>
+<main class="w-main">
+  <h1 class="w-h1">Avisos no WhatsApp</h1><div class="w-sub">A gente avisa quando um lote do seu jeito entrar na pista.</div>
+  <div class="lay">
+    <div>
+      <div class="frase">
+        <h2>Novo aviso</h2>
+        <p>Me avise quando entrar <span class="s">bezerra ou novilha</span> de <span class="s">6 a 8@</span>, <span class="s">100% brancas</span>, até <span class="s">250 km</span>, pelo menos <span class="s">10% abaixo da Scot</span> (hoje ≈ R$ 394/@).</p>
+        <div class="rodape"><span>Chega no WhatsApp (62) 9 ••••-4567 <span class="rb-tag rb-tag--exemplo" style="background:transparent;color:#ffe48a;border-color:#ffe48a">exemplo</span></span><a class="rb-btn rb-btn--amarelo" style="min-height:52px">Criar aviso</a></div>
+      </div>
+      <h2 class="w-sec" style="margin-top:28px">Seus avisos <span class="muted" style="font-size:17px">· 3 ligados</span></h2>
+      <div class="regra"><span class="ic">🔴</span><div><b>Bezerra/novilha branca 6–8@ entrando agora</b><small>até 250 km · 10% abaixo da Scot</small><div class="cn"><span class="rb-tag">Entrando agora</span><span class="rb-tag">Catálogo saiu</span><span class="rb-tag">WhatsApp + app</span></div></div><span class="rb-toggle is-on"></span></div>
+      <div class="regra"><span class="ic">📍</span><div><b>WM Uruaçu · toda quarta</b><small>55 km · catálogo e entrada de bezerra branca</small><div class="cn"><span class="rb-tag">Catálogo saiu</span><span class="rb-tag">Entrando agora</span></div></div><span class="rb-toggle is-on"></span></div>
+      <div class="regra"><span class="ic">📅</span><div><b>Resumo de segunda</b><small>toda segunda, 6h · ranking da semana do seu filtro</small><div class="cn"><span class="rb-tag">WhatsApp</span><span class="rb-tag">PDF junto</span></div></div><span class="rb-toggle is-on"></span></div>
+      <div class="regra off"><span class="ic">📍</span><div><b>JPS Niquelândia · toda terça</b><small>73 km · desligado</small></div><span class="rb-toggle"></span></div>
+    </div>
+    <div class="w-card hist">
+      <h2 style="font-size:22px;color:var(--verde-900)">O que chegou</h2>
+      <div style="margin-top:6px"><span class="rb-tag rb-tag--exemplo">exemplo · avisos montados com lotes reais</span></div>
+      <div class="dia">qua 04/11 · WM Uruaçu</div>
+      <div class="it"><img src="../img/qP6lHvAU3Bw_10_1.jpg" alt=""><div><b>🔴 Entrando agora: 7 novilhas · 14 m</b><small>~230 kg · lance R$ 2.490 · minuto 1:43:20</small><div class="q"><span class="rb-scot rb-scot--barato num">R$ 325/@ · 26% abaixo</span><span class="rb-selo rb-selo--ok">100% brancas</span></div></div></div>
+      <div class="it"><img src="../img/qP6lHvAU3Bw_9_1.jpg" alt=""><div><b>🔴 Entrando agora: 7 novilhas · 15 m</b><small>~240 kg · lance R$ 2.650 · minuto 1:33:40</small><div class="q"><span class="rb-scot rb-scot--barato num">R$ 331/@ · 24% abaixo</span><span class="rb-selo rb-selo--ok">100% brancas</span></div></div></div>
+      <div class="dia">ter 03/11 · JPS Niquelândia</div>
+      <div class="it"><img src="../img/faPKYrIsWuU_15_1.jpg" alt=""><div><b>🔴 Entrando agora: 7 bezerras · 12 m</b><small>~210 kg · lance R$ 2.415 · minuto 2:00:50</small><div class="q"><span class="rb-scot rb-scot--barato num">R$ 345/@ · 21% abaixo</span><span class="rb-selo rb-selo--ok">100% brancas</span></div></div></div>
+      <div class="dia">qua 28/10 · WM Uruaçu</div>
+      <div class="it"><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><div><b>🔴 Entrando agora: 7 bezerras · 12 m</b><small>~210 kg · lance R$ 2.330 · minuto 1:05:30</small><div class="q"><span class="rb-scot rb-scot--barato num">R$ 333/@ · 24% abaixo</span><span class="rb-selo rb-selo--ok">100% brancas</span></div></div></div>
+      <div class="it"><img src="../img/rmlJbmSu1i4_26_1.jpg" alt=""><div><b>🔴 Entrando agora: 3 bezerras · 12 m</b><small>~210 kg · lance R$ 1.920 · minuto 2:55:10</small><div class="q"><span class="rb-scot rb-scot--barato num">R$ 274/@ · 37% abaixo</span><span class="rb-selo rb-selo--ok">100% brancas</span></div></div></div>
+    </div>
+  </div>
+</main>
+</body></html>

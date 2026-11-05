@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W09 · Conta e planos · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.lay{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start;margin-top:22px}
+.w-card{margin-bottom:18px}
+.w-card h2{font-size:21px;color:var(--verde-900);display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.w-card h2 a{font-size:16px;text-decoration:none}
+.li{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-top:1px solid #eee;font-size:17px}
+.li span{color:var(--cinza)}.li b{text-align:right}
+.fz{display:flex;gap:12px;align-items:center;padding:12px;border:1.5px solid var(--areia);border-radius:12px;margin-top:8px}
+.fz .i{width:44px;height:44px;border-radius:12px;background:var(--verde-100);display:grid;place-items:center;font-size:22px}
+.fz b{display:block;font-size:17px}.fz small{color:var(--cinza)}
+.teste{background:var(--amarelo);border-radius:18px;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px}
+.teste h2{font-size:24px;color:var(--verde-900)}.teste p{margin:4px 0 0;font-size:17px;color:#4a3a00}
+.dias{font:800 52px/1 var(--fonte);color:var(--verde-900);text-align:center}.dias small{display:block;font-size:14px;font-weight:700}
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pl>div{border:2px solid var(--areia);border-radius:14px;padding:16px;background:#fff}
+.pl>div.on{border-color:var(--verde-600);background:var(--verde-50)}
+.pl b{font-size:18px;display:block}.pl .p{font:800 28px/1.1 var(--fonte);margin:6px 0;white-space:nowrap}.pl .p small{font-size:14px;color:var(--cinza)}
+.pl ul{margin:8px 0 0;padding-left:18px;font-size:14px;color:var(--cinza)}
+.pag{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+</style></head>
+<body>
+<!-- Tela W09 · Conta e planos. Perfil, fazendas, filtro padrão, custos de recria (usados na margem do W06) e assinatura.
+     Teste grátis: 30 dias do Pro sem cartão. No dia 25, mensagem no WhatsApp com link de pagamento (Pix recorrente ou cartão).
+     Se não pagar: volta para o plano gratuito "só resumo de segunda" por mais 30 dias, depois encerra (decisão a aprovar).
+     Cancelar: 1 clique + 1 pergunta opcional de motivo. Sem ligação, sem retenção forçada. -->
+<header class="w-top"><div class="in">
+  <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
+  <nav><a>Ranking</a><a>Lotes</a><a>Agenda</a><a>Alertas</a><a class="is-on">Conta</a></nav>
+  <div class="faz">📍<div>Barro Alto/GO<small>sua fazenda · trocar</small></div></div>
+  <div class="av">G</div>
+</div></header>
+<main class="w-main">
+  <h1 class="w-h1">Sua conta</h1>
+  <div class="lay">
+    <div>
+      <div class="w-card"><h2>Você <a>Editar</a></h2>
+        <div class="li"><span>Nome</span><b>Gabriel</b></div>
+        <div class="li"><span>WhatsApp</span><b>(62) 9 ••••-4567 <span class="rb-tag rb-tag--exemplo">exemplo</span></b></div>
+        <div class="li"><span>Resumo de segunda</span><b>6h · ligado</b></div>
+      </div>
+      <div class="w-card"><h2>Fazendas <a>+ Adicionar</a></h2>
+        <div class="fz"><span class="i">📍</span><div style="flex:1"><b>Barro Alto/GO</b><small>principal · raio 250 km · 24 leilões</small></div><a>Editar</a></div>
+        <div class="muted small" style="margin-top:10px">No Fazenda+ você cadastra até 3 fazendas e 5 pessoas.</div>
+      </div>
+      <div class="w-card"><h2>O que você compra <a>Editar</a></h2>
+        <div class="rb-chips"><span class="rb-chip is-on">Fêmeas</span><span class="rb-chip is-on">10–15 m</span><span class="rb-chip is-on">6–8@</span><span class="rb-chip is-on">Só 100% brancas</span><span class="rb-chip is-on">Vender com 15@</span></div>
+      </div>
+      <div class="w-card"><h2>Seus custos <span class="rb-tag rb-tag--exemplo">exemplo</span></h2>
+        <div class="li"><span>Recria (R$ por cabeça/mês)</span><b class="num">R$ 90</b></div>
+        <div class="li"><span>Meses até vender</span><b class="num">12</b></div>
+        <div class="li"><span>Frete (R$ por cabeça)</span><b class="muted">não informado</b></div>
+        <div class="li"><span>Comissão do leilão</span><b class="muted">não informado</b></div>
+        <div class="muted small" style="margin-top:6px">Usados para calcular a margem de cada lote.</div>
+      </div>
+    </div>
+    <div>
+      <div class="teste"><div><h2>Teste grátis do Pro</h2><p>Termina em 30/11 <span class="rb-tag rb-tag--exemplo" style="background:transparent">exemplo</span>. Sem cartão cadastrado. No dia 25 a gente manda o link de pagamento no WhatsApp.</p></div><div class="dias num">25<small>dias restantes</small></div></div>
+      <div class="w-card"><h2>Planos</h2>
+        <div class="pl">
+          <div><b>Semanal</b><div class="p num">R$ 79<small>/mês</small></div><ul><li>Resumo de segunda</li><li>Ranking</li><li>Link do vídeo</li></ul></div>
+          <div class="on"><b>Pro ✓</b><div class="p num">R$ 149<small>/mês</small></div><ul><li>Painel e filtros</li><li>Aviso entrando agora</li><li>Margem com seus custos</li></ul></div>
+          <div><b>Fazenda+</b><div class="p num">R$ 399<small>/mês</small></div><ul><li>3 fazendas, 5 pessoas</li><li>Freteiros da rota</li><li>Atendimento direto</li></ul></div>
+        </div>
+        <div class="li" style="margin-top:14px"><span>Pagar por ano</span><b>R$ 1.490 no Pro · 2 meses grátis</b></div>
+        <h2 style="margin-top:16px">Como pagar</h2>
+        <div class="pag"><div class="rb-opcao is-on"><span class="box"></span><div>Pix recorrente<small>autoriza uma vez no app do banco</small></div></div><div class="rb-opcao"><span class="box"></span><div>Cartão de crédito<small>cobrança todo mês</small></div></div></div>
+        <div style="margin-top:16px"><a class="rb-btn rb-btn--pri rb-btn--full">Assinar o Pro por R$ 149/mês</a></div>
+      </div>
+      <div class="w-card"><h2>Ajuda</h2>
+        <div class="li"><span>Falar com a gente</span><b><a>WhatsApp</a></b></div>
+        <div class="li"><span>Termos de uso e privacidade</span><b><a>Ler</a></b></div>
+        <div class="li"><span>Cancelar assinatura</span><b><a style="color:var(--caro)">Cancelar</a></b></div>
+      </div>
+    </div>
+  </div>
+</main>
+</body></html>

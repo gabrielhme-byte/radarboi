@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A03 · Onboarding 2: o que compra · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.onb{flex:1;display:flex;flex-direction:column;padding:4px 20px 34px}
+.prog{display:flex;gap:6px;margin:6px 0 22px}.prog i{flex:1;height:6px;border-radius:3px;background:#dcd8cc}.prog i.on{background:var(--verde-600)}
+.onb .passo{font:800 14px/1 var(--fonte);color:var(--verde-600);text-transform:uppercase;letter-spacing:.8px}
+.onb h1{font:800 30px/1.12 var(--fonte);color:var(--verde-900);margin:8px 0 8px;letter-spacing:-.5px}
+.onb p.d{font-size:18px;color:var(--cinza);margin:0 0 20px}
+.onb .fim{margin-top:auto}
+.onb .sub-t{font:800 17px/1 var(--fonte);margin:18px 0 10px}
+.onb .rb-opcao{margin-bottom:10px}
+.topo{display:flex;justify-content:space-between;align-items:center;padding:0 20px}
+.topo a{font-weight:700;text-decoration:none;font-size:17px;min-height:44px;display:flex;align-items:center}
+.onb .rb-opcao{min-height:60px}</style></head>
+<body class="app-pg">
+<!-- A03 · Onboarding 2: o que compra. Padrão: Fêmeas, 10–15 m, 6–8@. Peso é estimado pela era (curva Scot GO). -->
+<div class="phone">
+<div class="sb"><span>9:41</span><span class="di"></span><span>▂▄▆ 4G ▭</span></div><div class="topo"><a>← Voltar</a><a>Pular</a></div>
+<div class="onb"><div class="prog"><i class="on"></i><i class="on"></i><i class=""></i></div><div class="passo">Passo 2 de 3</div>
+<h1>O que você compra?</h1><p class="d" style="margin-bottom:6px">Pode marcar mais de um.</p>
+<div class="sub-t">Sexo</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div class="rb-opcao is-on" style="margin:0"><span class="box"></span>Fêmeas</div><div class="rb-opcao" style="margin:0"><span class="box"></span>Machos</div></div>
+<div class="sub-t">Era</div>
+<div class="rb-opcao"><span class="box"></span><div>Até 9 meses<small>desmama</small></div></div>
+<div class="rb-opcao is-on"><span class="box"></span><div>10 a 15 meses<small>bezerra de ano</small></div></div>
+<div class="rb-opcao"><span class="box"></span><div>16 a 24 meses<small>novilha, garrote</small></div></div>
+<div class="sub-t">Peso estimado</div>
+<div class="rb-chips"><span class="rb-chip">até 6@</span><span class="rb-chip is-on">6 a 8@</span><span class="rb-chip">8 a 10@</span><span class="rb-chip">10@+</span></div>
+
+<div class="fim"><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:20px">Continuar</a></div></div>
+<span class="home-ind"></span>
+</div>
+</body></html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design system v1 · componentes e estados · Radar Boi</title>
+<link rel="stylesheet" href="rb.css">
+<style>
+.w-main{max-width:1320px}
+.sec{margin-top:40px}
+.sec>h2{font:800 26px/1.2 var(--fonte);color:var(--verde-900);display:flex;align-items:baseline;gap:12px}
+.sec>h2 code{font:600 15px/1 ui-monospace,Menlo,monospace;color:var(--cinza);background:#fff;border:1px solid var(--areia);padding:4px 8px;border-radius:6px}
+.sec>p{color:var(--cinza);margin:6px 0 16px;font-size:16px;max-width:900px}
+.row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.sw{width:150px;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--areia)}
+.sw i{display:block;height:74px}
+.sw div{padding:8px 10px;font-size:13px;line-height:1.35}.sw b{display:block;font-size:14px}
+.ty div{display:flex;align-items:baseline;gap:18px;padding:8px 0;border-top:1px solid var(--areia)}
+.ty small{width:180px;color:var(--cinza);font:600 13px/1.2 ui-monospace,Menlo,monospace;flex:none}
+.cell{background:#fff;border:1px solid var(--areia);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.cell small{color:var(--cinza);font:600 12px/1.2 ui-monospace,Menlo,monospace}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.est{width:282px;height:520px;border-radius:30px;background:var(--creme);box-shadow:0 0 0 8px #111;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.est .h{padding:18px 16px 10px;font:800 22px/1 var(--fonte);color:var(--verde-900)}
+.est .b{flex:1;padding:0 14px}
+.est .rb-tabbar{padding-bottom:14px}
+.est .rb-tabbar a{min-height:40px;font-size:10px}
+.lbl{font:800 15px/1 var(--fonte);margin-bottom:10px;color:var(--tinta)}
+</style></head>
+<body>
+<header class="w-top"><div class="in"><span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span><nav><a class="is-on">Design system v1</a></nav><span style="color:#cfe3d4">Componentes e estados · 05/11/2026</span></div></header>
+<main class="w-main">
+  <h1 class="w-h1">Componentes e estados</h1>
+  <div class="w-sub">Tokens e classes em <b>rb.css</b>. Regras completas no README.md. Nomes entre parênteses = nome do componente no código.</div>
+
+  <section class="sec"><h2>Cores <code>--verde-800 …</code></h2><p>Verde da marca para a estrutura, amarelo só para o que é mais importante na tela (1 por tela). Verde/vermelho também carregam sentido: barato/caro. Contraste mínimo 4,5:1 em todo texto.</p>
+    <div class="row">
+      <div class="sw"><i style="background:#163a20"></i><div><b>verde-900</b>#163a20 · títulos</div></div>
+      <div class="sw"><i style="background:#1f4d2b"></i><div><b>verde-800</b>#1f4d2b · marca, barra</div></div>
+      <div class="sw"><i style="background:#2f7a43"></i><div><b>verde-600</b>#2f7a43 · ação</div></div>
+      <div class="sw"><i style="background:#e3f1e6"></i><div><b>verde-100</b>#e3f1e6 · fundo leve</div></div>
+      <div class="sw"><i style="background:#ffd54a"></i><div><b>amarelo</b>#ffd54a · destaque</div></div>
+      <div class="sw"><i style="background:#f6f3ea"></i><div><b>creme</b>#f6f3ea · fundo</div></div>
+      <div class="sw"><i style="background:#1d1d1b"></i><div><b>tinta</b>#1d1d1b · texto</div></div>
+      <div class="sw"><i style="background:#55554f"></i><div><b>cinza</b>#55554f · texto 2</div></div>
+      <div class="sw"><i style="background:#1e7a3c"></i><div><b>barato</b>#1e7a3c / bg #dff0e3</div></div>
+      <div class="sw"><i style="background:#b3261e"></i><div><b>caro</b>#b3261e / bg #fde2e0</div></div>
+      <div class="sw"><i style="background:#7a5600"></i><div><b>aviso</b>#7a5600 / bg #fff3d6</div></div>
+      <div class="sw"><i style="background:#d32f2f"></i><div><b>aovivo</b>#d32f2f · só ao vivo</div></div>
+    </div>
+  </section>
+
+  <section class="sec"><h2>Tipografia <code>fonte do sistema</code></h2><p>San Francisco no iPhone, Roboto no Android, sem baixar fonte (sinal fraco). Números sempre com <b>tabular-nums</b>. Texto corrido nunca abaixo de 16 px no app; 14 px só para legenda.</p>
+    <div class="ty">
+      <div><small>56 / 800 · landing h1</small><span style="font:800 56px/1 var(--fonte);letter-spacing:-1.5px">R$ 325/@</span></div>
+      <div><small>40 / 800 · preço principal</small><span style="font:800 40px/1 var(--fonte)">R$ 333/@ est.</span></div>
+      <div><small>32 / 800 · título tela, KPI</small><span style="font:800 32px/1 var(--fonte)">Onde a @ está mais barata</span></div>
+      <div><small>24 / 800 · título seção</small><span style="font:800 24px/1 var(--fonte)">Leilões, do mais barato ao mais caro</span></div>
+      <div><small>20 / 800 · título de card</small><span style="font:800 20px/1 var(--fonte)">7 bezerras · 12 meses</span></div>
+      <div><small>18 / 400 · corpo app</small><span style="font-size:18px">Uruaçu · WM Leilões · 55 km · qua 28/10</span></div>
+      <div><small>16 / 400 · corpo web</small><span style="font-size:16px">O preço é o último lance que aparece na tela.</span></div>
+      <div><small>14 / 600 · legenda, selo</small><span style="font:600 14px/1 var(--fonte);color:var(--cinza)">Scot GO bezerra 12 m: R$ 438/@</span></div>
+    </div>
+  </section>
+
+  <section class="sec"><h2>Botão <code>Botao</code></h2><p>Altura mínima 48 px (56 px no principal). Um botão principal por tela. Texto sempre com verbo: "Ver no vídeo", "Assistir agora".</p>
+    <div class="row"><a class="rb-btn rb-btn--pri">▶ Ver no vídeo</a><a class="rb-btn rb-btn--sec">☆ Salvar</a><a class="rb-btn rb-btn--amarelo">Testar 30 dias grátis</a><a class="rb-btn rb-btn--wa">Receber código no WhatsApp</a><a class="rb-btn rb-btn--pri" style="background:var(--aovivo)">▶ Assistir agora</a><a class="rb-btn rb-btn--txt">Ver tudo →</a><a class="rb-btn rb-btn--pri is-disabled">Entrar</a></div>
+  </section>
+
+  <section class="sec"><h2>Chip de filtro <code>ChipFiltro</code> · Selo de cor <code>SeloCor</code> · Badge vs Scot <code>BadgeScot</code></h2>
+    <p>BadgeScot compara o R$/@ estimado do lote/leilão com a Scot GO (bezerra 12 m, R$ 438/@ em 04/11): <b>barato ≤ −3%</b>, <b>caro ≥ +3%</b>, neutro no meio. Sempre com seta + texto (não depende só da cor).</p>
+    <div class="g3">
+      <div class="cell"><small>ChipFiltro: off · on · adicionar</small><div class="rb-chips"><span class="rb-chip">Machos</span><span class="rb-chip is-on">Fêmeas</span><span class="rb-chip rb-chip--add">+ Era</span></div></div>
+      <div class="cell"><small>SeloCor: ok · nc (não conferida) · fora</small><div class="row" style="gap:8px"><span class="rb-selo rb-selo--ok">100% brancas</span><span class="rb-selo rb-selo--nc">cor não conferida</span><span class="rb-selo rb-selo--fora">tem animal de outra cor</span></div></div>
+      <div class="cell"><small>BadgeScot: barato · neutro · caro</small><div class="row" style="gap:8px"><span class="rb-scot rb-scot--barato">26% abaixo</span><span class="rb-scot rb-scot--neutro">igual Scot</span><span class="rb-scot rb-scot--caro">4% acima</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec"><h2>KPI <code>Kpi</code> · Card de leilão <code>CardLeilao</code></h2>
+    <div style="display:grid;grid-template-columns:280px 280px 1fr;gap:14px;align-items:start">
+      <div class="rb-kpi rb-kpi--destaque"><div class="rot">Mais barato</div><div class="val num">R$ 325<small>/@</small></div><div class="sub">Uruaçu · 55 km · qua 28/10</div></div>
+      <div class="rb-kpi"><div class="rot">Margem média até 15@</div><div class="val num">R$ 2.406<small>/cab</small></div><div class="sub">sem recria, frete e comissão</div></div>
+      <article class="rb-leilao is-1"><span class="pos">1º</span>
+        <div><div class="nome">Uruaçu <span class="casa">· WM Leilões</span></div><div class="meta num"><span>📍 <b>55 km</b></span><span>📅 qua 28/10</span><span><b>20 cab.</b> em 5 lotes</span></div></div>
+        <div class="preco"><div class="v g num">R$ 325<small>/@</small></div><span class="rb-scot rb-scot--barato">26% abaixo da Scot</span></div>
+        <div class="barra"><i style="width:65%"></i><span class="scot" style="left:87.6%"></span></div></article>
+    </div>
+  </section>
+
+  <section class="sec"><h2>Card de lote <code>CardLote</code> · Alerta <code>Alerta</code> · Faixa ao vivo <code>FaixaAoVivo</code> · Tab bar <code>TabBar</code></h2>
+    <div style="display:grid;grid-template-columns:360px 1fr;gap:20px;align-items:start">
+      <article class="rb-lote"><div class="foto"><img src="img/rmlJbmSu1i4_10_1.jpg" alt=""><span class="rb-selo rb-selo--ok">100% brancas</span><span class="min">▶ 1:05:30</span></div>
+        <div class="corpo"><div class="tit"><h3>7 bezerras · 12 m</h3><span class="cab num">R$ 2.330<small>/cab</small></span></div>
+        <div class="linha"><span class="arroba num">R$ 333/@</span><span class="rb-scot rb-scot--barato">24% abaixo da Scot</span></div>
+        <div class="meta">Uruaçu · 55 km · qua 28/10 · ~210 kg</div>
+        <div class="acoes"><a class="rb-btn rb-btn--pri">▶ Ver no vídeo</a><a class="rb-btn rb-btn--sec">☆ Salvar</a></div></div></article>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="rb-aovivo"><span class="rb-tag rb-tag--aovivo">AO VIVO</span><div class="t"><b>WM Uruaçu · lote 10</b>7 bezerras · R$ 333/@</div><span style="font-size:24px">▶</span></div>
+        <div class="rb-alerta"><span class="ic">🔴</span><div><h4>Entrando agora · WM Uruaçu</h4><p>7 bezerras brancas · 12 m · R$ 2.330 = R$ 333/@</p></div></div>
+        <div class="rb-alerta rb-alerta--info"><span class="ic">📋</span><div><h4>Catálogo saiu · WM Uruaçu</h4><p>41 lotes. A gente avisa quando a bezerra branca entrar.</p></div></div>
+        <div class="rb-alerta rb-alerta--aviso"><span class="ic">⚠️</span><div><h4>Peso estimado pela era</h4><p>A tela do leilão não mostra o peso.</p></div></div>
+        <div class="rb-alerta rb-alerta--erro"><span class="ic">✕</span><div><h4>Não deu para atualizar</h4><p>Mostrando os dados de 05/11. Tentar de novo.</p></div></div>
+        <div style="max-width:420px;border:1px solid var(--areia);border-radius:14px;overflow:hidden"><nav class="rb-tabbar" style="padding-bottom:10px"><a class="is-on"><span class="i">⌂</span>Início</a><a><span class="i">🐂</span>Lotes</a><a><span class="i">📅</span>Agenda</a><a><span class="i">🔔</span>Alertas<span class="bol">2</span></a><a><span class="i">👤</span>Conta</a></nav></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec"><h2>Estados <code>EstadoVazio · Carregando · EstadoErro · SemSinal</code></h2><p>Toda lista tem os quatro. Sem sinal é o caso mais comum no campo: o app abre o que já tem salvo e diz de quando é.</p>
+    <div class="row" style="gap:22px;align-items:flex-start;flex-wrap:nowrap">
+      <div><div class="lbl">Vazio (filtro sem lote)</div><div class="est"><div class="h">Lotes</div><div class="b">
+        <div class="rb-chips" style="margin-bottom:10px"><span class="rb-chip is-on" style="font-size:13px;min-height:32px">Machos</span><span class="rb-chip is-on" style="font-size:13px;min-height:32px">até 6@</span><span class="rb-chip is-on" style="font-size:13px;min-height:32px">50 km</span></div>
+        <div class="rb-vazio"><div class="ic">🔍</div><h4>Nenhum lote com esses filtros</h4><p>Nos leilões de 26/10 a 04/11 não teve lote assim até 50 km.</p><span class="rb-tag rb-tag--exemplo">exemplo</span><a class="rb-btn rb-btn--pri" style="margin-top:8px;font-size:16px">Aumentar para 250 km</a><br><a class="rb-btn rb-btn--txt" style="font-size:16px">🔔 Avisar quando surgir</a></div>
+      </div><nav class="rb-tabbar"><a><span class="i">⌂</span>Início</a><a class="is-on"><span class="i">🐂</span>Lotes</a><a><span class="i">📅</span>Agenda</a><a><span class="i">🔔</span>Alertas</a><a><span class="i">👤</span>Conta</a></nav></div></div>
+
+      <div><div class="lbl">Carregando (esqueleto)</div><div class="est"><div class="h">Lotes</div><div class="b">
+        <div class="rb-sk" style="height:96px;border-radius:14px"></div><div class="rb-sk" style="height:20px;width:70%;margin-top:12px"></div><div class="rb-sk" style="height:16px;width:45%;margin-top:8px"></div><div class="rb-sk" style="height:40px;margin-top:12px;border-radius:12px"></div>
+        <div class="rb-sk" style="height:96px;border-radius:14px;margin-top:18px"></div><div class="rb-sk" style="height:20px;width:60%;margin-top:12px"></div>
+        <div class="muted small" style="text-align:center;margin-top:14px">Mostra o esqueleto só depois de 300 ms.</div>
+      </div><nav class="rb-tabbar"><a><span class="i">⌂</span>Início</a><a class="is-on"><span class="i">🐂</span>Lotes</a><a><span class="i">📅</span>Agenda</a><a><span class="i">🔔</span>Alertas</a><a><span class="i">👤</span>Conta</a></nav></div></div>
+
+      <div><div class="lbl">Erro</div><div class="est"><div class="h">Lotes</div><div class="b">
+        <div class="rb-vazio"><div class="ic">⚠️</div><h4>Não deu para carregar</h4><p>O problema foi do nosso lado. Seus filtros estão salvos.</p><a class="rb-btn rb-btn--pri" style="margin-top:8px;font-size:16px">Tentar de novo</a><br><a class="rb-btn rb-btn--txt" style="font-size:16px">💬 Avisar no WhatsApp</a></div>
+      </div><nav class="rb-tabbar"><a><span class="i">⌂</span>Início</a><a class="is-on"><span class="i">🐂</span>Lotes</a><a><span class="i">📅</span>Agenda</a><a><span class="i">🔔</span>Alertas</a><a><span class="i">👤</span>Conta</a></nav></div></div>
+
+      <div><div class="lbl">Sem sinal</div><div class="est"><div class="rb-offline">📶 Sem sinal · mostrando o que foi salvo em 05/11, 06:00</div><div class="h" style="padding-top:12px">Início</div><div class="b">
+        <div class="rb-kpi rb-kpi--destaque"><div class="rot">Mais barato · 26/10 a 04/11</div><div class="val num">R$ 325<small>/@</small></div><div class="sub">Uruaçu · 55 km</div></div>
+        <div class="rb-nota" style="margin-top:10px">Fotos e vídeo voltam quando o sinal voltar. Os preços e o ranking funcionam sem internet.</div>
+      </div><nav class="rb-tabbar"><a class="is-on"><span class="i">⌂</span>Início</a><a><span class="i">🐂</span>Lotes</a><a><span class="i">📅</span>Agenda</a><a><span class="i">🔔</span>Alertas</a><a><span class="i">👤</span>Conta</a></nav></div></div>
+    </div>
+  </section>
+  <div style="height:30px"></div>
+</main>
+</body></html>

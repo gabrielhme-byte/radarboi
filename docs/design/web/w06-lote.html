@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W06 · Detalhe do lote · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.bc{color:var(--cinza);font-size:15px;margin-bottom:14px}.bc a{text-decoration:none;font-weight:600}
+.lay{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;align-items:start}
+.gal .big{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:21/8;background:#000}
+.gal .big img{width:100%;height:100%;object-fit:cover;display:block}
+.gal .big .rb-selo{position:absolute;left:14px;top:14px;font-size:16px;padding:8px 12px}
+.gal .big .min{position:absolute;right:14px;bottom:14px;background:#000000c0;color:#fff;border-radius:10px;padding:10px 14px;font:800 17px/1 var(--fonte)}
+.gal .th{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.gal .th img{width:100%;aspect-ratio:21/8;object-fit:cover;border-radius:10px;display:block;border:3px solid transparent}
+.gal .th img.on{border-color:var(--verde-600)}
+.conf{display:flex;gap:12px;align-items:center;background:var(--verde-50);border:1px solid #cfe5d4;border-radius:14px;padding:14px 16px;margin-top:14px}
+.conf b{font-size:17px}.conf p{margin:2px 0 0;color:var(--cinza);font-size:15px}
+.preco{background:#fff;border:1px solid var(--areia);border-radius:18px;padding:24px}
+.preco h1{font:800 32px/1.1 var(--fonte);letter-spacing:-.5px}
+.preco .sub{color:var(--cinza);font-size:17px;margin-top:6px}
+.preco .big{display:flex;align-items:flex-end;gap:16px;margin:20px 0 6px}
+.preco .big .v{font:800 52px/1 var(--fonte);letter-spacing:-1.5px}
+.preco .big .v small{font-size:20px;color:var(--cinza);font-weight:700;letter-spacing:0}
+.preco .lance{color:var(--cinza);font-size:15px}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.grid4 div{background:var(--creme);border-radius:12px;padding:12px 14px}
+.grid4 small{display:block;color:var(--cinza);font:600 14px/1.2 var(--fonte)}
+.grid4 b{font:800 24px/1.2 var(--fonte)}
+.acoes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.acoes .rb-btn--pri{grid-column:1/3;font-size:20px}
+.calc{margin-top:16px}
+.calc h3{font-size:19px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.calc .l{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid #eee;font-size:17px}
+.calc .l.t{font-weight:800;font-size:20px}
+.info{margin-top:24px}
+.info .w-card{margin-bottom:16px}
+.info dl{display:grid;grid-template-columns:200px 1fr;gap:10px 16px;margin:0;font-size:17px}
+.info dt{color:var(--cinza)}.info dd{margin:0;font-weight:700}
+.outros .it{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:12px 0;border-top:1px solid #eee}
+.outros .it b{font-size:17px}.outros small{color:var(--cinza);display:block}
+</style></head>
+<body>
+<!-- Tela W06 · Detalhe do lote.
+     Dados: lote rmlJbmSu1i4 · 7 bezerras 12 m · R$ 2.330 · ~210 kg · minuto 01:05:30 · cor ok (data.json).
+     "▶ Assistir no minuto" abre https://youtu.be/rmlJbmSu1i4?t=3930. Miniaturas trocam a foto grande (3 imagens da conferência).
+     Calculadora "com seus custos": só no Pro; valores vêm do perfil (W09) e podem ser editados aqui (não salvam sem confirmar).
+     "Reportar erro" abre formulário curto (preço, quantidade, cor, outro). -->
+<header class="w-top"><div class="in">
+  <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
+  <nav><a>Ranking</a><a class="is-on">Lotes</a><a>Agenda</a><a>Alertas</a><a>Conta</a></nav>
+  <div class="faz">📍<div>Barro Alto/GO<small>sua fazenda · trocar</small></div></div>
+  <div class="av">G</div>
+</div></header>
+<main class="w-main">
+  <div class="bc"><a>← Lotes</a> · Uruaçu · qua 28/10 · lote 10</div>
+  <div class="lay">
+    <div>
+      <div class="gal">
+        <div class="big"><img src="../img/rmlJbmSu1i4_10_2.jpg" alt="7 bezerras brancas na pista"><span class="rb-selo rb-selo--ok">100% brancas</span><span class="min">▶ 1:05:30</span></div>
+        <div class="th"><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><img class="on" src="../img/rmlJbmSu1i4_10_2.jpg" alt=""><img src="../img/rmlJbmSu1i4_10_3.jpg" alt=""></div>
+      </div>
+      <div class="conf"><span class="rb-selo rb-selo--ok">Conferido</span><div><b>Cor conferida em 3 imagens</b><p>Todas as 7 cabeças brancas. Neste leilão, 15 lotes passaram e 26 ficaram de fora.</p></div></div>
+      <div class="info">
+        <div class="w-card"><h3 style="font-size:20px;margin-bottom:14px">Sobre o leilão</h3>
+          <dl class="num"><dt>Leiloeira</dt><dd>WM Leilões · Sindicato Rural de Uruaçu</dd><dt>Leilão</dt><dd>Gado de Corte (semanal de quarta)</dd><dt>Data</dt><dd>quarta, 28/10/2026</dd><dt>Distância</dt><dd>55 km em linha reta (≈ 66–72 km pela estrada)</dd><dt>Próximo</dt><dd>quarta, 11/11 · horário a confirmar</dd></dl>
+        </div>
+        <div class="w-card outros"><h3 style="font-size:20px;margin-bottom:6px">Outras bezerras brancas neste leilão</h3>
+          <div class="it"><div><b>3 bezerras · 12 m</b><small>minuto 2:55:10</small></div><b class="num">R$ 1.920</b><span class="rb-scot rb-scot--barato num">R$ 274/@ · 37% abaixo</span></div>
+          <div class="it"><div><b>2 bezerras · 12 m</b><small>minuto 3:14:50</small></div><b class="num">R$ 2.240</b><span class="rb-scot rb-scot--barato num">R$ 320/@ · 27% abaixo</span></div>
+          <div class="it"><div><b>2 bezerras · 12 m</b><small>minuto 3:04:10</small></div><b class="num">R$ 2.320</b><span class="rb-scot rb-scot--barato num">R$ 331/@ · 24% abaixo</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="preco">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start"><div><h1>7 bezerras · 12 meses</h1><div class="sub">Nelore · Uruaçu · 55 km · qua 28/10</div></div><a class="star" style="font-size:30px;color:#b08700;text-decoration:none">☆</a></div>
+        <div class="big"><div class="v g num">R$ 333<small>/@ est.</small></div><span class="rb-scot rb-scot--barato" style="font-size:17px;padding:7px 12px;margin-bottom:6px">24% abaixo da Scot</span></div>
+        <div class="lance">Scot GO bezerra 12 m: R$ 438/@ (R$ 3.063/cab), 04/11</div>
+        <div class="grid4 num">
+          <div><small>Último lance na tela</small><b>R$ 2.330/cab</b></div>
+          <div><small>Lote inteiro (7 cab.)</small><b>R$ 16.310</b></div>
+          <div><small>Peso estimado</small><b>~210 kg · 7@</b></div>
+          <div><small>R$ por kg</small><b>R$ 11,10</b></div>
+        </div>
+        <div class="acoes"><a class="rb-btn rb-btn--pri" href="https://youtu.be/rmlJbmSu1i4?t=3930">▶ Assistir no minuto 1:05:30</a><a class="rb-btn rb-btn--sec">🔔 Avisar parecido</a><a class="rb-btn rb-btn--sec">📤 Mandar no WhatsApp</a></div>
+      </div>
+      <div class="preco calc">
+        <h3>Margem até 15@ <span class="rb-tag rb-tag--margem">plano Pro</span></h3>
+        <div class="l num"><span>Venda: 15@ × R$ 364,71 (Datagro, 04/11)</span><b>R$ 5.471</b></div>
+        <div class="l num"><span>Compra</span><b>− R$ 2.330</b></div>
+        <div class="l t num"><span>Margem bruta por cabeça</span><span class="g">R$ 3.141</span></div>
+        <div class="l num" style="color:var(--cinza)"><span>Recria: R$ 90/cab/mês × 12 meses <span class="rb-tag rb-tag--exemplo">exemplo</span></span><b>− R$ 1.080</b></div>
+        <div class="l t num"><span>Com o seu custo</span><span>R$ 2.061/cab</span></div>
+        <div class="muted small" style="margin-top:6px">Sem frete e comissão. <a>Editar meus custos</a></div>
+      </div>
+      <div class="rb-nota" style="margin-top:16px">O preço é o último lance que aparece na tela, não venda confirmada. Confira no vídeo. <a>Reportar erro neste lote</a></div>
+    </div>
+  </div>
+</main>
+</body></html>

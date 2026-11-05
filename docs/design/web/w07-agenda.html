@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W07 · Agenda · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.sem{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:22px}
+.dh{background:var(--verde-800);color:#fff;border-radius:14px;padding:12px 14px;font:800 24px/1 var(--fonte);margin-bottom:12px;display:flex;gap:10px;align-items:baseline}
+.dh small{font-size:15px;color:var(--amarelo)}
+.ev{background:#fff;border:1px solid var(--areia);border-radius:14px;padding:14px;margin-bottom:10px}
+.ev.is-av{border:2px solid var(--verde-600);box-shadow:var(--sombra)}
+.ev .t{font:800 18px/1.2 var(--fonte)}.ev .casa{color:var(--cinza);font-size:14px}
+.ev .km{font-size:14px;margin-top:8px;color:var(--tinta)}
+.ev .ul{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;padding-top:10px;border-top:1px solid #eee;font-size:14px;color:var(--cinza)}
+.ev .ul b{font:800 19px/1 var(--fonte)}
+.ev .av{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-weight:700;font-size:15px}
+.ev .av .rb-toggle{transform:scale(.85);transform-origin:right}
+.barra{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.nav{display:flex;gap:8px;align-items:center}.nav span{font:800 20px/1 var(--fonte);padding:0 10px}
+.nav a{width:44px;height:44px;border-radius:12px;border:1.5px solid var(--areia);background:#fff;display:grid;place-items:center;text-decoration:none;font-size:20px}
+</style></head>
+<body>
+<!-- Tela W07 · Agenda dos próximos leilões no raio.
+     Fonte: leilões semanais já lidos (dia da semana repetido). Horário só aparece quando a leiloeira divulga (até lá: "horário a confirmar").
+     "Última (data)": R$/@ média das fêmeas 6–8@ na última edição lida. Verde/vermelho = abaixo/acima da Scot (±3%).
+     Selo "brancas" = preço só de lotes 100% brancos conferidos; "cor não conf." = todos os lotes.
+     Toggle "Avisar": manda no WhatsApp quando o catálogo sair e quando entrar lote do filtro na pista. Card com aviso ligado tem borda verde. -->
+<header class="w-top"><div class="in">
+  <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
+  <nav><a>Ranking</a><a>Lotes</a><a class="is-on">Agenda</a><a>Alertas</a><a>Conta</a></nav>
+  <div class="faz">📍<div>Barro Alto/GO<small>sua fazenda · trocar</small></div></div>
+  <div class="av">G</div>
+</div></header>
+<main class="w-main">
+  <h1 class="w-h1">Próximos leilões</h1><div class="w-sub">15 leilões até 250 km de Barro Alto/GO · previsão pelos leilões semanais</div>
+  <div class="barra">
+    <div class="nav"><a>‹</a><span>Semana de 09 a 13/11</span><a>›</a></div>
+    <div class="rb-chips"><span class="rb-chip is-on">Até 250 km</span><span class="rb-chip">Só com aviso ligado</span><span class="rb-chip">Lista</span></div>
+  </div>
+  <div class="sem"><div class="col"><div class="dh hoje"><small>SEG</small>09/11</div><div class="ev is-av"><div class="t">Goianésia</div><div class="casa">Neto Leilões e Niusmar</div>
+<div class="km num">📍 45 km · horário a confirmar</div>
+<div class="ul num"><span>Última (26/10)</span><b class="g">R$ 374/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle is-on"></span></div></div><div class="ev"><div class="t">Nova Glória</div><div class="casa">CBN Leilões Rurais</div>
+<div class="km num">📍 74 km · horário a confirmar</div>
+<div class="ul num"><span>Última (02/11)</span><b class="g">R$ 412/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div><div class="ev"><div class="t">Porangatu</div><div class="casa">Brasil Leilões</div>
+<div class="km num">📍 172 km · horário a confirmar</div>
+<div class="ul num"><span>Última (26/10)</span><b class="r">R$ 456/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--ok">brancas</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div></div><div class="col"><div class="dh"><small>TER</small>10/11</div><div class="ev is-av"><div class="t">Niquelândia</div><div class="casa">JPS Leilões</div>
+<div class="km num">📍 73 km · horário a confirmar</div>
+<div class="ul num"><span>Última (03/11)</span><b class="g">R$ 339/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--ok">brancas</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle is-on"></span></div></div><div class="ev"><div class="t">Santa Terezinha</div><div class="casa">Boi Verde Leilões</div>
+<div class="km num">📍 105 km · horário a confirmar</div>
+<div class="ul num"><span>Última (03/11)</span><b class="g">R$ 390/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div><div class="ev"><div class="t">Mara Rosa</div><div class="casa">Mara Rosa Leilões</div>
+<div class="km num">📍 110 km · horário a confirmar</div>
+<div class="ul num"><span>Última (03/11)</span><b class="g">R$ 354/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div><div class="ev"><div class="t">Bela Vista de Goiás</div><div class="casa">Giraboi Leilões</div>
+<div class="km num">📍 223 km · horário a confirmar</div>
+<div class="ul num"><span>Última (03/11)</span><b class="g">R$ 369/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div></div><div class="col"><div class="dh"><small>QUA</small>11/11</div><div class="ev is-av"><div class="t">Uruaçu</div><div class="casa">WM Leilões · Sind. Rural</div>
+<div class="km num">📍 55 km · horário a confirmar</div>
+<div class="ul num"><span>Última (04/11)</span><b class="g">R$ 328/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--ok">brancas</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle is-on"></span></div></div><div class="ev"><div class="t">Corumbá de Goiás</div><div class="casa">Corumbá Leilões</div>
+<div class="km num">📍 107 km · horário a confirmar</div>
+<div class="ul num"><span>Última (04/11)</span><b class="g">R$ 397/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div><div class="ev"><div class="t">Trombas</div><div class="casa">Trombas Leilões</div>
+<div class="km num">📍 163 km · horário a confirmar</div>
+<div class="ul num"><span>Última (28/10)</span><b class="g">R$ 355/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div><div class="ev"><div class="t">Porangatu</div><div class="casa">Sindicato Rural</div>
+<div class="km num">📍 172 km · horário a confirmar</div>
+<div class="ul num"><span>Última (04/11)</span><b class="g">R$ 399/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div></div><div class="col"><div class="dh"><small>QUI</small>12/11</div><div class="ev"><div class="t">Porangatu</div><div class="casa">Leiloeste</div>
+<div class="km num">📍 172 km · horário a confirmar</div>
+<div class="ul num"><span>Última (29/10)</span><b class="g">R$ 373/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div><div class="ev"><div class="t">São Miguel do Araguaia</div><div class="casa">Cristiano Reis</div>
+<div class="km num">📍 232 km · horário a confirmar</div>
+<div class="ul num"><span>Última (29/10)</span><b class="g">R$ 326/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div></div><div class="col"><div class="dh"><small>SEX</small>13/11</div><div class="ev"><div class="t">Campinorte</div><div class="casa">Bambu Leilões</div>
+<div class="km num">📍 77 km · horário a confirmar</div>
+<div class="ul num"><span>Última (30/10)</span><b class="g">R$ 371/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div><div class="ev"><div class="t">Nova Crixás</div><div class="casa">Araguaia Leilões</div>
+<div class="km num">📍 181 km · horário a confirmar</div>
+<div class="ul num"><span>Última (30/10)</span><b class="g">R$ 317/@</b></div><div style="margin-top:6px"><span class="rb-selo rb-selo--nc">cor não conf.</span></div>
+<div class="av"><span>🔔 Avisar</span><span class="rb-toggle"></span></div></div></div></div>
+  <div class="rb-nota" style="margin-top:8px">Os leilões semanais se repetem no mesmo dia. Quando a leiloeira divulga horário e catálogo, a agenda atualiza e quem ligou o aviso recebe no WhatsApp.</div>
+</main>
+</body></html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W03 · Onboarding · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.hd{background:#fff;border-bottom:1px solid var(--areia)}
+.hd .in{max-width:1240px;margin:0 auto;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+.stepper{display:flex;gap:8px;align-items:center;font:700 15px/1 var(--fonte);color:var(--cinza)}
+.stepper span{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px}
+.stepper span i{font-style:normal;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#e8e5db}
+.stepper span.ok i{background:var(--verde-600);color:#fff}
+.stepper span.on{background:var(--verde-100);color:var(--verde-900)}.stepper span.on i{background:var(--verde-800);color:var(--amarelo)}
+.lay{max-width:1240px;margin:0 auto;padding:32px 28px;display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start}
+.blk{background:#fff;border:1px solid var(--areia);border-radius:18px;padding:26px;margin-bottom:20px}
+.blk h2{font:800 24px/1.2 var(--fonte);color:var(--verde-900);display:flex;align-items:center;gap:12px}
+.blk h2 i{font-style:normal;width:34px;height:34px;border-radius:10px;background:var(--amarelo);display:grid;place-items:center;font-size:18px}
+.blk p.d{color:var(--cinza);margin:6px 0 18px;font-size:17px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mapa{height:210px;border-radius:14px;background:
+  radial-gradient(circle at 46% 52%,#2f7a4340 0 92px,transparent 93px),
+  radial-gradient(circle at 46% 52%,#2f7a43 0 7px,transparent 8px),
+  linear-gradient(135deg,#e8efe0,#dfe8d5);position:relative;border:1px solid #cfd8c4;overflow:hidden}
+.mapa .pin{position:absolute;font:700 13px/1 var(--fonte);background:#fff;padding:5px 8px;border-radius:8px;box-shadow:0 1px 3px #0003;white-space:nowrap}
+.mapa .eu{left:46%;top:52%;transform:translate(-50%,-150%);background:var(--verde-800);color:#fff}
+.mapa .circ{position:absolute;left:46%;top:52%;width:184px;height:184px;margin:-92px 0 0 -92px;border:2px dashed var(--verde-600);border-radius:50%}
+.sub-t{font:700 16px/1 var(--fonte);margin:18px 0 10px;color:var(--tinta)}
+.raio{display:flex;justify-content:space-between;color:var(--cinza);font-size:14px;font-weight:600}
+.raio-v{font:800 40px/1 var(--fonte);color:var(--verde-900)}
+.lado{position:sticky;top:20px}
+.res{background:var(--verde-800);color:#fff;border-radius:18px;padding:24px}
+.res h3{font-size:16px;color:#cfe3d4;font-weight:600}
+.res .big{font:800 44px/1 var(--fonte);color:var(--amarelo);margin:8px 0 2px}
+.res .row{display:flex;justify-content:space-between;padding:12px 0;border-top:1px solid #ffffff22;font-size:17px}
+.res .row b{font-variant-numeric:tabular-nums}
+.res .warn{background:#ffffff14;border-radius:12px;padding:12px;font-size:15px;color:#e6efe8;margin-top:12px}
+</style></head>
+<body>
+<!-- Tela W03 · Onboarding (web). 4 blocos numa página só, com resumo vivo à direita ("Seu radar").
+     Comportamento: cada mudança recalcula o resumo na hora (leilões no raio, lotes e cabeças da última quinzena).
+     Padrões: fazenda pelo GPS/cidade; Fêmeas; 6–8@; 250 km; "Só 100% brancas" LIGADO; vender com 15@.
+     "Pular" leva ao painel com os padrões. Campos salvos no perfil (Conta, W09) e editáveis depois. -->
+<div class="hd"><div class="in">
+  <span class="rb-logo"><i>◎</i>Radar Boi</span>
+  <div class="stepper"><span class="ok"><i>✓</i>WhatsApp</span><span class="on"><i>2</i>Seu radar</span><span><i>3</i>Pronto</span></div>
+  <a class="rb-btn rb-btn--txt">Pular, usar o padrão</a>
+</div></div>
+<div class="lay">
+  <div>
+    <h1 class="w-h1">Monte o seu radar</h1>
+    <p class="w-sub" style="margin-bottom:24px">Quatro perguntas. Dá para mudar tudo depois.</p>
+
+    <section class="blk"><h2><i>📍</i>Onde fica a fazenda?</h2><p class="d">A distância de cada leilão é contada a partir daqui.</p>
+      <div class="g2" style="grid-template-columns:1.3fr 1fr">
+        <div>
+          <label class="rb-campo">Cidade da fazenda<div class="ent is-foco">Barro Alto/GO</div></label>
+          <div style="margin-top:12px"><a class="rb-btn rb-btn--sec rb-btn--full">📍 Usar minha localização agora</a></div>
+          <label class="rb-campo" style="margin-top:14px"><span>Nome da fazenda <span class="ajuda" style="display:inline">(opcional)</span></span><div class="ent" style="color:#9a988f">Ex.: Fazenda Boa Vista</div></label>
+        </div>
+        <div class="mapa"><div class="circ"></div><span class="pin eu">◎ Barro Alto</span><span class="pin" style="left:14%;top:16%">Uruaçu · 55 km</span><span class="pin" style="left:44%;top:24%">Niquelândia · 73 km</span><span class="pin" style="left:12%;top:74%">Goianésia · 45 km</span></div>
+      </div>
+    </section>
+
+    <section class="blk"><h2><i>🐂</i>O que você compra?</h2><p class="d">Marque tudo que interessa. O ranking abre no primeiro que você marcar.</p>
+      <div class="sub-t">Sexo</div>
+      <div class="g3"><div class="rb-opcao is-on"><span class="box"></span><div>Fêmeas<small>bezerra, novilha</small></div></div><div class="rb-opcao"><span class="box"></span><div>Machos<small>bezerro, garrote</small></div></div><div class="rb-opcao"><span class="box"></span>Tanto faz</div></div>
+      <div class="sub-t">Era</div>
+      <div class="g3"><div class="rb-opcao"><span class="box"></span><div>Até 9 meses<small>desmama</small></div></div><div class="rb-opcao is-on"><span class="box"></span><div>10 a 15 meses<small>bezerra de ano</small></div></div><div class="rb-opcao"><span class="box"></span><div>16 a 24 meses<small>novilha / garrote</small></div></div></div>
+      <div class="sub-t">Peso estimado</div>
+      <div class="rb-chips"><span class="rb-chip">até 6@</span><span class="rb-chip is-on">6 a 8@ (recria)</span><span class="rb-chip">8 a 10@</span><span class="rb-chip">acima de 10@</span></div>
+      <div class="sub-t">Vende com quantas @?</div>
+      <div class="rb-chips"><span class="rb-chip">13@</span><span class="rb-chip">14@</span><span class="rb-chip is-on">15@</span><span class="rb-chip">16@</span></div>
+    </section>
+
+    <section class="blk"><h2><i>🛣️</i>Até onde você busca gado?</h2><p class="d">Distância em linha reta. Pela estrada, some 20 a 30%.</p>
+      <div style="display:flex;align-items:baseline;gap:10px"><span class="raio-v num">250 km</span><span class="muted">24 leilões cobertos neste raio</span></div>
+      <div class="rb-slider"><i style="width:44%"></i><b style="left:44%"></b></div>
+      <div class="raio num"><span>50 km</span><span>500 km</span></div><div class="muted small" style="margin-top:8px">100 km: 9 leilões · 150 km: 14 · 250 km: 24 · 500 km: 25</div>
+    </section>
+
+    <section class="blk"><h2><i>✓</i>Cor do lote</h2><p class="d">Conferimos três imagens de cada lote. Se aparecer um animal de outra cor, o lote perde o selo.</p>
+      <div class="g2">
+        <div class="rb-opcao is-on"><span class="box"></span><div>Só lotes 100% brancos<small>Nelore branco ou branco-acinzentado claro. Mostra só lote conferido.</small></div></div>
+        <div class="rb-opcao"><span class="box"></span><div>Mostrar todos<small>Inclui lote não conferido. Lote com animal de outra cor aparece marcado.</small></div></div>
+      </div>
+    </section>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><a class="rb-btn rb-btn--txt">← Voltar</a><a class="rb-btn rb-btn--pri" style="padding:0 40px;font-size:20px">Ver meu ranking →</a></div>
+  </div>
+
+  <aside class="lado">
+    <div class="res">
+      <h3>Seu radar, nos leilões de 26/10 a 04/11</h3>
+      <div class="big num">16 lotes</div><div style="color:#cfe3d4">bezerras e novilhas 6–8@, 100% brancas</div>
+      <div class="row" style="margin-top:16px"><span>Leilões até 250 km</span><b>24</b></div>
+      <div class="row"><span>Cabeças que servem</span><b>353</b></div>
+      <div class="row"><span>Mais barato</span><b>Uruaçu · R$ 325/@</b></div>
+      <div class="row"><span>Referência Scot GO</span><b>R$ 438/@</b></div>
+      <div class="warn">Sem o filtro de cor seriam <b>269 lotes</b> (3.331 cab.). Só 16 passaram na conferência de cor, porque a maioria dos lotes ainda não foi conferida.</div>
+    </div>
+    <div class="rb-nota" style="margin-top:14px">O resumo de segunda e os avisos vão usar estas escolhas.</div>
+  </aside>
+</div>
+</body></html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A05 · Início · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.hi{font:800 26px/1.15 var(--fonte);color:var(--verde-900)}.hi small{display:block;font:600 15px/1.3 var(--fonte);color:var(--cinza)}
+.dest{background:var(--verde-800);color:#fff;border-radius:18px;padding:16px 18px;margin-top:12px}
+.dest .r{font:600 14px/1.2 var(--fonte);color:#cfe3d4;text-transform:uppercase;letter-spacing:.6px}
+.dest .v{font:800 44px/1 var(--fonte);color:var(--amarelo);margin:8px 0 4px;letter-spacing:-1px}.dest .v small{font-size:20px}
+.dest .l{font-size:17px}
+.dest .s{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.mini{background:#fff;border:1px solid var(--areia);border-radius:16px;overflow:hidden}
+.mini .it{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:12px 14px;border-top:1px solid #eee}
+.mini .it:first-child{border-top:0}
+.mini .p{font:800 17px/1 var(--fonte);color:var(--verde-800)}
+.mini b{font-size:17px}.mini small{display:block;color:var(--cinza);font-size:14px}
+.mini .v{text-align:right;font:800 19px/1.1 var(--fonte)}.mini .v small{font-size:12px;font-weight:800}
+</style></head>
+<body class="app-pg">
+<!-- A05 · Início. Ordem: faixa ao vivo (só quando tem leilão do raio no ar), destaque do mais barato, ranking resumido. Pull-to-refresh. Offline: mostra a última versão com a faixa 'sem sinal'. -->
+<div class="phone">
+<div class="sb"><span>9:41</span><span class="di"></span><span>▂▄▆ 4G ▭</span></div>
+<div class="a-hd"><div class="hi">Bom dia, Gabriel<small>📍 Barro Alto/GO · até 250 km</small></div><span class="ic">🔔<span class="bol">2</span></span></div>
+<div class="a-body">
+  <div class="rb-aovivo"><span class="rb-tag rb-tag--aovivo">AO VIVO</span><div class="t"><b>WM Uruaçu · lote 10</b>7 bezerras · R$ 333/@</div><span style="font-size:26px">▶</span></div>
+  <div style="margin-top:4px;text-align:right"><span class="rb-tag rb-tag--exemplo">exemplo · lote real de 28/10</span></div>
+  <div class="dest">
+    <div class="r">Mais barato · 26/10 a 04/11</div>
+    <div class="v num">R$ 325<small>/@</small></div>
+    <div class="l">Uruaçu · WM Leilões · 55 km · qua 28/10</div>
+    <div class="s"><span class="rb-scot rb-scot--barato">26% abaixo da Scot</span><span class="rb-tag" style="background:#ffffff1f;color:#fff">20 cab. · 5 lotes</span></div>
+  </div>
+  <div class="a-sec">Ranking da semana <a>Ver tudo</a></div>
+  <div class="mini num">
+    <div class="it"><span class="p">2º</span><div><b>Uruaçu</b><small>55 km · qua 04/11 · 14 cab.</small></div><div class="v g">R$ 328/@<br><small>25% abaixo</small></div></div>
+    <div class="it"><span class="p">3º</span><div><b>Niquelândia</b><small>73 km · ter 03/11 · 9 cab.</small></div><div class="v g">R$ 339/@<br><small>23% abaixo</small></div></div>
+    <div class="it"><span class="p">4º</span><div><b>Porangatu</b><small>172 km · seg 26/10 · 310 cab.</small></div><div class="v r">R$ 456/@<br><small>4% acima</small></div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:14px;color:var(--cinza);font-weight:600"><span>Scot GO bezerra 12 m: R$ 438/@</span><span>Margem média 15@: R$ 2.406</span></div>
+</div><nav class="rb-tabbar"><a class="is-on"><span class="i">⌂</span>Início</a><a class=""><span class="i">🐂</span>Lotes</a><a class=""><span class="i">📅</span>Agenda</a><a class=""><span class="i">🔔</span>Alertas<span class="bol">2</span></a><a class=""><span class="i">👤</span>Conta</a></nav>
+<span class="home-ind"></span>
+</div>
+</body></html>

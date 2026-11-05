@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W02 · Entrar / cadastro · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+body{background:var(--verde-800)}
+.wrap{max-width:1240px;margin:0 auto;padding:36px 28px 60px;color:#fff}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px}
+.top a.v{color:#cfe3d4;text-decoration:none;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.passo-t{font:700 15px/1 var(--fonte);color:var(--amarelo);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.box{background:#fff;color:var(--tinta);border-radius:22px;padding:36px;box-shadow:0 24px 50px #0004}
+.box h1{font:800 34px/1.1 var(--fonte);color:var(--verde-900);letter-spacing:-.5px}
+.box p.l{font-size:19px;color:var(--cinza);margin:10px 0 26px}
+.pref{display:flex;gap:10px}
+.pref .ddi{min-width:110px}
+.codigo{display:flex;gap:12px;margin:8px 0 12px}
+.codigo span{width:64px;height:76px;border:2px solid #c9cfc4;border-radius:14px;display:grid;place-items:center;font:800 36px/1 var(--fonte);background:#fff}
+.codigo span.f{border-color:var(--verde-600);box-shadow:0 0 0 4px #2f7a4326}
+.codigo span.f::after{content:"";width:2px;height:36px;background:var(--verde-600)}
+.ok{display:flex;gap:10px;align-items:center;background:var(--verde-50);border:1px solid #cfe5d4;border-radius:12px;padding:12px 14px;font-size:16px;margin-bottom:22px}
+.leg{font-size:15px;color:var(--cinza);margin-top:16px;line-height:1.5}
+.nota{margin-top:26px;color:#cfe3d4;font-size:16px;display:flex;gap:28px}
+.nota b{color:#fff}
+.wa-prev{background:var(--wa-bg);border-radius:14px;padding:14px;margin-top:24px}
+.wa-prev .m{background:#fff;border-radius:10px;padding:10px 12px;font-size:16px;max-width:360px}
+.wa-prev .h{font-size:12px;color:#888;text-align:right}
+</style></head>
+<body>
+<!-- Tela W02 · Entrar/cadastro. Mesmo fluxo para quem é novo e para quem já assina: o número de WhatsApp é a conta. Sem senha.
+     Comportamento: (1) digita o WhatsApp -> envia código de 4 dígitos por WhatsApp (fallback SMS após 30 s).
+     (2) código preenche sozinho no celular (autocomplete="one-time-code"). Número novo -> Onboarding (W03). Número conhecido -> Painel (W04). -->
+<div class="wrap">
+  <div class="top"><span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span><a class="v">← Voltar para o site</a></div>
+  <div class="grid">
+    <div>
+      <div class="passo-t">Passo 1 de 2</div>
+      <div class="box">
+        <h1>Entre com seu WhatsApp</h1>
+        <p class="l">Não precisa de senha. A gente manda um código de 4 números no seu WhatsApp.</p>
+        <label class="rb-campo">Número do WhatsApp com DDD
+          <div class="pref"><div class="ent ddi">🇧🇷 +55</div><div class="ent is-foco" style="flex:1">(62) 9 ____-____</div></div>
+          <span class="ajuda">Exemplo: (62) 9 8123-4567</span>
+        </label>
+        <div style="margin-top:26px"><a class="rb-btn rb-btn--wa rb-btn--full" style="font-size:20px">Receber código no WhatsApp</a></div>
+        <div class="leg">Primeira vez? Você ganha <b>30 dias grátis do plano Pro</b>, sem cartão. Ao continuar você aceita os <a>termos de uso</a> e a <a>política de privacidade</a>.</div>
+      </div>
+    </div>
+    <div>
+      <div class="passo-t">Passo 2 de 2</div>
+      <div class="box">
+        <h1>Digite o código</h1>
+        <p class="l">Mandamos para <b>(62) 9 ••••-4567</b> <span class="rb-tag rb-tag--exemplo">exemplo</span> <a style="margin-left:6px">trocar</a></p>
+        <div class="codigo num"><span>4</span><span>7</span><span class="f"></span><span></span></div>
+        <div class="leg" style="margin:0 0 22px">Não chegou? <b>Reenviar em 0:24</b> · <a>receber por SMS</a></div>
+        <a class="rb-btn rb-btn--pri rb-btn--full is-disabled" style="font-size:20px">Entrar</a>
+        <div class="wa-prev"><div class="m"><b>Radar Boi</b><br>Seu código é <b>47__</b>. Não passe para ninguém.<div class="h">20:14</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="nota"><span><b>Por que WhatsApp?</b> É onde chegam o resumo de segunda e os avisos de lote.</span><span><b>Sem cartão no teste.</b> No dia 25 a gente pergunta se quer continuar.</span></div>
+</div>
+</body></html>
