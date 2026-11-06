@@ -4,7 +4,7 @@ import pathlib, posixpath
 D = pathlib.Path(__file__).resolve().parent.parent / "docs" / "design"
 
 GR = [
- ("Novo · Radar Grátis (proposta do CEO, aguarda OK) · web", "web", [
+ ("Novo · Radar Grátis (✅ aprovado) · web", "web", [
   ("w10-teste-acabou", "Seu teste acabou", "Escolha de plano, nada é apagado, \u201cvocê perdeu\u201d"),
   ("w11-painel-gratis", "Ranking no Radar Grátis", "7 dias de atraso, sem filtro de peso e cor"),
   ("w12-bloqueios", "Como fica cada tela bloqueada", "Cadeado e \u201cassine para ver\u201d em lotes, lote, alertas, agenda, conta"),
@@ -17,7 +17,7 @@ GR = [
   ("../whatsapp/z03-resumo-gratis", "Resumo de segunda grátis", "3 cidades e R$/@ + você perdeu"),
  ]),
  ("Web · painel (A)", "web", [
-  ("w01-landing", "Landing de vendas", "Planos e “testar 30 dias grátis”"),
+  ("w01-landing", "Landing de vendas", "Planos e “testar 7 dias grátis”"),
   ("w02-entrar", "Entrar pelo WhatsApp", "Número + código de 6 dígitos"),
   ("w03-onboarding", "Onboarding", "Fazenda, o que compra, raio e cor"),
   ("w04-painel", "Ranking de leilões", "Painel principal, do mais barato ao mais caro"),
@@ -79,7 +79,7 @@ figcaption b{{font-size:16px}} figcaption span{{color:var(--cinza)}} figcaption 
 <div class="dec"><h3>Para o Gabriel decidir</h3><ol>
 <li><b>Número principal = R$/@ grande</b>, com R$/cab embaixo e o selo contra a Scot (barato ≤ −3%, caro ≥ +3%).</li>
 <li><b>“Só 100% brancas” ligado por padrão</b>: mostra 16 de 269 lotes. Os leilões sem conferência aparecem à parte, marcados “cor não conferida”.</li>
-<li><b>Teste de 30 dias do Pro sem cartão</b>, entrando só com o WhatsApp; no dia 25 a gente manda o link de pagamento (Pix recorrente).</li>
+<li><b>Teste de 7 dias do Pro sem cartão</b> ✅ aprovado. Entra só com o WhatsApp; no dia 6 a gente manda o link do Mercado Pago (cartão todo mês ou Pix anual). Quem não paga cai no Radar Grátis.</li>
 </ol></div>
 {''.join(cards)}
 </main><footer class="rb-rodape">Radar Boi é um produto da Starcore Produtos de Tecnologia Ltda, CNPJ 39.573.543/0001-33</footer></body></html>"""

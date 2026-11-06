@@ -170,7 +170,9 @@ O nome do componente vem primeiro, depois a classe CSS.
 - **Horário dos leilões.** Fica "a confirmar" até a leiloeira divulgar. A agenda é uma previsão pela recorrência semanal.
 - **Margem.** É 15@ × preço da gorda menos o lance, sem recria, frete e comissão, até o usuário preencher "Meus custos".
 
-## Radar Grátis (proposta do CEO, aguarda OK do Gabriel)
+## Radar Grátis (aprovado pelo Gabriel)
+
+Teste: **7 dias** do Pro, sem cartão; no **dia 6** sai o link de pagamento. Cobrança pelo **Mercado Pago**: cartão todo mês ou Pix anual (2 meses grátis).
 
 Quem não paga depois dos 7 dias de teste cai no **Radar Grátis**. Regra de ouro: o grátis vê **o mercado** (cidade e R$/@, com atraso); o Pro vê **o lote** (qual, onde, quando, quanto sobra).
 

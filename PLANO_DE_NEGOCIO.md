@@ -66,7 +66,10 @@ Já estão ocupados: pistacerta, arrobacerta, radardoleilao, lancecerto e boinap
 | **Pro** | **R$ 149/mês** (R$ 1.490/ano) | Painel, filtros, alertas, margem própria |
 | Fazenda+ | R$ 399/mês | Várias fazendas e usuários, freteiros, atendimento |
 
-- Teste grátis de 30 dias, com cartão ou Pix recorrente (Asaas, Iugu ou Mercado Pago).
+- Teste grátis de **7 dias** do Pro, sem cartão. No dia 6, o link de pagamento chega no WhatsApp.
+- Cobrança pelo **Mercado Pago**: cartão de crédito todo mês ou Pix anual (2 meses grátis).
+- Quem não paga cai no **Radar Grátis**: top 3 do resumo de segunda (cidade e R$/@, sem link nem margem), painel com 7 dias de atraso, 1 alerta ao vivo por mês e o bloco "Você perdeu esta semana" com um lote real. Os filtros da conta ficam salvos.
+- Indicação: quem indicar um fazendeiro que assine ganha 1 mês de Pro.
 - **Receitas futuras:** destaque pago para leiloeiras ("leilão em destaque"), indicação de frete, dados agregados para frigoríficos e bancos (anônimos).
 
 ## 8. Operação: como os dados são feitos

@@ -19,5 +19,6 @@ td.n,th.n{text-align:right}tr:nth-child(even) td{background:#fafaf7}.bom{color:v
 .como ol{padding-left:20px}.como li{margin:6px 0}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{border:1px solid #e4dfd0;border-radius:12px;padding:16px}.card.dest{border:2px solid var(--v2)}.card h3{margin:0}.preco{font-size:28px;font-weight:800;color:var(--v);margin:6px 0}.preco span{font-size:14px;color:var(--m);font-weight:400}
 .cta{text-align:center;margin-top:20px}.btn{background:var(--v2);color:#fff;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:700}
+.planos .pg{text-align:center;color:#555;font-size:14px;margin:14px auto 0;max-width:640px}
 footer{background:var(--v);color:#dfe9e1;font-size:12px;padding:16px 20px;text-align:center}
 @media(max-width:600px){.hero h1{font-size:22px}.top nav{display:none}}

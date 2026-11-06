@@ -30,7 +30,7 @@ function init() {
       f.add(new Option('Minha localização', FAZENDAS.length - 1), f.options.length - 1); f.value = FAZENDAS.length - 1; render();
     });
   });
-  $('#btnWa').href = `https://wa.me/${WA}?text=${encodeURIComponent('Quero testar o Radar Boi por 30 dias')}`;
+  $('#btnWa').href = `https://wa.me/${WA}?text=${encodeURIComponent('Quero testar o Radar Boi por 7 dias')}`;
   $('#fonteVenda').textContent = `Venda: ${DB.gorda.fonte}, R$ ${DB.gorda.rs_arroba.toLocaleString('pt-BR')}/@ (${DB.gorda.data}). Atualizado em ${DB.atualizado.split('-').reverse().join('/')}.`;
   const conf = DB.leiloes.filter(l => l.rev).length;
   $('#heroNums').innerHTML = `<div><b>${DB.leiloes.length}</b>leilões lidos</div><div><b>${DB.lotes.length}</b>lotes Nelore</div><div><b>${conf}</b>leilões com cor conferida</div><div><b>500 km</b>de raio</div>`;

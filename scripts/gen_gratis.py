@@ -60,7 +60,7 @@ def web(title, nota, css, corpo, nav_on="", gratis=True, nav=True):
 <link rel="stylesheet" href="../rb.css">
 <style>{css}</style></head>
 <body>
-<!-- {title}. Plano Radar Grátis: PROPOSTA DO CEO, AGUARDANDO OK DO GABRIEL.
+<!-- {title}. Plano Radar Grátis: APROVADO pelo Gabriel. Cobrança Mercado Pago: cartão mensal ou Pix anual.
      {nota} -->
 <header class="w-top"><div class="in">
   <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
@@ -105,7 +105,7 @@ W10_CSS = """
 """
 S["web/w10-teste-acabou"] = web("W10 · Seu teste acabou", """Aparece no 1º acesso depois do fim do teste de 7 dias (e é o destino do link do WhatsApp do dia 7).
      Padrão pré-selecionado: Pro (o que a pessoa usou). Se fechar a tela ou tocar em "Ficar no Radar Grátis", a conta vira status gratuita:
-     NADA é apagado (fazenda, filtros, salvos, custos). Assinar = 1 toque: Pix recorrente já autorizado ou cartão; os filtros voltam como estavam.
+     NADA é apagado (fazenda, filtros, salvos, custos). Assinar = 1 toque: link do Mercado Pago (cartão todo mês ou Pix anual); os filtros voltam como estavam.
      Números de "nos seus 7 dias" vêm da conta (aqui: exemplo). O bloco "você perdeu" usa o melhor lote real da semana que passou no filtro dela.""", W10_CSS, f"""
 <div class="hero">
   <div>
@@ -130,7 +130,7 @@ S["web/w10-teste-acabou"] = web("W10 · Seu teste acabou", """Aparece no 1º ace
     <ul><li>3 fazendas e 5 pessoas</li><li>Freteiros da rota</li><li>Atendimento direto</li><li>Tudo do Pro</li></ul>
     <a class="rb-btn rb-btn--sec rb-btn--full">Falar com a gente</a></div>
 </div>
-<div class="pag">💳 <span><b>Pix recorrente</b> (autoriza uma vez no app do banco) ou <b>cartão</b>. Cancela quando quiser, sem ligação.</span><span style="margin-left:auto">🎁 Ou <a><b>indique 1 fazendeiro</b></a> que assine e ganhe 1 mês de Pro.</span></div>
+<div class="pag">💳 <span><b>Cartão</b> todo mês ou <b>Pix anual</b> (2 meses grátis), pelo Mercado Pago. Cancela quando quiser, sem ligação.</span><span style="margin-left:auto">🎁 Ou <a><b>indique 1 fazendeiro</b></a> que assine e ganhe 1 mês de Pro.</span></div>
 <div class="cmp"><table>
 <tr><th>O que muda</th><th>Radar Grátis</th><th>Pro</th></tr>
 <tr><td>Resumo de segunda no WhatsApp</td><td>3 primeiras cidades e R$/@</td><td>Completo, com leilão, lote e margem</td></tr>
@@ -278,9 +278,9 @@ W13_CSS = """
 .ind .it{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-top:1px solid #eee;font-size:16px}
 """
 S["web/w13-indique"] = web("W13 · Indique e ganhe 1 mês de Pro", """Link pessoal radarboi.com/i/{codigo}. Quem entra pelo link ganha o teste normal de 7 dias.
-     Recompensa: quando o indicado paga a 1ª mensalidade (qualquer plano pago), quem indicou ganha 1 mês de Pro (no grátis: vira Pro por 30 dias;
+     Recompensa: quando o indicado paga a 1ª mensalidade (qualquer plano pago), quem indicou ganha 1 mês de Pro (no grátis: vira Pro por 1 mês;
      no pago: 1 mensalidade a menos). Sem limite. Aviso no WhatsApp para os dois. Antifraude: mesmo CPF/telefone não conta; pagamento estornado cancela o prêmio.
-     Regras de prêmio = proposta, aguardam OK do Gabriel.""", W13_CSS, f"""
+     Regras aprovadas pelo Gabriel.""", W13_CSS, f"""
 <div class="lay">
   <div>
     <span class="rb-tag rb-tag--margem">🎁 Indique e ganhe</span>
@@ -329,7 +329,7 @@ S["app/a13-teste-acabou"] = page("A13 · Seu teste acabou (app)", sb() + f"""
   <div class="op"><span class="rd"></span><div><b>Radar Grátis</b><small>3 cidades no resumo, painel 7 dias atrasado, 1 alerta/mês</small></div><div class="p">R$ 0</div></div>
   <div style="text-align:center;font-size:15px;margin-top:6px">🎁 <a><b>Indique 1 fazendeiro</b></a> e ganhe 1 mês de Pro</div>
 </div>
-<div class="bt"><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:20px">Continuar no Pro</a><div class="muted" style="text-align:center;font-size:13px;margin-top:8px">Pix recorrente ou cartão · cancela quando quiser</div></div>
+<div class="bt"><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:20px">Continuar no Pro</a><div class="muted" style="text-align:center;font-size:13px;margin-top:8px">Cartão todo mês ou Pix anual · Mercado Pago</div></div>
 """, A13_CSS, nota="Abre no lugar da Início no 1º acesso após o fim do teste. Pro pré-selecionado. Fechar = Radar Grátis (nada é apagado).")
 
 FAKE_CARD = """<article class="rb-lote"><div class="foto" style="background:linear-gradient(135deg,#7a8f6a,#c9c2a8)"></div><div class="corpo"><div class="tit"><h3>0 bezerras · 00 m</h3><span class="cab num">R$ 0.000</span></div><div class="linha"><span class="arroba num">R$ 000/@</span></div><div class="meta">Cidade · 00 km · dia 00/00</div></div></article>"""
