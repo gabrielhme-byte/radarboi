@@ -1,2 +1,6 @@
 .DS_Store
 .scratch/
+__pycache__/
+# Código e documentos internos ficam no repositório privado radarboi-app (atalhos locais)
+/eng
+/pipeline
