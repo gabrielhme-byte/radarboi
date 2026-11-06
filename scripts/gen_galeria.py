@@ -70,7 +70,6 @@ figcaption b{{font-size:16px}} figcaption span{{color:var(--cinza)}} figcaption 
 <li><b>Teste de 30 dias do Pro sem cartão</b>, entrando só com o WhatsApp; no dia 25 a gente manda o link de pagamento (Pix recorrente).</li>
 </ol></div>
 {''.join(cards)}
-<div style="height:40px"></div>
-</main></body></html>"""
+</main><footer class="rb-rodape">Radar Boi é um produto da Starcore Produtos de Tecnologia Ltda, CNPJ 39.573.543/0001-33</footer></body></html>"""
 (D / "index.html").write_text(html)
 print("index.html ok")

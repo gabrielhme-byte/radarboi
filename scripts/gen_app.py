@@ -301,16 +301,17 @@ S["app/a11-salvos"] = page("A11 · Salvos", sb() + """
 
 # ---------- A12 perfil ----------
 PF_CSS = """
-.pf{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.pf{display:flex;gap:14px;align-items:center;margin-bottom:10px}
 .pf .av{width:60px;height:60px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;font:800 26px/1 var(--fonte);color:var(--verde-900)}
 .pf b{font-size:22px;display:block}.pf small{color:var(--cinza);font-size:15px}
 .pl{background:var(--amarelo);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
 .pl b{font-size:19px;display:block}.pl span{font-size:15px;color:#4a3a00}
 .pl .d{font:800 34px/1 var(--fonte);color:var(--verde-900);text-align:center}.pl .d small{display:block;font-size:12px}
-.gr{background:#fff;border:1px solid var(--areia);border-radius:16px;margin-top:12px}
-.gr .l{display:flex;align-items:center;gap:12px;padding:0 16px;min-height:56px;border-top:1px solid #eee;font-size:17px}
+.gr{background:#fff;border:1px solid var(--areia);border-radius:16px;margin-top:10px}
+.gr .l{display:flex;align-items:center;gap:12px;padding:0 16px;min-height:48px;border-top:1px solid #eee;font-size:17px}
 .gr .l:first-child{border-top:0}
 .gr .l i{font-style:normal;width:26px;text-align:center}
+.legal{text-align:center;color:var(--cinza);font-size:13px;line-height:1.4;margin:10px 8px 4px}
 .gr .l span{flex:1}.gr .l em{font-style:normal;color:var(--cinza);font-size:15px}
 """
 S["app/a12-conta"] = page("A12 · Conta, fazenda e plano", sb() + """
@@ -330,6 +331,7 @@ S["app/a12-conta"] = page("A12 · Conta, fazenda e plano", sb() + """
     <div class="l"><i>💬</i><span>Falar no WhatsApp</span><em>›</em></div>
     <div class="l"><i>📶</i><span>Modo sinal fraco</span><span class="rb-toggle is-on" style="flex:none"></span></div>
   </div>
+  <p class="legal">Radar Boi é um produto da Starcore Produtos de Tecnologia Ltda, CNPJ 39.573.543/0001-33</p>
 </div>""" + tab("conta"), PF_CSS, nota="'Modo sinal fraco': fotos menores, sem vídeo embutido, guarda o último ranking offline. 'Meus custos' em exemplo até o usuário preencher.")
 
 # ---------- WhatsApp ----------

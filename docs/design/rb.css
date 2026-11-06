@@ -210,3 +210,9 @@ body.app-pg{background:#d9d5c8;display:flex;justify-content:center;align-items:f
 .a-sec a{font-size:16px;font-weight:700;text-decoration:none}
 .home-ind{position:absolute;bottom:8px;left:50%;margin-left:-67px;width:134px;height:5px;border-radius:3px;background:#111}
 .escuro .home-ind{background:#fff}
+
+/* ---------- Rodapé legal (RodapeLegal) ---------- */
+.rb-rodape{border-top:1px solid var(--areia);background:var(--creme);color:var(--cinza);font:400 var(--t-14)/1.5 var(--fonte);text-align:center;padding:20px 28px 28px}
+.rb-rodape b{color:var(--tinta);font-weight:600}
+.rb-rodape--escuro{background:transparent;border-top-color:#ffffff26;color:#cfe3d4}
+.rb-rodape--escuro b{color:#fff}

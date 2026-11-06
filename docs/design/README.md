@@ -98,6 +98,7 @@ O nome do componente vem primeiro, depois a classe CSS.
 | **FaixaAoVivo** | `.rb-aovivo` | fundo vinho, tag AO VIVO, lote e R$/@, ▶. Só aparece quando há leilão do raio no ar com lote do filtro. |
 | **TabBar** | `.rb-tabbar` | 5 abas: Início, Lotes, Agenda, Alertas, Conta. Bolinha vermelha com o número de alertas não vistos. Salvos fica dentro de Lotes (segmento "Todos / ★ Salvos"). |
 | **Campo, Opcao, Toggle, Slider** | `.rb-campo`, `.rb-opcao`, `.rb-toggle`, `.rb-slider` | Opcao é um checkbox grande (mín. 56 px) com título e linha de ajuda. Toggle tem 56×32 e toque de 48. |
+| **RodapeLegal** | `.rb-rodape` | Em toda tela web, e no app na Conta: "Radar Boi é um produto da Starcore Produtos de Tecnologia Ltda, CNPJ 39.573.543/0001-33" (a Meta exige para aprovar o nome no WhatsApp). `--escuro` vai sobre fundo verde. |
 | **Nota** | `.rb-nota` | caixa branca com texto de 14 px: como ler o dado, de onde vem. |
 
 Ícones: nesta rodada são emoji, só para o desenho. Na implementação, trocar por **Lucide** (web e app), mantendo 24 px, traço 2 e a cor do texto.
