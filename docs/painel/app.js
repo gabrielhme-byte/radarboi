@@ -15,7 +15,7 @@ function km(a, b, c, d) {
   return 12742 * Math.asin(Math.sqrt(x));
 }
 let DB;
-fetch('data.json').then(r => r.json()).then(j => { DB = j; init(); });
+fetch('../data.json').then(r => r.json()).then(j => { DB = j; init(); });
 
 function init() {
   const f = $('#fFaz');
