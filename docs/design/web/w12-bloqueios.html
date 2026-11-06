@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W12 · Telas bloqueadas no Radar Grátis · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.pn{background:#fff;border:1px solid var(--areia);border-radius:18px;padding:18px}
+.pn>h2{font:800 20px/1.2 var(--fonte);color:var(--verde-900);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pn>h2 code{font:600 13px/1 ui-monospace,Menlo,monospace;color:var(--cinza)}
+.pn>p{color:var(--cinza);font-size:15px;margin:6px 0 14px}
+.fr{display:grid;grid-template-columns:110px 1fr 90px 100px 90px 110px;gap:12px;align-items:center;padding:12px;border:1px solid var(--areia);border-radius:12px;margin-bottom:8px;background:#fff}
+.fr .ph{height:46px;border-radius:8px;background:linear-gradient(135deg,#7a8f6a,#c9c2a8)}
+.fr small{display:block;color:var(--cinza)}
+.lk{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-top:1px solid #eee;font-size:17px}
+.ex{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.mini-ag{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini-ag div{border:1px solid var(--areia);border-radius:12px;padding:12px}
+.mini-ag b{display:block;font-size:17px}.mini-ag small{color:var(--cinza)}
+.mini-ag .r{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-weight:700}
+</style></head>
+<body>
+<!-- W12 · Telas bloqueadas no Radar Grátis. Plano Radar Grátis: PROPOSTA DO CEO, AGUARDANDO OK DO GABRIEL.
+     Catálogo de como cada tela fica para a conta grátis. Componentes: Bloqueio (.rb-bloq: blur + cadeado + CTA),
+     CampoBloqueado (.rb-cadeado), ChipBloqueado (.rb-chip.is-bloq), AvisoAtraso (.rb-atraso), CardVocePerdeu (.rb-perdeu), SeloPlano (.rb-plano).
+     Regra de texto: sempre dizer O QUE a pessoa ganha ("lote por lote, com foto e vídeo"), nunca só "conteúdo bloqueado".
+     Todo 🔒 é clicável e abre W10 (escolha de plano). Atrás do blur vão valores falsos (0.000), nunca o dado real. -->
+<header class="w-top"><div class="in">
+  <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
+  <nav><a class="">Ranking</a><a class="">Lotes 🔒</a><a class="">Agenda</a><a class="">Alertas 🔒</a><a class="">Conta</a></nav><span class="rb-plano rb-plano--gratis">Radar Grátis</span>
+  <div class="av">G</div>
+</div></header>
+<main class="w-main">
+
+<h1 class="w-h1">Como fica cada tela no Radar Grátis</h1>
+<div class="w-sub">Regra: o grátis vê <b>o mercado</b> (cidade e R$/@, com atraso); o Pro vê <b>o lote</b> (qual, onde, quando, quanto sobra). Todo cadeado abre a escolha de plano (W10).</div>
+<div class="grid">
+  <div class="pn"><h2>Componentes <code>Bloqueio · CampoBloqueado · ChipBloqueado</code></h2><p>Três jeitos de bloquear, do mais forte ao mais leve.</p>
+    <div class="ex" style="margin-bottom:14px"><span class="rb-cadeado">lotes</span><span class="rb-cadeado">só no Pro</span><span class="rb-chip is-bloq">Só 100% brancas</span><span class="rb-chip is-bloq">Peso 6–8@</span><span class="rb-plano rb-plano--gratis" style="background:var(--verde-800)">Radar Grátis</span></div>
+    <div class="rb-atraso"><span class="ic">⏱</span><div><b>Dados de 7 dias atrás.</b> No Pro, ao vivo.</div><a class="rb-btn rb-btn--pri">Ver ao vivo</a></div>
+  </div>
+  <div class="pn"><h2>Ranking <code>W04 → W11</code></h2><p>Aberto, com 7 dias de atraso. Sem nome do lote, Scot, margem nem filtros de peso e cor.</p>
+    <div class="lk"><span>Uruaçu · WM Leilões · qua 28/10</span><b>R$ 303/@</b></div>
+    <div class="lk"><span>Contra a Scot</span><span class="rb-cadeado">só no Pro</span></div>
+    <div class="lk"><span>Margem até 15@</span><span class="rb-cadeado">só no Pro</span></div>
+    <div class="lk"><span>Ver os lotes deste leilão</span><span class="rb-cadeado">lotes</span></div>
+  </div>
+  <div class="pn" style="grid-column:1/3"><h2>Lotes <code>W05</code></h2><p>A lista inteira fica atrás do cadeado. O grátis vê quantos lotes havia, não quais.</p>
+    <div class="rb-bloq"><div class="atras"><div class="fr"><span class="ph"></span><div><b>0 bezerras · 00 meses</b><small>Cidade · Leiloeira · 00 km</small></div><b>R$ 0.000</b><b class="g">R$ 000/@</b><b>R$ 0.000</b><span class="rb-btn rb-btn--sec" style="min-height:40px;font-size:15px">▶ 0:00:00</span></div><div class="fr"><span class="ph"></span><div><b>0 bezerras · 00 meses</b><small>Cidade · Leiloeira · 00 km</small></div><b>R$ 0.000</b><b class="g">R$ 000/@</b><b>R$ 0.000</b><span class="rb-btn rb-btn--sec" style="min-height:40px;font-size:15px">▶ 0:00:00</span></div><div class="fr"><span class="ph"></span><div><b>0 bezerras · 00 meses</b><small>Cidade · Leiloeira · 00 km</small></div><b>R$ 0.000</b><b class="g">R$ 000/@</b><b>R$ 0.000</b><span class="rb-btn rb-btn--sec" style="min-height:40px;font-size:15px">▶ 0:00:00</span></div><div class="fr"><span class="ph"></span><div><b>0 bezerras · 00 meses</b><small>Cidade · Leiloeira · 00 km</small></div><b>R$ 0.000</b><b class="g">R$ 000/@</b><b>R$ 0.000</b><span class="rb-btn rb-btn--sec" style="min-height:40px;font-size:15px">▶ 0:00:00</span></div></div>
+      <div class="cad"><span class="i">🔒</span><h4>4 lotes (22 cabeças) passaram no seu filtro de 02 a 06/11</h4><p>Lote por lote, com foto, cor conferida e o vídeo no minuto do lance. É do Pro.</p>
+        <div style="display:flex;gap:10px"><a class="rb-btn rb-btn--pri">Voltar para o Pro · R$ 149/mês</a><a class="rb-btn rb-btn--sec">🎁 Indicar e ganhar 1 mês</a></div></div></div>
+  </div>
+  <div class="pn"><h2>Detalhe do lote <code>W06</code></h2><p>O grátis só chega aqui pelo alerta grátis do mês ou pelo "você perdeu". Mostra o preço; esconde o vídeo e a margem.</p>
+    <div class="lk"><span>7 novilhas brancas · 14 m</span><b>R$ 325/@</b></div>
+    <div class="lk"><span>Lance na tela</span><b>R$ 2.490/cab</b></div>
+    <div class="lk"><span>▶ Vídeo no minuto do lance</span><span class="rb-cadeado">só no Pro</span></div>
+    <div class="lk"><span>Margem com os seus custos</span><span class="rb-cadeado">só no Pro</span></div>
+  </div>
+  <div class="pn"><h2>Alertas <code>W08</code></h2><p>1 alerta "entrando agora" grátis por mês, no filtro salvo. Depois de usado, a regra fica pausada até o mês virar.</p>
+    <div class="lk"><span>🔴 Bezerra/novilha branca 6–8@ entrando agora</span><span class="rb-toggle is-on"></span></div>
+    <div style="display:flex;gap:6px;margin:4px 0 8px"><i style="flex:1;height:10px;border-radius:5px;background:var(--verde-600)"></i></div>
+    <div class="muted" style="font-size:15px"><b style="color:var(--tinta)">1 de 1 disponível em novembro.</b> Depois: alertas sem limite no Pro.</div>
+    <div class="lk"><span>Criar outro aviso</span><span class="rb-cadeado">só no Pro</span></div>
+  </div>
+  <div class="pn"><h2>Agenda <code>W07</code></h2><p>Aberta: é informação pública. O aviso de catálogo e de entrada é do Pro. <span class="rb-tag rb-tag--exemplo">datas exemplo</span></p>
+    <div class="mini-ag"><div><b>Uruaçu</b><small>qua 11/11 · 55 km</small><div class="r"><span>🔔 Avisar</span><span class="rb-cadeado">Pro</span></div></div><div><b>Niquelândia</b><small>ter 10/11 · 73 km</small><div class="r"><span>🔔 Avisar</span><span class="rb-cadeado">Pro</span></div></div></div>
+  </div>
+  <div class="pn"><h2>Conta <code>W09</code></h2><p>Mostra o plano grátis e o que está guardado. Voltar é um toque.</p>
+    <div class="lk"><span>Plano</span><b>Radar Grátis</b></div>
+    <div class="lk"><span>Fazenda, filtros e 2 lotes salvos</span><b class="g">guardados</b></div>
+    <a class="rb-btn rb-btn--pri rb-btn--full" style="margin-top:10px">Voltar para o Pro com 1 toque</a>
+  </div>
+</div>
+
+</main>
+<footer class="rb-rodape">Dados de transmissões públicas de leilões. Não compramos, não vendemos e não damos lance.<br><b>Radar Boi é um produto da Starcore Produtos de Tecnologia Ltda, CNPJ 39.573.543/0001-33</b></footer>
+</body></html>

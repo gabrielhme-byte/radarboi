@@ -380,6 +380,7 @@ S["whatsapp/z02-alerta-entrando"] = page("Z02 · WhatsApp: alerta entrando agora
   <span class="rb-tag rb-tag--exemplo" style="align-self:center;white-space:normal;text-align:center;max-width:90%">exemplo · horários ilustrativos · lote real de 28/10</span>
 </div>""" + WAIN, WA_CSS, nota="Alerta = template com imagem (1ª foto da conferência). Máx. 5 alertas/dia. Só sai se a cor estiver conferida; enquanto a conferência ao vivo não existir, sai com 'cor a conferir'.")
 
-for k, v in S.items():
-    p = D / (k + ".html"); p.parent.mkdir(parents=True, exist_ok=True); p.write_text(v)
-    print(p.relative_to(D))
+if __name__ == "__main__":
+    for k, v in S.items():
+        p = D / (k + ".html"); p.parent.mkdir(parents=True, exist_ok=True); p.write_text(v)
+        print(p.relative_to(D))

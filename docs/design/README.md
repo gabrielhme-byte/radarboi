@@ -169,3 +169,23 @@ O nome do componente vem primeiro, depois a classe CSS.
 - **Alerta "entrando agora".** A conferência de cor hoje é manual, depois do leilão. Enquanto não houver conferência ao vivo, o alerta sai com o selo `--nc` "cor a conferir". O mockup mostra a versão final, com a cor já conferida.
 - **Horário dos leilões.** Fica "a confirmar" até a leiloeira divulgar. A agenda é uma previsão pela recorrência semanal.
 - **Margem.** É 15@ × preço da gorda menos o lance, sem recria, frete e comissão, até o usuário preencher "Meus custos".
+
+## Radar Grátis (proposta do CEO, aguarda OK do Gabriel)
+
+Quem não paga depois dos 7 dias de teste cai no **Radar Grátis**. Regra de ouro: o grátis vê **o mercado** (cidade e R$/@, com atraso); o Pro vê **o lote** (qual, onde, quando, quanto sobra).
+
+| Componente | Classe | Uso |
+|---|---|---|
+| **SeloPlano** | `.rb-plano.rb-plano--gratis` | No topo (web) e no cabeçalho do app quando a conta é grátis. |
+| **AvisoAtraso** | `.rb-atraso` | Faixa amarela "dados de 7 dias atrás" + CTA "ver ao vivo". |
+| **Bloqueio** | `.rb-bloq > .atras + .cad` | Lista inteira atrás de blur, com cadeado, título que diz o que se ganha e CTA. Atrás do blur vão **valores falsos**. |
+| **CampoBloqueado** | `.rb-cadeado` | Um campo só (Scot, margem, vídeo, lotes). Clicável, abre W10/A13. |
+| **ChipBloqueado** | `.rb-chip.is-bloq` | Filtro de peso e cor no grátis. |
+| **CardVocePerdeu** | `.rb-perdeu` | Melhor lote real da semana no filtro salvo da conta, com fonte (vídeo e minuto). |
+
+Regras para o dev:
+- Dado bloqueado **não sai do servidor** para conta grátis (nada de esconder com CSS).
+- Todo cadeado abre a escolha de plano (W10/A13). Conta grátis nunca perde fazenda, filtros, salvos nem custos.
+- 1 alerta "entrando agora" por mês; depois de usado, a regra fica pausada até o mês virar.
+- Indicação: prêmio entra quando o indicado paga a 1ª mensalidade; mesmo telefone ou CPF não conta duas vezes.
+- Geração: `python3 scripts/gen_gratis.py` (W10–W13, A13–A15, Z03), dados de `docs/data.json`.

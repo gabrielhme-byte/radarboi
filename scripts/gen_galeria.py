@@ -1,9 +1,21 @@
 #!/usr/bin/env python3
 """Gera docs/design/index.html (galeria para aprovação). Rodar depois de shots.py."""
-import pathlib
+import pathlib, posixpath
 D = pathlib.Path(__file__).resolve().parent.parent / "docs" / "design"
 
 GR = [
+ ("Novo · Radar Grátis (proposta do CEO, aguarda OK) · web", "web", [
+  ("w10-teste-acabou", "Seu teste acabou", "Escolha de plano, nada é apagado, \u201cvocê perdeu\u201d"),
+  ("w11-painel-gratis", "Ranking no Radar Grátis", "7 dias de atraso, sem filtro de peso e cor"),
+  ("w12-bloqueios", "Como fica cada tela bloqueada", "Cadeado e \u201cassine para ver\u201d em lotes, lote, alertas, agenda, conta"),
+  ("w13-indique", "Indique e ganhe", "1 fazendeiro que assine = 1 mês de Pro"),
+ ]),
+ ("Novo · Radar Grátis · app e WhatsApp", "app", [
+  ("a13-teste-acabou", "Seu teste acabou", "Pro pré-selecionado"),
+  ("a14-lotes-gratis", "Lotes bloqueados", "Conta grátis"),
+  ("a15-indique", "Indique e ganhe", ""),
+  ("../whatsapp/z03-resumo-gratis", "Resumo de segunda grátis", "3 cidades e R$/@ + você perdeu"),
+ ]),
  ("Web · painel (A)", "web", [
   ("w01-landing", "Landing de vendas", "Planos e “testar 30 dias grátis”"),
   ("w02-entrar", "Entrar pelo WhatsApp", "Número + código de 6 dígitos"),
@@ -37,14 +49,14 @@ for titulo, sub, itens in GR:
     app = sub in ("app", "whatsapp")
     h = []
     for k, t, d in itens:
-        href = f"{sub}/{k}.html" if sub else f"{k}.html"
-        h.append(f'''<figure class="{'m' if app else 'w'}"><a href="{href}"><img loading="lazy" src="png/{k}.png" alt="{t}"></a>
-<figcaption><b>{t}</b>{'<span>'+d+'</span>' if d else ''}<em><a href="{href}">HTML</a> · <a href="png/{k}.png">PNG</a></em></figcaption></figure>''')
+        href = posixpath.normpath(f"{sub}/{k}.html") if sub else f"{k}.html"
+        h.append(f'''<figure class="{'m' if app else 'w'}"><a href="{href}"><img loading="lazy" src="png/{k.split('/')[-1]}.png" alt="{t}"></a>
+<figcaption><b>{t}</b>{'<span>'+d+'</span>' if d else ''}<em><a href="{href}">HTML</a> · <a href="png/{k.split('/')[-1]}.png">PNG</a></em></figcaption></figure>''')
     cards.append(f'<section><h2>{titulo} <small>{len(itens)} telas</small></h2><div class="g {"gm" if app else "gw"}">{"".join(h)}</div></section>')
 
 html = f"""<!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Radar Boi · Telas para aprovação · rodada 1</title>
+<title>Radar Boi · Telas para aprovação</title>
 <link rel="stylesheet" href="rb.css">
 <style>
 .w-main{{max-width:1360px}}
@@ -62,7 +74,7 @@ figcaption b{{font-size:16px}} figcaption span{{color:var(--cinza)}} figcaption 
 </style></head><body>
 <header class="w-top"><div class="in"><span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span><nav><a class="is-on">Telas · rodada 1</a><a href="https://github.com/gabrielhme-byte/radarboi/blob/main/docs/design/README.md">Design system (README)</a></nav><span style="color:#cfe3d4">05/11/2026</span></div></header>
 <main class="w-main">
-<h1 class="w-h1">Telas para aprovação · rodada 1</h1>
+<h1 class="w-h1">Telas para aprovação</h1>
 <div class="w-sub">Experiência A+B (painel web + WhatsApp) e a base do app (C). Dados reais de data.json (leilões de 26/10 a 04/11, 936 lotes). Filtro padrão: fêmeas 6–8@, 100% brancas, até 250 km de Barro Alto/GO. O que não é dado real está marcado <span class="rb-tag rb-tag--exemplo">exemplo</span>.</div>
 <div class="dec"><h3>Para o Gabriel decidir</h3><ol>
 <li><b>Número principal = R$/@ grande</b>, com R$/cab embaixo e o selo contra a Scot (barato ≤ −3%, caro ≥ +3%).</li>

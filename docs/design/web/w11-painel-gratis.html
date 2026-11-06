@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>W11 · Painel no Radar Grátis · Radar Boi</title>
+<link rel="stylesheet" href="../rb.css">
+<style>
+.lay{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start;margin-top:18px}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:#fff;border:1px solid var(--areia);border-radius:16px;padding:14px 16px;margin:18px 0}
+.filtros .lb{font:700 15px/1 var(--fonte);color:var(--cinza);margin-right:4px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:22px}
+.kpi-b .val{display:flex;align-items:center;gap:8px}
+table.rk{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--areia);border-radius:16px;overflow:hidden}
+.rk th{background:var(--creme);text-align:left;font-size:13px;color:var(--cinza);text-transform:uppercase;letter-spacing:.5px;padding:10px 12px}
+.rk td{padding:10px 12px;border-top:1px solid #eee;font-size:16px;vertical-align:middle}
+.rk td small{display:block;color:var(--cinza);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px}
+.rk td:not(:nth-child(2)){white-space:nowrap}
+.rk .po{font:800 17px/1 var(--fonte);color:var(--verde-800);width:44px}
+.rk .v{font:800 19px/1 var(--fonte);color:var(--verde-900);white-space:nowrap}
+.lado>*{margin-bottom:16px}
+.alg{background:#fff;border:1px solid var(--areia);border-radius:16px;padding:16px}
+.alg h3{font-size:18px}.alg p{margin:6px 0 10px;color:var(--cinza);font-size:15px}
+.cont{display:flex;gap:6px;margin:8px 0 12px}.cont i{flex:1;height:10px;border-radius:5px;background:var(--verde-600)}
+</style></head>
+<body>
+<!-- W11 · Painel no Radar Grátis. Plano Radar Grátis: PROPOSTA DO CEO, AGUARDANDO OK DO GABRIEL.
+     Mesmo W04, em modo consulta: dados com 7 dias de atraso (corte = hoje − 7 dias; aqui hoje = seg 09/11 → leilões até 02/11).
+     Sem filtro de peso e cor: o recorte é fixo em fêmeas (ou machos, conforme o perfil), todas as eras e cores, no raio da fazenda.
+     Bloqueado (rb-cadeado / rb-chip.is-bloq): lotes, comparação com a Scot, margem, filtros de peso e cor, PDF. Clique em qualquer 🔒 abre W10.
+     IMPORTANTE p/ dev: dado bloqueado NÃO vai no HTML/JSON da conta grátis (nada de esconder com CSS). O blur das telas usa valores falsos. -->
+<header class="w-top"><div class="in">
+  <span class="rb-logo claro" style="color:#fff"><i>◎</i>Radar Boi</span>
+  <nav><a class="is-on">Ranking</a><a class="">Lotes 🔒</a><a class="">Agenda</a><a class="">Alertas 🔒</a><a class="">Conta</a></nav><span class="rb-plano rb-plano--gratis">Radar Grátis</span>
+  <div class="av">G</div>
+</div></header>
+<main class="w-main">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end">
+  <div><h1 class="w-h1">Onde a @ estava mais barata</h1><div class="w-sub">Leilões de 26/10 a 02/11 · fêmeas de todas as eras e cores · até 250 km de Barro Alto/GO</div></div>
+</div>
+<div class="rb-atraso" style="margin-top:18px"><span class="ic">⏱</span><div><b>Você está vendo dados de 7 dias atrás, como cotação atrasada.</b><br>No Pro, o ranking atualiza a cada leilão e o alerta chega com o lote na pista.</div><a class="rb-btn rb-btn--pri">Ver ao vivo no Pro</a></div>
+<div class="filtros"><span class="lb">Filtros</span><span class="rb-chip is-on">Fêmeas</span><span class="rb-chip is-on">Até 250 km</span><span class="rb-chip is-bloq">Peso 6–8@</span><span class="rb-chip is-bloq">Só 100% brancas</span><span class="rb-chip is-bloq">Vender com 15@</span><span class="rb-cadeado" style="margin-left:auto">Baixar PDF</span></div>
+<div class="kpis">
+  <div class="rb-kpi rb-kpi--destaque"><div class="rot">Mais barato</div><div class="val num">R$ 298<small>/@</small></div><div class="sub">Nova Crixás · 181 km · sex 30/10</div></div>
+  <div class="rb-kpi"><div class="rot">Leilões no raio</div><div class="val num">16</div><div class="sub">3.684 fêmeas na pista</div></div>
+  <div class="rb-kpi kpi-b"><div class="rot">Contra a Scot</div><div class="val"><span class="rb-cadeado" style="font-size:16px">só no Pro</span></div><div class="sub">quanto abaixo da referência</div></div>
+  <div class="rb-kpi kpi-b"><div class="rot">Margem até 15@</div><div class="val"><span class="rb-cadeado" style="font-size:16px">só no Pro</span></div><div class="sub">com os seus custos</div></div>
+</div>
+<div class="lay">
+  <div>
+    <table class="rk"><tr><th>#</th><th>Cidade · leiloeira</th><th>Data</th><th>Distância</th><th>Fêmeas</th><th>R$/@ est.</th><th>R$/cab</th><th></th></tr><tr><td class="po">1º</td><td><b>Nova Crixás</b><small>Araguaia Leilões</small></td><td>sex 30/10</td><td class="num">181 km</td><td class="num">168 cab.</td><td class="num v">R$ 298/@</td><td class="num">R$ 2.376</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">2º</td><td><b>Uruaçu</b><small>WM Leilões</small></td><td>qua 28/10</td><td class="num">55 km</td><td class="num">107 cab.</td><td class="num v">R$ 303/@</td><td class="num">R$ 2.589</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">3º</td><td><b>São Miguel do Araguaia</b><small>Cristiano Reis Leiloeiro</small></td><td>qui 29/10</td><td class="num">232 km</td><td class="num">191 cab.</td><td class="num v">R$ 329/@</td><td class="num">R$ 2.536</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">4º</td><td><b>Trombas</b><small>Trombas Leilões</small></td><td>qua 28/10</td><td class="num">163 km</td><td class="num">266 cab.</td><td class="num v">R$ 342/@</td><td class="num">R$ 2.774</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">5º</td><td><b>Campinorte</b><small>Bambu Leilões</small></td><td>sex 30/10</td><td class="num">77 km</td><td class="num">133 cab.</td><td class="num v">R$ 345/@</td><td class="num">R$ 2.874</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">6º</td><td><b>Mara Rosa</b><small>Mara Rosa Leilões</small></td><td>ter 27/10</td><td class="num">110 km</td><td class="num">392 cab.</td><td class="num v">R$ 353/@</td><td class="num">R$ 2.992</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">7º</td><td><b>Porangatu</b><small>Leiloeste</small></td><td>qui 29/10</td><td class="num">172 km</td><td class="num">180 cab.</td><td class="num v">R$ 353/@</td><td class="num">R$ 2.990</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">8º</td><td><b>Santa Terezinha de Goiás</b><small>Boi Verde Leilões</small></td><td>ter 27/10</td><td class="num">105 km</td><td class="num">78 cab.</td><td class="num v">R$ 361/@</td><td class="num">R$ 2.985</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">9º</td><td><b>Campinorte</b><small>Casa Branca Leilões</small></td><td>qui 29/10</td><td class="num">77 km</td><td class="num">411 cab.</td><td class="num v">R$ 361/@</td><td class="num">R$ 2.779</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">10º</td><td><b>Niquelândia</b><small>JPS Leilões</small></td><td>ter 27/10</td><td class="num">73 km</td><td class="num">91 cab.</td><td class="num v">R$ 364/@</td><td class="num">R$ 2.457</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">11º</td><td><b>Porangatu</b><small>Sindicato Rural de Porangatu</small></td><td>qua 28/10</td><td class="num">172 km</td><td class="num">510 cab.</td><td class="num v">R$ 370/@</td><td class="num">R$ 3.008</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">12º</td><td><b>Nova Crixás</b><small>Sindicato Rural de Nova Crixás</small></td><td>seg 02/11</td><td class="num">181 km</td><td class="num">47 cab.</td><td class="num v">R$ 370/@</td><td class="num">R$ 3.118</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">13º</td><td><b>Nova Glória</b><small>CBN Leilões Rurais</small></td><td>seg 26/10</td><td class="num">74 km</td><td class="num">327 cab.</td><td class="num v">R$ 379/@</td><td class="num">R$ 2.771</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">14º</td><td><b>Goianésia</b><small>Neto Leilões e Niusmar</small></td><td>seg 26/10</td><td class="num">45 km</td><td class="num">107 cab.</td><td class="num v">R$ 383/@</td><td class="num">R$ 2.824</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">15º</td><td><b>Nova Glória</b><small>CBN Leilões Rurais</small></td><td>seg 02/11</td><td class="num">74 km</td><td class="num">222 cab.</td><td class="num v">R$ 403/@</td><td class="num">R$ 3.036</td><td><span class="rb-cadeado">lotes</span></td></tr><tr><td class="po">16º</td><td><b>Porangatu</b><small>Brasil Leilões</small></td><td>seg 26/10</td><td class="num">172 km</td><td class="num">454 cab.</td><td class="num v">R$ 426/@</td><td class="num">R$ 3.118</td><td><span class="rb-cadeado">lotes</span></td></tr></table>
+    <div class="rb-nota" style="margin-top:12px">R$/@ = soma dos lances ÷ soma das @ estimadas pela era (8 m 180 kg, 12 m 210 kg, 18 m 270 kg), ponderado por cabeça. Mistura todas as eras e cores, por isso não é comparável com o ranking do Pro.</div>
+  </div>
+  <aside class="lado">
+    <div class="rb-perdeu"><div class="tp">🔴 Você perdeu esta semana</div><img src="../img/qP6lHvAU3Bw_10_1.jpg" alt=""><div class="cp"><div class="q" style="font-size:17px">Quarta 04/11, por volta das 21h46, entrou em Uruaçu um lote de <b>7 novilhas brancas</b> de 14 meses a <b>R$ 325/@</b>, <b>26% abaixo da Scot</b>. Os assinantes receberam o alerta na hora.</div><div class="src">WM Leilões, Uruaçu · lance R$ 2.490/cab · ~230 kg (estimado pela era) · vídeo no minuto 1:43:20 · horário estimado pelo início da live (20:02)</div><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:17px">Receber o próximo na hora</a></div></div>
+    <div class="alg"><h3>🔔 Seu alerta grátis de novembro</h3><p>1 alerta "entrando agora" por mês, para você sentir como é.</p><div class="cont"><i></i></div><b>1 disponível</b><span class="muted"> · vale para o próximo lote do seu filtro</span></div>
+    <div class="alg" style="background:var(--verde-50);border-color:#cfe3d4"><h3>🎁 Ganhe 1 mês de Pro</h3><p>Indique um fazendeiro. Se ele assinar, você ganha 1 mês do Pro.</p><a class="rb-btn rb-btn--sec rb-btn--full" style="font-size:17px">Indicar no WhatsApp</a></div>
+  </aside>
+</div>
+
+</main>
+<footer class="rb-rodape">Dados de transmissões públicas de leilões. Não compramos, não vendemos e não damos lance.<br><b>Radar Boi é um produto da Starcore Produtos de Tecnologia Ltda, CNPJ 39.573.543/0001-33</b></footer>
+</body></html>
