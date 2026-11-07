@@ -31,6 +31,17 @@ Cada HTML abre com um comentário `<!-- ... -->` com as notas de comportamento p
    - Cor não conferida nunca aparece como "branca".
 6. **Uma ação principal por tela.** Quase sempre é "Ver no vídeo" ou "Assistir agora".
 
+
+## Marca (logo B1, aprovada pelo Gabriel)
+
+Anel de radar, varredura e um ponto, que é o lote achado. No centro, um **Nelore de perfil** (cupim no ombro, barbela, perna curta). Substitui o antigo ◎.
+
+- Fonte única: `scripts/gen_marca.py`. Ele gera os SVGs e `marca/logo.html`, que serve para tirar os PNGs.
+- SVG: `marca/app-verde.svg` e `app-amarelo.svg` (cantos arredondados; site, favicon e app), `icone-verde.svg` e `icone-amarelo.svg` (quadrados), `simbolo-verde.svg` e `simbolo-branco.svg` (sem fundo).
+- PNG: `logo-radarboi-verde.png` e `logo-radarboi-branco.png` (fundo transparente), `icone-radarboi-verde.png` e `icone-radarboi-amarelo.png` (1080²), `instagram-perfil-radarboi.png` (1080², pensado para o recorte redondo).
+- No HTML, `<span class="rb-logo"><i>◎</i>Radar Boi</span>`: o `<i>` recebe o SVG pelo `rb.css`. A versão `.claro` usa o fundo amarelo.
+- Tamanho mínimo: 24 px. Abaixo disso o boi vira mancha.
+
 ## Cores
 
 | Token | Hex | Uso |

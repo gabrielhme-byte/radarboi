@@ -67,7 +67,7 @@ S = {}
 S["app/a01-splash"] = page("A01 · Splash", sb(claro=True) + """
 <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:0 36px;position:relative">
   <div style="position:absolute;width:520px;height:520px;border-radius:50%;border:2px solid #ffffff14;box-shadow:0 0 0 60px #ffffff08,0 0 0 120px #ffffff05;top:50%;left:50%;transform:translate(-50%,-62%)"></div>
-  <div style="width:112px;height:112px;border-radius:30px;background:var(--amarelo);color:var(--verde-800);display:grid;place-items:center;font-size:80px;line-height:1;box-shadow:0 14px 30px #0004;position:relative">◎</div>
+  <div style="width:112px;height:112px;border-radius:30px;background:var(--amarelo);color:var(--verde-800);display:grid;place-items:center;font-size:80px;line-height:1;box-shadow:0 14px 30px #0004;position:relative;overflow:hidden"><img src="../marca/app-amarelo.svg" alt="Radar Boi" style="width:100%;height:100%;display:block;border-radius:inherit"></div>
   <div style="font:800 40px/1 var(--fonte);margin-top:24px;letter-spacing:-1px;position:relative">Radar Boi</div>
   <div style="font-size:19px;color:#d2e4d6;margin-top:12px;line-height:1.4;position:relative">O leilão mais barato<br>perto da sua fazenda.</div>
 </div>
@@ -279,13 +279,13 @@ NOT_CSS = """
 """
 S["app/a10-notificacao"] = page("A10 · Notificação 'entrando agora'", sb(claro=True, hora="") + """
 <div class="lock"><div class="d">quarta-feira, 28 de outubro</div><div class="h">20:41</div>
-  <div class="ntf"><div class="t"><i>◎</i>RADAR BOI<span>agora</span></div>
+  <div class="ntf"><div class="t"><i style="overflow:hidden"><img src="../marca/app-verde.svg" alt="Radar Boi" style="width:100%;height:100%;display:block;border-radius:inherit"></i>RADAR BOI<span>agora</span></div>
     <b>🔴 Entrando agora · WM Uruaçu</b>
     <p>7 bezerras brancas · 12 m · lance R$ 2.330 = R$ 333/@ (24% abaixo da Scot)</p>
     <img src="../img/rmlJbmSu1i4_10_1.jpg" alt="">
     <div class="ac"><span>▶ Assistir</span><span>☆ Salvar</span></div>
   </div>
-  <div class="ntf2"><div class="t" style="display:flex;gap:8px;font:600 14px/1 var(--fonte);color:#555"><span style="width:24px;height:24px;border-radius:6px;background:var(--verde-800);color:var(--amarelo);display:grid;place-items:center">◎</span>RADAR BOI<span style="margin-left:auto">19:58</span></div><b style="display:block;margin-top:6px">Catálogo saiu · WM Uruaçu hoje</b><span style="font-size:15px">41 lotes. A gente avisa quando a bezerra branca entrar.</span></div>
+  <div class="ntf2"><div class="t" style="display:flex;gap:8px;font:600 14px/1 var(--fonte);color:#555"><span style="width:24px;height:24px;border-radius:6px;background:var(--verde-800);color:var(--amarelo);display:grid;place-items:center;overflow:hidden"><img src="../marca/app-verde.svg" alt="Radar Boi" style="width:100%;height:100%;display:block;border-radius:inherit"></span>RADAR BOI<span style="margin-left:auto">19:58</span></div><b style="display:block;margin-top:6px">Catálogo saiu · WM Uruaçu hoje</b><span style="font-size:15px">41 lotes. A gente avisa quando a bezerra branca entrar.</span></div>
   <div style="margin-top:auto;margin-bottom:46px"><span class="rb-tag rb-tag--exemplo" style="background:#ffffff20;color:#ffe48a;border-color:#ffe48a;white-space:normal;text-align:center">exemplo · horário ilustrativo · lote real de 28/10</span></div>
 </div>""", NOT_CSS, escuro=True, nota="Push rico (imagem + 2 ações). Mesmo texto do WhatsApp. Ação Assistir abre o vídeo ao vivo; Salvar não abre o app.")
 
@@ -354,7 +354,7 @@ WA_CSS = """
 .in i{font-style:normal;width:44px;height:44px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center}
 .al{border-left:4px solid var(--aovivo)}
 """
-WAH = sb(claro=True) + '<div class="wah"><span>←</span><span class="av">◎</span><div><b>Radar Boi ✓</b><small>conta comercial</small></div></div>'
+WAH = sb(claro=True) + '<div class="wah"><span>←</span><span class="av" style="overflow:hidden"><img src="../marca/icone-verde.svg" alt="Radar Boi" style="width:100%;height:100%;display:block;border-radius:inherit"></span><div><b>Radar Boi ✓</b><small>conta comercial</small></div></div>'
 WAIN = '<div class="in"><span>Mensagem</span><i>🎤</i></div>'
 S["whatsapp/z01-resumo-segunda"] = page("Z01 · WhatsApp: resumo de segunda", WAH + """
 <div class="cv">

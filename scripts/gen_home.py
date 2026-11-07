@@ -14,7 +14,7 @@ rep = [
   '<meta property="og:title" content="Radar Boi · o leilão mais barato perto da sua fazenda">\n'
   '<meta property="og:description" content="Ranking dos leilões da sua região por R$/@, com cor conferida e link do vídeo no minuto do lote.">\n'
   '<meta property="og:image" content="https://radarboi.com/design/img/rmlJbmSu1i4_10_1.jpg">\n'
-  '<meta name="theme-color" content="#1f4d2b">'),
+  '<meta name="theme-color" content="#1f4d2b">\n<link rel="icon" href="design/marca/app-verde.svg">\n<link rel="apple-touch-icon" href="design/marca/icone-radarboi-verde.png">'),
  ('href="../rb.css"', 'href="design/rb.css"'),
  ('<!-- Tela W01 · Landing de venda.', '<!-- Página inicial (gerada por scripts/gen_home.py a partir da W01).'),
  ('<a class="rb-logo claro" style="color:#fff">', '<a class="rb-logo claro" style="color:#fff;text-decoration:none" href="./">'),
