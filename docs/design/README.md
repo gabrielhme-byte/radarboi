@@ -151,13 +151,13 @@ O nome do componente vem primeiro, depois a classe CSS.
   - 100% brancas
   - até 250 km
   - venda com 15@ a R$ 364,71/@ (Datagro novilha GO, 04/11)
-- Resultado: 16 lotes, 353 cabeças, 3 cidades.
+- Resultado: 15 lotes, 346 cabeças, 3 cidades. (05/11: o lote qP6lHvAU3Bw 1:43:20, 7 novilhas 14 m, foi reprovado na cor e saiu.)
 - Ranking:
 
 | Leilão | Data | R$/@ |
 |---|---|---|
 | Uruaçu | 28/10 | 325 |
-| Uruaçu | 04/11 | 328 |
+| Uruaçu | 04/11 | 331 |
 | Niquelândia | 03/11 | 339 |
 | Porangatu | 26/10 | 456 |
 

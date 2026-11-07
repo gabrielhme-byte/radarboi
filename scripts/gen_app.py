@@ -146,11 +146,11 @@ S["app/a05-home"] = page("A05 · Início", sb() + """
   </div>
   <div class="a-sec">Ranking da semana <a>Ver tudo</a></div>
   <div class="mini num">
-    <div class="it"><span class="p">2º</span><div><b>Uruaçu</b><small>55 km · qua 04/11 · 14 cab.</small></div><div class="v g">R$ 328/@<br><small>25% abaixo</small></div></div>
+    <div class="it"><span class="p">2º</span><div><b>Uruaçu</b><small>55 km · qua 04/11 · 7 cab.</small></div><div class="v g">R$ 331/@<br><small>24% abaixo</small></div></div>
     <div class="it"><span class="p">3º</span><div><b>Niquelândia</b><small>73 km · ter 03/11 · 9 cab.</small></div><div class="v g">R$ 339/@<br><small>23% abaixo</small></div></div>
     <div class="it"><span class="p">4º</span><div><b>Porangatu</b><small>172 km · seg 26/10 · 310 cab.</small></div><div class="v r">R$ 456/@<br><small>4% acima</small></div></div>
   </div>
-  <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:14px;color:var(--cinza);font-weight:600"><span>Scot GO bezerra 12 m: R$ 438/@</span><span>Margem média 15@: R$ 2.406</span></div>
+  <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:14px;color:var(--cinza);font-weight:600"><span>Scot GO bezerra 12 m: R$ 438/@</span><span>Margem média 15@: R$ 2.394</span></div>
 </div>""" + tab("inicio"), HOME_CSS, nota="Ordem: faixa ao vivo (só quando tem leilão do raio no ar), destaque do mais barato, ranking resumido. Pull-to-refresh. Offline: mostra a última versão com a faixa 'sem sinal'.")
 
 # ---------- A06 feed de lotes ----------
@@ -164,7 +164,7 @@ FEED_CSS = """
 """
 S["app/a06-lotes"] = page("A06 · Feed de lotes", sb() + """
 <div class="a-hd"><h1>Lotes</h1><span class="ic">⚙︎</span></div>
-<div class="seg2"><span class="on">Todos (16)</span><span>★ Salvos (2)</span></div>
+<div class="seg2"><span class="on">Todos (15)</span><span>★ Salvos (2)</span></div>
 <div class="chs"><span class="rb-chip is-on">Fêmeas</span><span class="rb-chip is-on">6–8@</span><span class="rb-chip is-on">Brancas</span><span class="rb-chip is-on">250 km</span></div>
 <div class="cont"><span>Mais barato por @ primeiro</span><span>↕ Ordenar</span></div>
 <div class="a-body pad0"><div class="feed">""" +
@@ -225,7 +225,7 @@ S["app/a08-agenda"] = page("A08 · Agenda", sb() + """
 <div class="a-body">
   <div style="font:700 15px/1 var(--fonte);color:var(--cinza);margin:2px 0 10px">Quarta, 11/11 · 4 leilões no raio</div>
   <div class="ev is-av"><div class="t"><div><b>Uruaçu</b><small>WM Leilões · 55 km · horário a confirmar</small></div><span class="rb-toggle is-on"></span></div>
-    <div class="u num"><span>Última (04/11) <span class="rb-selo rb-selo--ok" style="font-size:12px;padding:3px 7px">brancas</span></span><b class="g">R$ 328/@</b></div></div>
+    <div class="u num"><span>Última (04/11) <span class="rb-selo rb-selo--ok" style="font-size:12px;padding:3px 7px">brancas</span></span><b class="g">R$ 331/@</b></div></div>
   <div class="ev"><div class="t"><div><b>Corumbá de Goiás</b><small>Corumbá Leilões · 107 km</small></div><span class="rb-toggle"></span></div>
     <div class="u num"><span>Última (04/11) <span class="rb-selo rb-selo--nc" style="font-size:12px;padding:3px 7px">cor não conf.</span></span><b>R$ 397/@</b></div></div>
   <div class="ev"><div class="t"><div><b>Trombas</b><small>Trombas Leilões · 163 km</small></div><span class="rb-toggle"></span></div>
@@ -258,7 +258,7 @@ S["app/a09-alertas"] = page("A09 · Alertas (entrando agora)", sb() + """
   </div>
   <div style="margin:6px 0 4px;text-align:right"><span class="rb-tag rb-tag--exemplo">exemplo · lote real de 28/10</span></div>
   <div class="a-sec" style="margin-top:8px">Antes</div>
-  <div class="al"><span class="i">🔴</span><div><b>7 novilhas · 14 m · R$ 2.490</b><small>WM Uruaçu · qua 04/11 · R$ 325/@ · 26% abaixo</small></div></div>
+  <div class="al"><span class="i">🔴</span><div><b>7 novilhas · 15 m · R$ 2.650</b><small>WM Uruaçu · qua 04/11 · R$ 331/@ · 24% abaixo</small></div></div>
   <div class="al"><span class="i">🔴</span><div><b>7 bezerras · 12 m · R$ 2.415</b><small>JPS Niquelândia · ter 03/11 · R$ 345/@ · 21% abaixo</small></div></div>
   <div class="al"><span class="i">📅</span><div><b>Resumo da semana chegou</b><small>seg 02/11, 6h · no WhatsApp</small></div></div>
 </div>""" + tab("alertas"), AL_CSS, nota="Alerta ao vivo fica no topo enquanto o lote está na pista (até 10 min). Depois vira item da lista 'Antes'. Toque abre a transmissão no minuto atual.")
@@ -292,7 +292,7 @@ S["app/a10-notificacao"] = page("A10 · Notificação 'entrando agora'", sb(clar
 # ---------- A11 salvos ----------
 S["app/a11-salvos"] = page("A11 · Salvos", sb() + """
 <div class="a-hd"><h1>Lotes</h1><span class="ic">⚙︎</span></div>
-<div class="seg2"><span>Todos (16)</span><span class="on">★ Salvos (2)</span></div>
+<div class="seg2"><span>Todos (15)</span><span class="on">★ Salvos (2)</span></div>
 <div class="cont" style="padding-top:4px"><span>Ficam aqui mesmo depois do leilão</span></div>
 <div class="a-body pad0"><div class="feed">""" +
     lote_card("rmlJbmSu1i4_26", "3 bezerras · 12 m", "1.920", "274", 37, "Uruaçu · 55 km · qua 28/10 · ~210 kg", "2:55:10", "3.551", True) +
@@ -366,7 +366,7 @@ S["whatsapp/z01-resumo-segunda"] = page("Z01 · WhatsApp: resumo de segunda", WA
     <div class="h">06:00</div>
     <div class="bt"><span>📊 Ver painel</span><span>📄 PDF</span><span>⚙️ Filtro</span></div></div>
   <div class="m eu">quanto tava a novilha em uruaçu quarta?<div class="h">07:12 ✓✓</div></div>
-  <div class="m">Quarta 04/11 em Uruaçu: 7 novilhas 14 m a <b>R$ 2.490</b> (R$ 325/@) e 7 novilhas 15 m a <b>R$ 2.650</b> (R$ 331/@). As duas 100% brancas.<br>▶ youtu.be/qP6lHvAU3Bw?t=6200<div class="h">07:12</div></div>
+  <div class="m">Quarta 04/11 em Uruaçu, só um lote de novilha passou na cor: 7 novilhas 15 m a <b>R$ 2.650</b> (R$ 331/@), 100% brancas. O de 14 m (R$ 2.490) tinha animal vermelho e ficou fora.<br>▶ youtu.be/qP6lHvAU3Bw?t=5620<div class="h">07:12</div></div>
 </div>""" + WAIN, WA_CSS, nota="Template aprovado na API do WhatsApp (categoria utilidade). Máx. 3 leilões + Scot + 1 lote destaque. Botões de resposta rápida. Data do envio: segunda 6h. Resposta livre do usuário é atendida pelo robô dentro da janela de 24 h.")
 
 S["whatsapp/z02-alerta-entrando"] = page("Z02 · WhatsApp: alerta entrando agora", WAH + """

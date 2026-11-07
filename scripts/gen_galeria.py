@@ -21,7 +21,7 @@ GR = [
   ("w02-entrar", "Entrar pelo WhatsApp", "Número + código de 6 dígitos"),
   ("w03-onboarding", "Onboarding", "Fazenda, o que compra, raio e cor"),
   ("w04-painel", "Ranking de leilões", "Painel principal, do mais barato ao mais caro"),
-  ("w05-lotes", "Lotes com filtros", "16 lotes, um por um"),
+  ("w05-lotes", "Lotes com filtros", "15 lotes, um por um"),
   ("w06-lote", "Detalhe do lote", "Foto, preço, @, margem, vídeo no minuto"),
   ("w07-agenda", "Agenda", "Próximos leilões no raio, 09 a 13/11"),
   ("w08-alertas", "Alertas", "Regra de aviso + histórico"),

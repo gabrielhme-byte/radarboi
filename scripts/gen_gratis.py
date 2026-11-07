@@ -6,9 +6,10 @@ Dados reais (docs/data.json), "hoje" = segunda 09/11/2026:
 - Painel grátis = 7 dias de atraso -> leilões de 26/10 a 02/11, fêmeas de todas as eras e cores, até 250 km de Barro Alto/GO
   (16 leilões; R$/@ = soma R$ / soma @ estimadas, ponderado por cabeça).
 - Resumo grátis = semana anterior 02 a 06/11, mesmo recorte: 1º Uruaçu R$ 270/@, 2º Niquelândia R$ 335/@, 3º Bela Vista de Goiás R$ 345/@.
-- Lotes bloqueados: 4 lotes / 22 cab. no filtro padrão (fêmeas 10–15 m, 180–240 kg, cor ok, ≤250 km) de 02 a 06/11.
-- "Você perdeu" = lote real qP6lHvAU3Bw, quarta 04/11, WM Uruaçu: 7 novilhas brancas 14 m, ~230 kg, R$ 2.490/cab = R$ 325/@,
-  26% abaixo da Scot (R$ 438/@). Minuto 1:43:20; live começou 20:02 -> ~21h46 (horário estimado pelo início da live).
+- Lotes bloqueados: 4 lotes / 16 cab. no filtro padrão (fêmeas 6–8@ = 180–240 kg, cor ok, ≤250 km) de 02 a 06/11.
+  (05/11: o lote qP6lHvAU3Bw 01:43:20 foi REPROVADO na cor; não usar.)
+- "Você perdeu" = lote real rmlJbmSu1i4, quarta 28/10, WM Uruaçu: 7 bezerras brancas 12 m, ~210 kg, R$ 2.330/cab = R$ 333/@,
+  24% abaixo da Scot (R$ 438/@). Minuto 1:05:30; live começou 20:19 -> ~21h25 (horário estimado pelo início da live).
 """
 import math, json, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
@@ -47,8 +48,8 @@ def dfmt(s):
 def brl(n): return f"{n:,}".replace(",", ".")
 CAB_TOT = sum(x["q"] for x in RK)
 
-PERDEU_TXT = "Quarta 04/11, por volta das 21h46, entrou em Uruaçu um lote de <b>7 novilhas brancas</b> de 14 meses a <b>R$ 325/@</b>, <b>26% abaixo da Scot</b>. Os assinantes receberam o alerta na hora."
-PERDEU_SRC = "WM Leilões, Uruaçu · lance R$ 2.490/cab · ~230 kg (estimado pela era) · vídeo no minuto 1:43:20 · horário estimado pelo início da live (20:02)"
+PERDEU_TXT = "Quarta 28/10, por volta das 21h25, entrou em Uruaçu um lote de <b>7 bezerras brancas</b> de 12 meses a <b>R$ 333/@</b>, <b>24% abaixo da Scot</b>. Os assinantes receberam o alerta na hora."
+PERDEU_SRC = "WM Leilões, Uruaçu · lance R$ 2.330/cab · ~210 kg (estimado pela era) · vídeo no minuto 1:05:30 · horário estimado pelo início da live (20:19)"
 
 def web(title, nota, css, corpo, nav_on="", gratis=True, nav=True):
     navs = [("Ranking", False), ("Lotes", True), ("Agenda", False), ("Alertas", True), ("Conta", False)]
@@ -106,7 +107,7 @@ W10_CSS = """
 S["web/w10-teste-acabou"] = web("W10 · Seu teste acabou", """Aparece no 1º acesso depois do fim do teste de 7 dias (e é o destino do link do WhatsApp do dia 7).
      Padrão pré-selecionado: Pro (o que a pessoa usou). Se fechar a tela ou tocar em "Ficar no Radar Grátis", a conta vira status gratuita:
      NADA é apagado (fazenda, filtros, salvos, custos). Assinar = 1 toque: link do Mercado Pago (cartão todo mês ou Pix anual); os filtros voltam como estavam.
-     Números de "nos seus 7 dias" vêm da conta (aqui: exemplo). O bloco "você perdeu" usa o melhor lote real da semana que passou no filtro dela.""", W10_CSS, f"""
+     Números de "nos seus 7 dias" vêm da conta (aqui: exemplo). O bloco "você perdeu" usa o melhor lote real e de cor conferida que passou no filtro dela.""", W10_CSS, f"""
 <div class="hero">
   <div>
     <span class="rb-tag" style="background:var(--aviso-bg);color:var(--aviso)">Teste do Pro terminou em 08/11 <span class="rb-tag rb-tag--exemplo" style="margin-left:4px">exemplo</span></span>
@@ -114,7 +115,7 @@ S["web/w10-teste-acabou"] = web("W10 · Seu teste acabou", """Aparece no 1º ace
     <p class="s">Nada foi apagado. Sua fazenda, seus filtros e seus lotes salvos ficam guardados. Para voltar ao Pro é um toque.</p>
     <div class="guard"><span>📍 <b>Barro Alto/GO</b> · 250 km</span><span>🐂 <b>Fêmeas 6–8@</b> · 100% brancas</span><span>★ <b>2</b> lotes salvos</span><span>💰 custos preenchidos</span></div>
   </div>
-  <div class="rb-perdeu"><div class="tp">🔴 Você perdeu esta semana</div><img src="../img/qP6lHvAU3Bw_10_1.jpg" alt=""><div class="cp"><div class="q">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div></div></div>
+  <div class="rb-perdeu"><div class="tp">🔴 Você perdeu</div><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><div class="cp"><div class="q">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div></div></div>
 </div>
 <div class="planos">
   <div class="pc"><h3>Radar Grátis</h3><div class="p">R$ 0</div><div class="an">para sempre</div>
@@ -188,7 +189,7 @@ S["web/w11-painel-gratis"] = web("W11 · Painel no Radar Grátis", """Mesmo W04,
     <div class="rb-nota" style="margin-top:12px">R$/@ = soma dos lances ÷ soma das @ estimadas pela era (8 m 180 kg, 12 m 210 kg, 18 m 270 kg), ponderado por cabeça. Mistura todas as eras e cores, por isso não é comparável com o ranking do Pro.</div>
   </div>
   <aside class="lado">
-    <div class="rb-perdeu"><div class="tp">🔴 Você perdeu esta semana</div><img src="../img/qP6lHvAU3Bw_10_1.jpg" alt=""><div class="cp"><div class="q" style="font-size:17px">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:17px">Receber o próximo na hora</a></div></div>
+    <div class="rb-perdeu"><div class="tp">🔴 Você perdeu</div><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><div class="cp"><div class="q" style="font-size:17px">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:17px">Receber o próximo na hora</a></div></div>
     <div class="alg"><h3>🔔 Seu alerta grátis de novembro</h3><p>1 alerta "entrando agora" por mês, para você sentir como é.</p><div class="cont"><i></i></div><b>1 disponível</b><span class="muted"> · vale para o próximo lote do seu filtro</span></div>
     <div class="alg" style="background:var(--verde-50);border-color:#cfe3d4"><h3>🎁 Ganhe 1 mês de Pro</h3><p>Indique um fazendeiro. Se ele assinar, você ganha 1 mês do Pro.</p><a class="rb-btn rb-btn--sec rb-btn--full" style="font-size:17px">Indicar no WhatsApp</a></div>
   </aside>
@@ -234,12 +235,12 @@ S["web/w12-bloqueios"] = web("W12 · Telas bloqueadas no Radar Grátis", """Cat�
   </div>
   <div class="pn" style="grid-column:1/3"><h2>Lotes <code>W05</code></h2><p>A lista inteira fica atrás do cadeado. O grátis vê quantos lotes havia, não quais.</p>
     <div class="rb-bloq"><div class="atras">{FAKE_ROW*4}</div>
-      <div class="cad"><span class="i">🔒</span><h4>4 lotes (22 cabeças) passaram no seu filtro de 02 a 06/11</h4><p>Lote por lote, com foto, cor conferida e o vídeo no minuto do lance. É do Pro.</p>
+      <div class="cad"><span class="i">🔒</span><h4>4 lotes (16 cabeças) passaram no seu filtro de 02 a 06/11</h4><p>Lote por lote, com foto, cor conferida e o vídeo no minuto do lance. É do Pro.</p>
         <div style="display:flex;gap:10px"><a class="rb-btn rb-btn--pri">Voltar para o Pro · R$ 149/mês</a><a class="rb-btn rb-btn--sec">🎁 Indicar e ganhar 1 mês</a></div></div></div>
   </div>
   <div class="pn"><h2>Detalhe do lote <code>W06</code></h2><p>O grátis só chega aqui pelo alerta grátis do mês ou pelo "você perdeu". Mostra o preço; esconde o vídeo e a margem.</p>
-    <div class="lk"><span>7 novilhas brancas · 14 m</span><b>R$ 325/@</b></div>
-    <div class="lk"><span>Lance na tela</span><b>R$ 2.490/cab</b></div>
+    <div class="lk"><span>7 bezerras brancas · 12 m</span><b>R$ 333/@</b></div>
+    <div class="lk"><span>Lance na tela</span><b>R$ 2.330/cab</b></div>
     <div class="lk"><span>▶ Vídeo no minuto do lance</span><span class="rb-cadeado">só no Pro</span></div>
     <div class="lk"><span>Margem com os seus custos</span><span class="rb-cadeado">só no Pro</span></div>
   </div>
@@ -323,7 +324,7 @@ S["app/a13-teste-acabou"] = page("A13 · Seu teste acabou (app)", sb() + f"""
 <div class="ta">
   <h1>Seu teste de 7 dias acabou.</h1>
   <p class="s">Sua fazenda, filtros e salvos ficam guardados. Voltar é um toque.</p>
-  <div class="rb-perdeu" style="margin-bottom:12px"><div class="tp">🔴 Você perdeu esta semana</div><div class="cp" style="padding:10px 12px"><div class="q" style="font-size:15px">Qua 04/11, ~21h46, em Uruaçu: <b>7 novilhas brancas</b> a <b>R$ 325/@</b>, <b>26% abaixo da Scot</b>. Os assinantes receberam na hora.</div></div></div>
+  <div class="rb-perdeu" style="margin-bottom:12px"><div class="tp">🔴 Você perdeu</div><div class="cp" style="padding:10px 12px"><div class="q" style="font-size:15px">Qua 28/10, ~21h25, em Uruaçu: <b>7 bezerras brancas</b> a <b>R$ 333/@</b>, <b>24% abaixo da Scot</b>. Os assinantes receberam na hora.</div></div></div>
   <div class="op on"><span class="rd"></span><div><b>Pro</b><small>Ao vivo, peso e cor, alerta sem limite</small></div><div class="p">R$ 149<br><small>/mês</small></div></div>
   <div class="op"><span class="rd"></span><div><b>Semanal</b><small>Resumo completo de segunda</small></div><div class="p">R$ 79<br><small>/mês</small></div></div>
   <div class="op"><span class="rd"></span><div><b>Radar Grátis</b><small>3 cidades no resumo, painel 7 dias atrasado, 1 alerta/mês</small></div><div class="p">R$ 0</div></div>
@@ -384,13 +385,13 @@ S["whatsapp/z03-resumo-gratis"] = page("Z03 · WhatsApp: resumo de segunda (Rada
   <div class="m"><b>Bom dia, Gabriel! ☀️ Resumo da semana (grátis)</b><br>Fêmeas até 250 km de Barro Alto. Leilões de 02 a 06/11:
     <table class="num"><tr><td>🥇 {s1['cidade']}</td><td>R$ {s1['arr']}/@</td></tr><tr><td>🥈 {s2['cidade']}</td><td>R$ {s2['arr']}/@</td></tr><tr><td>🥉 {s3['cidade']}</td><td>R$ {s3['arr']}/@</td></tr></table>
     🔒 Leilão, lote, vídeo e margem: só no Pro.
-    <div style="margin-top:8px;padding:8px 10px;border-left:4px solid var(--aovivo);background:#fff4f3;border-radius:6px">🔴 <b>Você perdeu:</b> quarta 04/11, ~21h46, entrou em Uruaçu um lote de <b>7 novilhas brancas</b> a <b>R$ 325/@</b>, <b>26% abaixo da Scot</b>. Os assinantes receberam o alerta na hora.</div>
+    <div style="margin-top:8px;padding:8px 10px;border-left:4px solid var(--aovivo);background:#fff4f3;border-radius:6px">🔴 <b>Você perdeu:</b> quarta 28/10, ~21h25, entrou em Uruaçu um lote de <b>7 bezerras brancas</b> a <b>R$ 333/@</b>, <b>24% abaixo da Scot</b>. Os assinantes receberam o alerta na hora.</div>
     <div style="margin-top:8px">🎁 Indique 1 fazendeiro que assine e ganhe 1 mês de Pro.</div>
     <div class="h">06:00</div>
     <div class="bt"><span>⭐ Voltar pro Pro</span><span>🎁 Indicar</span></div></div>
   <div class="m eu">qual leilão de uruaçu?<div class="h">07:05 ✓✓</div></div>
   <div class="m">Fica no Pro. Seus filtros estão guardados: toque em <b>Voltar pro Pro</b>. 👍<div class="h">07:05</div></div>
-</div>""" + WAIN, WA_CSS, nota="Template utilidade. Ranking = 3 primeiras cidades, só R$/@ (fêmeas, todas as eras e cores, raio da fazenda). Sem nome do leilão, sem link do lote, sem margem. Bloco 'você perdeu' = melhor lote real da semana no filtro salvo da conta. Horário ~21h46 = início da live (20:02) + minuto 1:43:20.")
+</div>""" + WAIN, WA_CSS, nota="Template utilidade. Ranking = 3 primeiras cidades, só R$/@ (fêmeas, todas as eras e cores, raio da fazenda). Sem nome do leilão, sem link do lote, sem margem. Bloco 'você perdeu' = melhor lote real da semana no filtro salvo da conta. Horário ~21h25 = início da live (20:19) + minuto 1:05:30. Lote trocado em 05/11: o de 04/11 (qP6lHvAU3Bw 1:43:20) foi reprovado na cor.")
 
 if __name__ == "__main__":
     for k, v in S.items():
