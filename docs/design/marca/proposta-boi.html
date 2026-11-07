@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><title>Logo com boi · propostas · Radar Boi</title>
+<style>
+body{margin:0;background:#f6f3ea;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#163a20;padding:28px}
+h1{margin:0 0 18px;font-size:28px}
+.op{display:flex;align-items:center;gap:28px;background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:16px}
+.op h2{width:150px;margin:0;font-size:22px}.op h2 small{display:block;font-size:14px;color:#6b6b6b;font-weight:500;margin-top:4px}
+.ic{width:150px;height:150px;border-radius:38px;display:grid;place-items:center;flex:none}
+.ic svg{width:84%;height:84%}
+.v{background:#1f4d2b;color:#ffd54a;--bg:#1f4d2b}.a{background:#ffd54a;color:#1f4d2b;--bg:#ffd54a}
+.round{border-radius:50%}
+.sm{width:48px;height:48px;border-radius:50%}
+.wm{display:flex;align-items:center;gap:14px;font-weight:800;font-size:40px;letter-spacing:-.8px}
+.wm .ic{width:64px;height:64px;border-radius:17px}
+.dk{background:#1f4d2b;border-radius:14px;padding:14px 18px;color:#fff}
+.dk .ic{background:#ffd54a;color:#1f4d2b;--bg:#ffd54a}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute">
+ <defs>
+  <!-- Cabeça de Nelore de frente: chifre curto, orelha caída, cara comprida -->
+  <g id="boi">
+   <path fill="currentColor" d="M37 31 C32 26 31 19 33.5 13 C37.5 18.5 41 23.5 44 28.5 Z"/>
+   <path fill="currentColor" d="M63 31 C68 26 69 19 66.5 13 C62.5 18.5 59 23.5 56 28.5 Z"/>
+   <path fill="currentColor" d="M37 35 C28 33 18 37 12.5 47.5 C14 50 17 50.5 20 49.5 C27 47.5 33 45 38 42 Z"/>
+   <path fill="currentColor" d="M63 35 C72 33 82 37 87.5 47.5 C86 50 83 50.5 80 49.5 C73 47.5 67 45 62 42 Z"/>
+   <path fill="currentColor" d="M33.5 30 Q50 22.5 66.5 30 L64.5 46 Q62.5 58 60.5 68 Q61.5 85 50 85 Q38.5 85 39.5 68 Q37.5 58 35.5 46 Z"/>
+   <ellipse cx="42" cy="45" rx="2.7" ry="3" fill="var(--bg)"/>
+   <ellipse cx="58" cy="45" rx="2.7" ry="3" fill="var(--bg)"/>
+   <ellipse cx="45.6" cy="78" rx="2.2" ry="3" fill="var(--bg)"/>
+   <ellipse cx="54.4" cy="78" rx="2.2" ry="3" fill="var(--bg)"/>
+  </g>
+  <!-- 1: radar (anel) com o boi no centro -->
+  <g id="o1"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/><use href="#boi" transform="translate(50 51) scale(.86) translate(-50 -50)"/></g>
+  <!-- 2: mira de radar (anel + marcas) -->
+  <g id="o2"><circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="5"/>
+   <path stroke="currentColor" stroke-width="5" stroke-linecap="round" d="M50 1v9M50 90v9M1 50h9M90 50h9"/><use href="#boi" transform="translate(50 51) scale(.8) translate(-50 -50)"/></g>
+  <!-- 3: radar varrendo + ponto (o lote achado) -->
+  <g id="o3"><circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="6"/>
+   <path fill="currentColor" opacity=".22" d="M50 50 L50 5 A45 45 0 0 1 89 27.5 Z"/>
+   <circle cx="77" cy="22" r="5.5" fill="currentColor"/><use href="#boi" transform="translate(48 52) scale(.8) translate(-50 -50)"/></g>
+ </defs>
+</svg>
+<h1>Logo com boi · 3 propostas</h1>
+<script>
+const ops=[['o1','Opção 1','Radar + boi'],['o2','Opção 2','Mira de radar'],['o3','Opção 3','Radar achando o lote']];
+const s=id=>`<svg viewBox="0 0 100 100"><use href="#${id}"/></svg>`;
+document.write(ops.map(([id,t,d])=>`<div class="op"><h2>${t}<small>${d}</small></h2>
+<div class="ic v">${s(id)}</div><div class="ic a">${s(id)}</div><div class="ic v round">${s(id)}</div>
+<div class="ic v sm">${s(id)}</div>
+<div><div class="wm"><div class="ic v">${s(id)}</div>Radar Boi</div><div class="wm dk" style="margin-top:12px"><div class="ic">${s(id)}</div>Radar Boi</div></div></div>`).join(''));
+</script>
+</body></html>
