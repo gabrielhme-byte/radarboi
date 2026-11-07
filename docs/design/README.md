@@ -183,7 +183,7 @@ Quem não paga depois dos 7 dias de teste cai no **Radar Grátis**. Regra de our
 | **Bloqueio** | `.rb-bloq > .atras + .cad` | Lista inteira atrás de blur, com cadeado, título que diz o que se ganha e CTA. Atrás do blur vão **valores falsos**. |
 | **CampoBloqueado** | `.rb-cadeado` | Um campo só (Scot, margem, vídeo, lotes). Clicável, abre W10/A13. |
 | **ChipBloqueado** | `.rb-chip.is-bloq` | Filtro de peso e cor no grátis. |
-| **CardVocePerdeu** | `.rb-perdeu` | Melhor lote real da semana no filtro salvo da conta, com fonte (vídeo e minuto). |
+| **CardVocePerdeu** | `.rb-perdeu` | Regra: lote real, de cor conferida, da semana mais recente que o Grátis ainda não vê (dentro dos 7 dias de atraso), no filtro salvo da conta, com fonte (vídeo e minuto). Nas telas, as 7 bezerras de Uruaçu 28/10 aparecem marcadas como exemplo. |
 
 Regras para o dev:
 - Dado bloqueado **não sai do servidor** para conta grátis (nada de esconder com CSS).

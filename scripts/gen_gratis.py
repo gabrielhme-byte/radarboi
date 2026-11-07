@@ -107,7 +107,7 @@ W10_CSS = """
 S["web/w10-teste-acabou"] = web("W10 · Seu teste acabou", """Aparece no 1º acesso depois do fim do teste de 7 dias (e é o destino do link do WhatsApp do dia 7).
      Padrão pré-selecionado: Pro (o que a pessoa usou). Se fechar a tela ou tocar em "Ficar no Radar Grátis", a conta vira status gratuita:
      NADA é apagado (fazenda, filtros, salvos, custos). Assinar = 1 toque: link do Mercado Pago (cartão todo mês ou Pix anual); os filtros voltam como estavam.
-     Números de "nos seus 7 dias" vêm da conta (aqui: exemplo). O bloco "você perdeu" usa o melhor lote real e de cor conferida que passou no filtro dela.""", W10_CSS, f"""
+     Números de "nos seus 7 dias" vêm da conta (aqui: exemplo). Regra do bloco "você perdeu": lote real, de cor conferida, da semana mais recente que o Grátis ainda não vê (dentro dos 7 dias de atraso), no filtro salvo da conta. Aqui o lote de 28/10 é só exemplo.""", W10_CSS, f"""
 <div class="hero">
   <div>
     <span class="rb-tag" style="background:var(--aviso-bg);color:var(--aviso)">Teste do Pro terminou em 08/11 <span class="rb-tag rb-tag--exemplo" style="margin-left:4px">exemplo</span></span>
@@ -115,7 +115,7 @@ S["web/w10-teste-acabou"] = web("W10 · Seu teste acabou", """Aparece no 1º ace
     <p class="s">Nada foi apagado. Sua fazenda, seus filtros e seus lotes salvos ficam guardados. Para voltar ao Pro é um toque.</p>
     <div class="guard"><span>📍 <b>Barro Alto/GO</b> · 250 km</span><span>🐂 <b>Fêmeas 6–8@</b> · 100% brancas</span><span>★ <b>2</b> lotes salvos</span><span>💰 custos preenchidos</span></div>
   </div>
-  <div class="rb-perdeu"><div class="tp">🔴 Você perdeu</div><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><div class="cp"><div class="q">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div></div></div>
+  <div class="rb-perdeu"><div class="tp">🔴 Você perdeu <span class="rb-tag rb-tag--exemplo">exemplo</span></div><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><div class="cp"><div class="q">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div></div></div>
 </div>
 <div class="planos">
   <div class="pc"><h3>Radar Grátis</h3><div class="p">R$ 0</div><div class="an">para sempre</div>
@@ -189,7 +189,7 @@ S["web/w11-painel-gratis"] = web("W11 · Painel no Radar Grátis", """Mesmo W04,
     <div class="rb-nota" style="margin-top:12px">R$/@ = soma dos lances ÷ soma das @ estimadas pela era (8 m 180 kg, 12 m 210 kg, 18 m 270 kg), ponderado por cabeça. Mistura todas as eras e cores, por isso não é comparável com o ranking do Pro.</div>
   </div>
   <aside class="lado">
-    <div class="rb-perdeu"><div class="tp">🔴 Você perdeu</div><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><div class="cp"><div class="q" style="font-size:17px">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:17px">Receber o próximo na hora</a></div></div>
+    <div class="rb-perdeu"><div class="tp">🔴 Você perdeu <span class="rb-tag rb-tag--exemplo">exemplo</span></div><img src="../img/rmlJbmSu1i4_10_1.jpg" alt=""><div class="cp"><div class="q" style="font-size:17px">{PERDEU_TXT}</div><div class="src">{PERDEU_SRC}</div><a class="rb-btn rb-btn--pri rb-btn--full" style="font-size:17px">Receber o próximo na hora</a></div></div>
     <div class="alg"><h3>🔔 Seu alerta grátis de novembro</h3><p>1 alerta "entrando agora" por mês, para você sentir como é.</p><div class="cont"><i></i></div><b>1 disponível</b><span class="muted"> · vale para o próximo lote do seu filtro</span></div>
     <div class="alg" style="background:var(--verde-50);border-color:#cfe3d4"><h3>🎁 Ganhe 1 mês de Pro</h3><p>Indique um fazendeiro. Se ele assinar, você ganha 1 mês do Pro.</p><a class="rb-btn rb-btn--sec rb-btn--full" style="font-size:17px">Indicar no WhatsApp</a></div>
   </aside>
@@ -324,7 +324,7 @@ S["app/a13-teste-acabou"] = page("A13 · Seu teste acabou (app)", sb() + f"""
 <div class="ta">
   <h1>Seu teste de 7 dias acabou.</h1>
   <p class="s">Sua fazenda, filtros e salvos ficam guardados. Voltar é um toque.</p>
-  <div class="rb-perdeu" style="margin-bottom:12px"><div class="tp">🔴 Você perdeu</div><div class="cp" style="padding:10px 12px"><div class="q" style="font-size:15px">Qua 28/10, ~21h25, em Uruaçu: <b>7 bezerras brancas</b> a <b>R$ 333/@</b>, <b>24% abaixo da Scot</b>. Os assinantes receberam na hora.</div></div></div>
+  <div class="rb-perdeu" style="margin-bottom:12px"><div class="tp">🔴 Você perdeu <span class="rb-tag rb-tag--exemplo">exemplo</span></div><div class="cp" style="padding:10px 12px"><div class="q" style="font-size:15px">Qua 28/10, ~21h25, em Uruaçu: <b>7 bezerras brancas</b> a <b>R$ 333/@</b>, <b>24% abaixo da Scot</b>. Os assinantes receberam na hora.</div></div></div>
   <div class="op on"><span class="rd"></span><div><b>Pro</b><small>Ao vivo, peso e cor, alerta sem limite</small></div><div class="p">R$ 149<br><small>/mês</small></div></div>
   <div class="op"><span class="rd"></span><div><b>Semanal</b><small>Resumo completo de segunda</small></div><div class="p">R$ 79<br><small>/mês</small></div></div>
   <div class="op"><span class="rd"></span><div><b>Radar Grátis</b><small>3 cidades no resumo, painel 7 dias atrasado, 1 alerta/mês</small></div><div class="p">R$ 0</div></div>
@@ -385,13 +385,13 @@ S["whatsapp/z03-resumo-gratis"] = page("Z03 · WhatsApp: resumo de segunda (Rada
   <div class="m"><b>Bom dia, Gabriel! ☀️ Resumo da semana (grátis)</b><br>Fêmeas até 250 km de Barro Alto. Leilões de 02 a 06/11:
     <table class="num"><tr><td>🥇 {s1['cidade']}</td><td>R$ {s1['arr']}/@</td></tr><tr><td>🥈 {s2['cidade']}</td><td>R$ {s2['arr']}/@</td></tr><tr><td>🥉 {s3['cidade']}</td><td>R$ {s3['arr']}/@</td></tr></table>
     🔒 Leilão, lote, vídeo e margem: só no Pro.
-    <div style="margin-top:8px;padding:8px 10px;border-left:4px solid var(--aovivo);background:#fff4f3;border-radius:6px">🔴 <b>Você perdeu:</b> quarta 28/10, ~21h25, entrou em Uruaçu um lote de <b>7 bezerras brancas</b> a <b>R$ 333/@</b>, <b>24% abaixo da Scot</b>. Os assinantes receberam o alerta na hora.</div>
+    <div style="margin-top:8px;padding:8px 10px;border-left:4px solid var(--aovivo);background:#fff4f3;border-radius:6px">🔴 <b>Você perdeu</b> <i>(exemplo)</i><b>:</b> quarta 28/10, ~21h25, entrou em Uruaçu um lote de <b>7 bezerras brancas</b> a <b>R$ 333/@</b>, <b>24% abaixo da Scot</b>. Os assinantes receberam o alerta na hora.</div>
     <div style="margin-top:8px">🎁 Indique 1 fazendeiro que assine e ganhe 1 mês de Pro.</div>
     <div class="h">06:00</div>
     <div class="bt"><span>⭐ Voltar pro Pro</span><span>🎁 Indicar</span></div></div>
   <div class="m eu">qual leilão de uruaçu?<div class="h">07:05 ✓✓</div></div>
   <div class="m">Fica no Pro. Seus filtros estão guardados: toque em <b>Voltar pro Pro</b>. 👍<div class="h">07:05</div></div>
-</div>""" + WAIN, WA_CSS, nota="Template utilidade. Ranking = 3 primeiras cidades, só R$/@ (fêmeas, todas as eras e cores, raio da fazenda). Sem nome do leilão, sem link do lote, sem margem. Bloco 'você perdeu' = melhor lote real da semana no filtro salvo da conta. Horário ~21h25 = início da live (20:19) + minuto 1:05:30. Lote trocado em 05/11: o de 04/11 (qP6lHvAU3Bw 1:43:20) foi reprovado na cor.")
+</div>""" + WAIN, WA_CSS, nota="Template utilidade. Ranking = 3 primeiras cidades, só R$/@ (fêmeas, todas as eras e cores, raio da fazenda). Sem nome do leilão, sem link do lote, sem margem. Bloco 'você perdeu' (regra): lote real, de cor conferida, da semana mais recente que o Grátis ainda não vê (dentro dos 7 dias de atraso), no filtro salvo da conta. Aqui: exemplo com o lote de 28/10. Horário ~21h25 = início da live (20:19) + minuto 1:05:30. Lote trocado em 05/11: o de 04/11 (qP6lHvAU3Bw 1:43:20) foi reprovado na cor.")
 
 if __name__ == "__main__":
     for k, v in S.items():
