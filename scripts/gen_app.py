@@ -114,7 +114,7 @@ S["app/a04-onb-raio-cor"] = page("A04 · Onboarding 3: raio, cor e aviso", onb(3
   <div style="display:flex;align-items:center;gap:12px;padding:14px 0"><div style="flex:1"><b style="font-size:18px">Avisar no WhatsApp</b><div class="muted small">Resumo de segunda e "entrando agora"</div></div><span class="rb-toggle is-on"></span></div>
 </div>
 <div style="background:var(--verde-800);color:#fff;border-radius:16px;padding:16px;margin-top:16px;display:flex;gap:14px;align-items:center">
-  <span style="font:800 36px/1 var(--fonte);color:var(--amarelo)" class="num">16</span><span style="font-size:16px;line-height:1.35">lotes serviram pra você nos últimos 10 dias. O mais barato: <b>Uruaçu, R$ 325/@</b>.</span>
+  <span style="font:800 36px/1 var(--fonte);color:var(--amarelo)" class="num">11</span><span style="font-size:16px;line-height:1.35">lotes serviram pra você nos últimos 10 dias. O mais barato: <b>Uruaçu, R$ 318/@</b>.</span>
 </div>
 """, "Ver meu radar"), ONB_CSS, nota="O quadro verde recalcula ao mexer no raio/cor. Sem o filtro de cor seriam 269 lotes.")
 
@@ -140,17 +140,17 @@ S["app/a05-home"] = page("A05 · Início", sb() + """
   <div style="margin-top:4px;text-align:right"><span class="rb-tag rb-tag--exemplo">exemplo · lote real de 28/10</span></div>
   <div class="dest">
     <div class="r">Mais barato · 26/10 a 04/11</div>
-    <div class="v num">R$ 325<small>/@</small></div>
+    <div class="v num">R$ 318<small>/@</small></div>
     <div class="l">Uruaçu · WM Leilões · 55 km · qua 28/10</div>
-    <div class="s"><span class="rb-scot rb-scot--barato">26% abaixo da Scot</span><span class="rb-tag" style="background:#ffffff1f;color:#fff">20 cab. · 5 lotes</span></div>
+    <div class="s"><span class="rb-scot rb-scot--barato">27% abaixo da Scot</span><span class="rb-tag" style="background:#ffffff1f;color:#fff">14 cab. · 4 lotes</span></div>
   </div>
   <div class="a-sec">Ranking da semana <a>Ver tudo</a></div>
   <div class="mini num">
     <div class="it"><span class="p">2º</span><div><b>Uruaçu</b><small>55 km · qua 04/11 · 7 cab.</small></div><div class="v g">R$ 331/@<br><small>24% abaixo</small></div></div>
     <div class="it"><span class="p">3º</span><div><b>Niquelândia</b><small>73 km · ter 03/11 · 9 cab.</small></div><div class="v g">R$ 339/@<br><small>23% abaixo</small></div></div>
-    <div class="it"><span class="p">4º</span><div><b>Porangatu</b><small>172 km · seg 26/10 · 310 cab.</small></div><div class="v r">R$ 456/@<br><small>4% acima</small></div></div>
+    <div class="it"><span class="p">4º</span><div><b>Porangatu</b><small>172 km · seg 26/10 · 160 cab.</small></div><div class="v r">R$ 457/@<br><small>4% acima</small></div></div>
   </div>
-  <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:14px;color:var(--cinza);font-weight:600"><span>Scot GO bezerra 12 m: R$ 438/@</span><span>Margem média 15@: R$ 2.394</span></div>
+  <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:14px;color:var(--cinza);font-weight:600"><span>Scot GO bezerra 12 m: R$ 438/@</span><span>Margem média 15@: R$ 2.416</span></div>
 </div>""" + tab("inicio"), HOME_CSS, nota="Ordem: faixa ao vivo (só quando tem leilão do raio no ar), destaque do mais barato, ranking resumido. Pull-to-refresh. Offline: mostra a última versão com a faixa 'sem sinal'.")
 
 # ---------- A06 feed de lotes ----------
@@ -164,7 +164,7 @@ FEED_CSS = """
 """
 S["app/a06-lotes"] = page("A06 · Feed de lotes", sb() + """
 <div class="a-hd"><h1>Lotes</h1><span class="ic">⚙︎</span></div>
-<div class="seg2"><span class="on">Todos (15)</span><span>★ Salvos (2)</span></div>
+<div class="seg2"><span class="on">Todos (11)</span><span>★ Salvos (2)</span></div>
 <div class="chs"><span class="rb-chip is-on">Fêmeas</span><span class="rb-chip is-on">6–8@</span><span class="rb-chip is-on">Brancas</span><span class="rb-chip is-on">250 km</span></div>
 <div class="cont"><span>Mais barato por @ primeiro</span><span>↕ Ordenar</span></div>
 <div class="a-body pad0"><div class="feed">""" +
@@ -292,7 +292,7 @@ S["app/a10-notificacao"] = page("A10 · Notificação 'entrando agora'", sb(clar
 # ---------- A11 salvos ----------
 S["app/a11-salvos"] = page("A11 · Salvos", sb() + """
 <div class="a-hd"><h1>Lotes</h1><span class="ic">⚙︎</span></div>
-<div class="seg2"><span>Todos (15)</span><span class="on">★ Salvos (2)</span></div>
+<div class="seg2"><span>Todos (11)</span><span class="on">★ Salvos (2)</span></div>
 <div class="cont" style="padding-top:4px"><span>Ficam aqui mesmo depois do leilão</span></div>
 <div class="a-body pad0"><div class="feed">""" +
     lote_card("rmlJbmSu1i4_26", "3 bezerras · 12 m", "1.920", "274", 37, "Uruaçu · 55 km · qua 28/10 · ~210 kg", "2:55:10", "3.551", True) +
@@ -360,7 +360,7 @@ S["whatsapp/z01-resumo-segunda"] = page("Z01 · WhatsApp: resumo de segunda", WA
 <div class="cv">
   <span class="dia">SEGUNDA</span>
   <div class="m"><b>Bom dia, Gabriel! ☀️ Resumo da semana</b><br>Bezerra/novilha <b>branca 6–8@</b>, até 250 km de Barro Alto. Leilões de 26/10 a 04/11:
-    <table class="num"><tr><td>🥇 Uruaçu · 55 km · qua</td><td class="g">R$ 325/@</td></tr><tr><td>🥈 Niquelândia · 73 km · ter</td><td class="g">R$ 339/@</td></tr><tr><td>🥉 Porangatu · 172 km · seg</td><td class="r">R$ 456/@</td></tr><tr><td style="color:#666">Scot GO (bezerra 12 m)</td><td>R$ 438/@</td></tr></table>
+    <table class="num"><tr><td>🥇 Uruaçu · 55 km · qua</td><td class="g">R$ 318/@</td></tr><tr><td>🥈 Niquelândia · 73 km · ter</td><td class="g">R$ 339/@</td></tr><tr><td>🥉 Porangatu · 172 km · seg</td><td class="r">R$ 457/@</td></tr><tr><td style="color:#666">Scot GO (bezerra 12 m)</td><td>R$ 438/@</td></tr></table>
     💰 Lote mais barato: <b>3 bezerras 12 m, R$ 1.920</b> em Uruaçu (R$ 274/@).<br>
     📅 Esta semana: ter Niquelândia · qua Uruaçu. Te aviso quando entrar bezerra branca.
     <div class="h">06:00</div>

@@ -9,9 +9,10 @@ import peso as PZ  # curva de peso por idade e preço da novilha gorda
 arqs = sorted(glob.glob(os.path.join(FZ, 'dados', 'lotes_*.csv')))
 D = sys.argv[1] if len(sys.argv) > 1 else re.search(r'lotes_(.+)\.csv', arqs[-1]).group(1)
 LE = {r['video']: r for r in csv.DictReader(open(os.path.join(FZ, 'leiloes.csv'), encoding='utf-8'))}
-REV = {}
+REV, COR = {}, {}
 p = os.path.join(FZ, 'cor', 'revisao.csv')
 for r in csv.DictReader(open(p, encoding='utf-8')):
+    COR[(r['video'], r['fim'])] = r['status']   # revisao.csv atual manda na cor (fim do lote = minuto)
     REV.setdefault(r['video'], {'ok': 0, 'reprovado': 0, 'duvidoso': 0})[r['status']] += 1
 
 SEXO = {'bezerro': 'M', 'garrote': 'M', 'bezerra': 'F', 'novilha': 'F'}
@@ -22,7 +23,7 @@ for l in csv.DictReader(open(os.path.join(FZ, 'dados', f'lotes_{D}.csv'), encodi
     idade = int(float(l['idade_m'])) if l['idade_m'] else None
     kg = round(PZ.peso(idade)) if idade else None
     lotes.append(dict(v=l['video'], c=l['categoria'], s=SEXO[l['categoria']], q=int(l['qtd']), i=idade,
-                      p=int(l['preco_cab']), kg=kg, cor=l['cor'], m=l['minuto'], u=l['link']))
+                      p=int(l['preco_cab']), kg=kg, cor=COR.get((l['video'], l['minuto']), 'não conferido'), m=l['minuto'], u=l['link']))
     usados.add(l['video'])
 
 leiloes = []

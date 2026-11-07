@@ -162,15 +162,15 @@ O nome do componente vem primeiro, depois a classe CSS.
   - 100% brancas
   - até 250 km
   - venda com 15@ a R$ 364,71/@ (Datagro novilha GO, 04/11)
-- Resultado: 15 lotes, 346 cabeças, 3 cidades. (05/11: o lote qP6lHvAU3Bw 1:43:20, 7 novilhas 14 m, foi reprovado na cor e saiu.)
+- Resultado: 11 lotes, 190 cabeças, 3 cidades. (05/11: o lote qP6lHvAU3Bw 1:43:20 foi reprovado na cor. 07/11: reconferência de cor pela regra 1–3 min antes do fim, commit df0921d em radarboi-app; saíram Porangatu 3A, 8 e 4000 e Uruaçu 28/10 L19. `build_data.py` agora lê a cor direto do `revisao.csv`, só status ok.)
 - Ranking:
 
 | Leilão | Data | R$/@ |
 |---|---|---|
-| Uruaçu | 28/10 | 325 |
+| Uruaçu | 28/10 | 318 |
 | Uruaçu | 04/11 | 331 |
 | Niquelândia | 03/11 | 339 |
-| Porangatu | 26/10 | 456 |
+| Porangatu | 26/10 | 457 |
 
 - Scot: R$ 438/@.
 - Curva de peso pela era: 8 m = 180 kg, 12 m = 210 kg, 18 m = 270 kg; 1@ = 30 kg.
