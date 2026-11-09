@@ -3,9 +3,8 @@
 Rodar: python3 scripts/gen_home.py. Troque WA pelo número comercial quando existir."""
 import pathlib, re, urllib.parse
 R = pathlib.Path(__file__).resolve().parent.parent
-WA = "5562900000000"  # TODO: número comercial do Radar Boi (mesmo placeholder do painel)
-WA_CONTATO = "5562991075225"  # contato temporário autorizado, até o lançamento
-def wa(txt, numero=WA): return f"https://wa.me/{numero}?text=" + urllib.parse.quote(txt)
+WA = "5562991075225"  # destino temporário autorizado para TODOS os CTAs da landing, até o lançamento
+def wa(txt): return f"https://wa.me/{WA}?text=" + urllib.parse.quote(txt)
 TESTE = wa("Quero testar o Radar Boi por 7 dias")
 s = (R / "docs/design/web/w01-landing.html").read_text()
 rep = [
@@ -27,7 +26,7 @@ rep = [
  ('<section class="sec" style="padding-top:0">\n  <h2>Como funciona</h2>', '<section class="sec" id="como" style="padding-top:0">\n  <h2>Como funciona</h2>'),
  ('<section class="wa">', '<section class="wa" id="whatsapp">'),
  ('<span class="rb-tag rb-tag--exemplo">exemplo · lote real de 28/10</span>', '<span class="rb-tag">lote real · WM Uruaçu · 28/10</span>'),
- ('<a class="rb-btn rb-btn--sec rb-btn--full">Falar no WhatsApp</a>', f'<a class="rb-btn rb-btn--sec rb-btn--full" href="{wa("Quero saber do plano Fazenda+ do Radar Boi", WA_CONTATO)}">Falar no WhatsApp</a>'),
+ ('<a class="rb-btn rb-btn--sec rb-btn--full">Falar no WhatsApp</a>', f'<a class="rb-btn rb-btn--sec rb-btn--full" href="{wa("Quero saber do plano Fazenda+ do Radar Boi")}">Falar no WhatsApp</a>'),
 ]
 for a, b in rep:
     assert a in s, a[:60]
@@ -59,5 +58,8 @@ html{scroll-behavior:smooth}a.rb-btn{text-decoration:none}
 @media(max-width:520px){.passos{grid-template-columns:1fr}.hero h1{font-size:32px}}
 """
 s = s.replace("</style></head>", MOBILE + "</style></head>", 1)
+# Impede publicar novamente um destino antigo em qualquer CTA da landing.
+assert set(re.findall(r'https://wa\.me/(\d+)', s)) == {WA}, "Destino WhatsApp divergente na landing"
+assert "5562900000000" not in s, "Placeholder de WhatsApp na landing"
 (R / "docs/index.html").write_text(s)
 print("docs/index.html ok")
